@@ -1,0 +1,12 @@
+C:\Users\Admin\source\repos\QuanLyTour\DAO\bin\Debug\DAO.exe.config
+C:\Users\Admin\source\repos\QuanLyTour\DAO\bin\Debug\DAO.exe
+C:\Users\Admin\source\repos\QuanLyTour\DAO\bin\Debug\DAO.pdb
+C:\Users\Admin\source\repos\QuanLyTour\DAO\bin\Debug\DTO.exe
+C:\Users\Admin\source\repos\QuanLyTour\DAO\bin\Debug\DTO.pdb
+C:\Users\Admin\source\repos\QuanLyTour\DAO\bin\Debug\DTO.exe.config
+C:\Users\Admin\source\repos\QuanLyTour\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\QuanLyTour\DAO\obj\Debug\DAO.Properties.Resources.resources
+C:\Users\Admin\source\repos\QuanLyTour\DAO\obj\Debug\DAO.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\QuanLyTour\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\QuanLyTour\DAO\obj\Debug\DAO.exe
+C:\Users\Admin\source\repos\QuanLyTour\DAO\obj\Debug\DAO.pdb

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2136080354994995812226d4fdf18b30" Name="Diagram1">
+        <EntityTypeShape EntityType="QuanLyTourModel.CHIPHI" Width="1.5" PointX="7.5" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyTourModel.DIADIEM" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyTourModel.DOANDULICH" Width="1.5" PointX="5.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyTourModel.GIATOUR" Width="1.5" PointX="5.25" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyTourModel.KHACH" Width="1.5" PointX="7.5" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyTourModel.LOAICHIPHI" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyTourModel.LOAIHINHDULICH" Width="1.5" PointX="0.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyTourModel.NHANVIEN" Width="1.5" PointX="8.25" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyTourModel.NOIDUNGTOUR" Width="1.5" PointX="7.5" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyTourModel.PHANBONHANVIEN_DOAN" Width="1.5" PointX="10.5" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyTourModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyTourModel.THAMQUAN" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyTourModel.TOURDULICH" Width="1.5" PointX="3" PointY="8.75" IsExpanded="true" />
+        <AssociationConnector Association="QuanLyTourModel.FK_CHIPHI_DOANDULICH" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyTourModel.FK_CHIPHI_LOAICHIPHI" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyTourModel.FK_THAMQUAN_DIADIEM" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyTourModel.FK_DOANDULICH_TUORDULICH" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyTourModel.FK_NOIDUNGTOUR_DOANDULICH" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyTourModel.FK_PHANBONHANVIEN_DOAN_DOANDULICH" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyTourModel.FK_GIATOUR_TOURDULICH" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyTourModel.FK_TOURDULICH_LOAIHINHDULICH" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyTourModel.FK_PHANBONHANVIEN_DOAN_NHANVIEN" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyTourModel.FK_THAMQUAN_TOURDULICH" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyTourModel.CHITIETDOAN" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
