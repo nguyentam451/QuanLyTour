@@ -44,29 +44,36 @@ namespace QuanLyTour
             this.lbMaLoaiHinh = new System.Windows.Forms.Label();
             this.txtMaLoaiHinh = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbQuanLyTour = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.lbQuanLyTour = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTourDuLich)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridViewTourDuLich
             // 
             this.dataGridViewTourDuLich.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTourDuLich.Location = new System.Drawing.Point(286, 306);
+            this.dataGridViewTourDuLich.Location = new System.Drawing.Point(12, 148);
             this.dataGridViewTourDuLich.Name = "dataGridViewTourDuLich";
             this.dataGridViewTourDuLich.RowHeadersWidth = 51;
             this.dataGridViewTourDuLich.RowTemplate.Height = 24;
             this.dataGridViewTourDuLich.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewTourDuLich.Size = new System.Drawing.Size(791, 407);
+            this.dataGridViewTourDuLich.Size = new System.Drawing.Size(965, 422);
             this.dataGridViewTourDuLich.TabIndex = 0;
             this.dataGridViewTourDuLich.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(280, 749);
+            this.btnThem.Location = new System.Drawing.Point(12, 579);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(112, 37);
             this.btnThem.TabIndex = 1;
@@ -76,7 +83,7 @@ namespace QuanLyTour
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(420, 749);
+            this.btnXoa.Location = new System.Drawing.Point(208, 579);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(112, 37);
             this.btnXoa.TabIndex = 2;
@@ -86,7 +93,7 @@ namespace QuanLyTour
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(554, 749);
+            this.btnSua.Location = new System.Drawing.Point(394, 579);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(112, 37);
             this.btnSua.TabIndex = 4;
@@ -96,7 +103,7 @@ namespace QuanLyTour
             // 
             // btnTim
             // 
-            this.btnTim.Location = new System.Drawing.Point(911, 749);
+            this.btnTim.Location = new System.Drawing.Point(866, 579);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(112, 37);
             this.btnTim.TabIndex = 5;
@@ -108,9 +115,9 @@ namespace QuanLyTour
             this.lbTittle.BackColor = System.Drawing.Color.SlateBlue;
             this.lbTittle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTittle.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbTittle.Location = new System.Drawing.Point(286, 33);
+            this.lbTittle.Location = new System.Drawing.Point(280, 33);
             this.lbTittle.Name = "lbTittle";
-            this.lbTittle.Size = new System.Drawing.Size(791, 60);
+            this.lbTittle.Size = new System.Drawing.Size(994, 60);
             this.lbTittle.TabIndex = 6;
             this.lbTittle.Text = "Quản lý tour du lịch";
             this.lbTittle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -119,7 +126,7 @@ namespace QuanLyTour
             // 
             this.lbMaTour.AutoSize = true;
             this.lbMaTour.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMaTour.Location = new System.Drawing.Point(282, 170);
+            this.lbMaTour.Location = new System.Drawing.Point(8, 43);
             this.lbMaTour.Name = "lbMaTour";
             this.lbMaTour.Size = new System.Drawing.Size(73, 24);
             this.lbMaTour.TabIndex = 7;
@@ -127,7 +134,7 @@ namespace QuanLyTour
             // 
             // txtMaTour
             // 
-            this.txtMaTour.Location = new System.Drawing.Point(394, 163);
+            this.txtMaTour.Location = new System.Drawing.Point(114, 36);
             this.txtMaTour.Multiline = true;
             this.txtMaTour.Name = "txtMaTour";
             this.txtMaTour.Size = new System.Drawing.Size(167, 31);
@@ -135,7 +142,7 @@ namespace QuanLyTour
             // 
             // txtDacDiem
             // 
-            this.txtDacDiem.Location = new System.Drawing.Point(394, 237);
+            this.txtDacDiem.Location = new System.Drawing.Point(114, 94);
             this.txtDacDiem.Multiline = true;
             this.txtDacDiem.Name = "txtDacDiem";
             this.txtDacDiem.Size = new System.Drawing.Size(167, 31);
@@ -145,7 +152,7 @@ namespace QuanLyTour
             // 
             this.lbTenTour.AutoSize = true;
             this.lbTenTour.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTenTour.Location = new System.Drawing.Point(771, 170);
+            this.lbTenTour.Location = new System.Drawing.Point(670, 43);
             this.lbTenTour.Name = "lbTenTour";
             this.lbTenTour.Size = new System.Drawing.Size(81, 24);
             this.lbTenTour.TabIndex = 10;
@@ -153,7 +160,7 @@ namespace QuanLyTour
             // 
             // txtTenTour
             // 
-            this.txtTenTour.Location = new System.Drawing.Point(910, 163);
+            this.txtTenTour.Location = new System.Drawing.Point(811, 36);
             this.txtTenTour.Multiline = true;
             this.txtTenTour.Name = "txtTenTour";
             this.txtTenTour.Size = new System.Drawing.Size(167, 31);
@@ -163,7 +170,7 @@ namespace QuanLyTour
             // 
             this.lbDacDiem.AutoSize = true;
             this.lbDacDiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDacDiem.Location = new System.Drawing.Point(280, 244);
+            this.lbDacDiem.Location = new System.Drawing.Point(8, 101);
             this.lbDacDiem.Name = "lbDacDiem";
             this.lbDacDiem.Size = new System.Drawing.Size(91, 24);
             this.lbDacDiem.TabIndex = 12;
@@ -174,7 +181,7 @@ namespace QuanLyTour
             // 
             this.lbMaLoaiHinh.AutoSize = true;
             this.lbMaLoaiHinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMaLoaiHinh.Location = new System.Drawing.Point(771, 244);
+            this.lbMaLoaiHinh.Location = new System.Drawing.Point(670, 101);
             this.lbMaLoaiHinh.Name = "lbMaLoaiHinh";
             this.lbMaLoaiHinh.Size = new System.Drawing.Size(118, 24);
             this.lbMaLoaiHinh.TabIndex = 13;
@@ -182,7 +189,7 @@ namespace QuanLyTour
             // 
             // txtMaLoaiHinh
             // 
-            this.txtMaLoaiHinh.Location = new System.Drawing.Point(910, 237);
+            this.txtMaLoaiHinh.Location = new System.Drawing.Point(811, 94);
             this.txtMaLoaiHinh.Multiline = true;
             this.txtMaLoaiHinh.Name = "txtMaLoaiHinh";
             this.txtMaLoaiHinh.Size = new System.Drawing.Size(167, 31);
@@ -193,40 +200,10 @@ namespace QuanLyTour
             this.panel1.BackColor = System.Drawing.Color.SlateBlue;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.lbQuanLyTour);
-            this.panel1.Location = new System.Drawing.Point(29, 170);
+            this.panel1.Location = new System.Drawing.Point(29, 145);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(245, 616);
+            this.panel1.Size = new System.Drawing.Size(245, 670);
             this.panel1.TabIndex = 15;
-            // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.Location = new System.Drawing.Point(720, 749);
-            this.txtTimKiem.Multiline = true;
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(169, 37);
-            this.txtTimKiem.TabIndex = 16;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.SystemColors.Control;
-            this.label1.Image = global::QuanLyTour.Properties.Resources.flight__1___1_;
-            this.label1.Location = new System.Drawing.Point(54, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(184, 158);
-            this.label1.TabIndex = 17;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // lbQuanLyTour
-            // 
-            this.lbQuanLyTour.BackColor = System.Drawing.Color.SkyBlue;
-            this.lbQuanLyTour.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbQuanLyTour.ForeColor = System.Drawing.Color.White;
-            this.lbQuanLyTour.Location = new System.Drawing.Point(3, 10);
-            this.lbQuanLyTour.Name = "lbQuanLyTour";
-            this.lbQuanLyTour.Size = new System.Drawing.Size(239, 71);
-            this.lbQuanLyTour.TabIndex = 0;
-            this.lbQuanLyTour.Text = "Quản lý tour";
-            this.lbQuanLyTour.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -241,35 +218,111 @@ namespace QuanLyTour
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // lbQuanLyTour
+            // 
+            this.lbQuanLyTour.BackColor = System.Drawing.Color.SkyBlue;
+            this.lbQuanLyTour.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQuanLyTour.ForeColor = System.Drawing.Color.White;
+            this.lbQuanLyTour.Location = new System.Drawing.Point(3, 10);
+            this.lbQuanLyTour.Name = "lbQuanLyTour";
+            this.lbQuanLyTour.Size = new System.Drawing.Size(239, 71);
+            this.lbQuanLyTour.TabIndex = 0;
+            this.lbQuanLyTour.Text = "Quản lý tour";
+            this.lbQuanLyTour.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiem.Location = new System.Drawing.Point(569, 576);
+            this.txtTimKiem.Multiline = true;
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(262, 37);
+            this.txtTimKiem.TabIndex = 16;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.Image = global::QuanLyTour.Properties.Resources.flight__1___1_;
+            this.label1.Location = new System.Drawing.Point(73, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(167, 133);
+            this.label1.TabIndex = 17;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.GhostWhite;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btnTim);
+            this.panel2.Controls.Add(this.txtTimKiem);
+            this.panel2.Controls.Add(this.btnSua);
+            this.panel2.Controls.Add(this.txtTenTour);
+            this.panel2.Controls.Add(this.lbMaLoaiHinh);
+            this.panel2.Controls.Add(this.lbTenTour);
+            this.panel2.Controls.Add(this.txtMaLoaiHinh);
+            this.panel2.Controls.Add(this.dataGridViewTourDuLich);
+            this.panel2.Controls.Add(this.btnXoa);
+            this.panel2.Controls.Add(this.lbDacDiem);
+            this.panel2.Controls.Add(this.btnThem);
+            this.panel2.Controls.Add(this.lbMaTour);
+            this.panel2.Controls.Add(this.txtDacDiem);
+            this.panel2.Controls.Add(this.txtMaTour);
+            this.panel2.Location = new System.Drawing.Point(3, 6);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1002, 629);
+            this.panel2.TabIndex = 18;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(286, 145);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1009, 670);
+            this.tabControl1.TabIndex = 19;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.panel2);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1001, 641);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(192, 71);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1101, 817);
+            this.ClientSize = new System.Drawing.Size(1321, 842);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.txtMaLoaiHinh);
-            this.Controls.Add(this.lbMaLoaiHinh);
-            this.Controls.Add(this.lbDacDiem);
-            this.Controls.Add(this.txtTenTour);
-            this.Controls.Add(this.lbTenTour);
-            this.Controls.Add(this.txtDacDiem);
-            this.Controls.Add(this.txtMaTour);
-            this.Controls.Add(this.lbMaTour);
             this.Controls.Add(this.lbTittle);
-            this.Controls.Add(this.btnTim);
-            this.Controls.Add(this.btnSua);
-            this.Controls.Add(this.btnXoa);
-            this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.dataGridViewTourDuLich);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTourDuLich)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -294,6 +347,10 @@ namespace QuanLyTour
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbQuanLyTour;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }
 

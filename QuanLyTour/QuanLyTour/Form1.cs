@@ -13,7 +13,7 @@ namespace QuanLyTour
 {
     public partial class Form1 : Form
     {
-        QuanLyTourEntities db = new QuanLyTourEntities();
+   //     QuanLyTourEntities db = new QuanLyTourEntities();
         public Form1()
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace QuanLyTour
         void LoadData()
         {
           //  using (QuanLyTourEntities db = new QuanLyTourEntities())
-            {
+           /* {
 
                 var result = from u in db.TOURDULICH
                              select new
@@ -39,7 +39,7 @@ namespace QuanLyTour
             }    
                
 
-            dataGridViewTourDuLich.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewTourDuLich.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;*/
         }
 
         void AddBinding()
@@ -53,7 +53,7 @@ namespace QuanLyTour
         void addTour()
         {
            // using (QuanLyTourEntities db = new QuanLyTourEntities())
-            {
+          /*  {
                 
                 db.TOURDULICH.Add(new TOURDULICH() 
                 { MaTour = txtMaTour.Text, 
@@ -65,11 +65,11 @@ namespace QuanLyTour
 
                 MessageBox.Show("Thêm thành công");
                 LoadData();
-            }
+            }*/
         }
         void deleteTour()
         {
-            String id = txtMaTour.Text;
+          /*  String id = txtMaTour.Text;
             TOURDULICH tour = db.TOURDULICH.Where(p => p.MaTour == id).SingleOrDefault();
             db.TOURDULICH.Remove(tour);
     
@@ -77,12 +77,12 @@ namespace QuanLyTour
             db.SaveChanges();
 
             MessageBox.Show("Xóa thành công");
-            LoadData();
+            LoadData();*/
         }
 
         void updateTour()
         {
-            String id = txtMaTour.Text;
+          /*  String id = txtMaTour.Text;
             TOURDULICH tour = db.TOURDULICH.Where(p => p.MaTour == id).SingleOrDefault();
             tour.MaTour = txtMaTour.Text;
             tour.TenGoi = txtTenTour.Text;
@@ -90,7 +90,7 @@ namespace QuanLyTour
 
             db.SaveChanges();
             MessageBox.Show("Sửa thành công");
-            LoadData();
+            LoadData();*/
 
         }
         #endregion 
@@ -143,6 +143,16 @@ namespace QuanLyTour
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

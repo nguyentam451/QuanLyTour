@@ -21,3 +21,4 @@ C:\Users\Admin\source\repos\QuanLyTour\QuanLyTour\bin\Debug\DAO.pdb
 C:\Users\Admin\source\repos\QuanLyTour\QuanLyTour\bin\Debug\DAO.exe.config
 C:\Users\Admin\source\repos\QuanLyTour\QuanLyTour\bin\Debug\DTO.pdb
 C:\Users\Admin\source\repos\QuanLyTour\QuanLyTour\bin\Debug\DTO.exe.config
+C:\Users\Admin\source\repos\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.csproj.CopyComplete
