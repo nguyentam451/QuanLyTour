@@ -57,8 +57,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\KhachBUS.cs" />
+    <Compile Include="Controller\ndTourBUS.cs" />
     <Compile Include="Controller\TourDuLichBUS.cs" />
     <Compile Include="Model\KhachDAO.cs" />
+    <Compile Include="Model\ndTourDAO.cs" />
+    <Compile Include="Model\ndTourMODEL.cs" />
     <Compile Include="Model\TourDuLichDAO.cs" />
     <Compile Include="QuanLyTour.designer.cs">
       <AutoGen>True</AutoGen>

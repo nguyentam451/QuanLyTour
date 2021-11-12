@@ -37,3 +37,17 @@ C:\Users\tangc\OneDrive\Desktop\QuanLyTour\QuanLyTour\QuanLyTour\bin\Debug\Entit
 C:\Users\tangc\OneDrive\Desktop\QuanLyTour\QuanLyTour\QuanLyTour\bin\Debug\EntityFramework.xml
 C:\Users\tangc\OneDrive\Desktop\QuanLyTour\QuanLyTour\QuanLyTour\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\tangc\OneDrive\Desktop\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.csproj.CopyComplete
+E:\DATA\phanlop\QuanLyTour\QuanLyTour\QuanLyTour\bin\Debug\QuanLyTour.exe.config
+E:\DATA\phanlop\QuanLyTour\QuanLyTour\QuanLyTour\bin\Debug\QuanLyTour.exe
+E:\DATA\phanlop\QuanLyTour\QuanLyTour\QuanLyTour\bin\Debug\QuanLyTour.pdb
+E:\DATA\phanlop\QuanLyTour\QuanLyTour\QuanLyTour\bin\Debug\EntityFramework.dll
+E:\DATA\phanlop\QuanLyTour\QuanLyTour\QuanLyTour\bin\Debug\EntityFramework.SqlServer.dll
+E:\DATA\phanlop\QuanLyTour\QuanLyTour\QuanLyTour\bin\Debug\EntityFramework.xml
+E:\DATA\phanlop\QuanLyTour\QuanLyTour\QuanLyTour\bin\Debug\EntityFramework.SqlServer.xml
+E:\DATA\phanlop\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.csproj.AssemblyReference.cache
+E:\DATA\phanlop\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.Form1.resources
+E:\DATA\phanlop\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.Properties.Resources.resources
+E:\DATA\phanlop\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.csproj.GenerateResource.cache
+E:\DATA\phanlop\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.csproj.CoreCompileInputs.cache
+E:\DATA\phanlop\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.exe
+E:\DATA\phanlop\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.pdb
