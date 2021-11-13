@@ -9,14 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using QuanLyTour;
-using Controller;
-using QuanLyTour.Controller;
+using Model;
+using QuanLyTour.Model;
 
 namespace QuanLyTour
 {
     public partial class Form1 : Form
     {
-   //     QuanLyTourEntities db = new QuanLyTourEntities();
+        //     QuanLyTourEntities db = new QuanLyTourEntities();
+        List<TourDuLichModel> allTours;
         public Form1()
         {
             InitializeComponent();
@@ -48,7 +49,7 @@ namespace QuanLyTour
         void AddBinding()
         {
             txtMaTour.DataBindings.Add(new Binding("Text", dataGridViewTourDuLich.DataSource, "MaTour"));
-            txtTenTour.DataBindings.Add(new Binding("Text", dataGridViewTourDuLich.DataSource, "TenGoi"));
+            txtTenTour.DataBindings.Add(new Binding("Text", dataGridViewTourDuLich.DataSource, "TenTour"));
             txtDacDiem.DataBindings.Add(new Binding("Text", dataGridViewTourDuLich.DataSource, "DacDiem"));
             txtMaLoaiHinh.DataBindings.Add(new Binding("Text", dataGridViewTourDuLich.DataSource, "MaLoaiHinh"));
         }
@@ -99,15 +100,23 @@ namespace QuanLyTour
         #endregion 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //     LoadData();
-            TourDuLichBUS.Instance.getAll(dataGridViewTourDuLich);
-            ndTourBUS.Instance.getAll(dataGridView1);
-          //  KhachBUS.Instance.getAll(dataGridViewTourDuLich);
 
-            dataGridViewTourDuLich.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewTourDuLich.Columns.Remove("LoaiHinhDuLich");
-           
-            AddBinding();
+            //   TourDuLichBUS.Instance.getAll(dataGridViewTourDuLich);
+            //  ndTourBUS.Instance.getAll(dataGridView1);
+            //  KhachBUS.Instance.getAll(dataGridViewTourDuLich);
+            /*
+                        dataGridViewTourDuLich.DataSource = TourDuLichModel.GetAll();
+
+
+                        dataGridViewTourDuLich.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        dataGridViewTourDuLich.Columns.Remove("LoaiHinhDuLich");*/
+
+
+            allTours = TourDuLichModel.GetAll();
+            dataGridViewTourDuLich.DataSource = allTours;
+
+
+      //      AddBinding();
 
         }
 

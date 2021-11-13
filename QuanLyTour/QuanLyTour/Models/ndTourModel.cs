@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyTour.Model
 {
-    class ndTourMODEL
+    class ndTourModel
     {
         public String MaTour { set; get; }
         public String TenGoi { set; get; }

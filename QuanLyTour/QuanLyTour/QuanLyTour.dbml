@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLyTour" Class="QuanLyTourDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-B5Q6F7K\SQLEXPRESS;Initial Catalog=QuanLyTour;Integrated Security=True" SettingsObjectName="QuanLyTour.Properties.Settings" SettingsPropertyName="QuanLyTourConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-QTR2F8I;Initial Catalog=QuanLyTour;Integrated Security=True" SettingsObjectName="QuanLyTour.Properties.Settings" SettingsPropertyName="QuanLyTourConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.CHIPHI" Member="CHIPHIs">
     <Type Name="CHIPHI">
       <Column Name="MaChiPhi" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -10,13 +10,16 @@
       <Association Name="LOAICHIPHI_CHIPHI" Member="LOAICHIPHI" ThisKey="MaLoaiChiPhi" OtherKey="MaLoaiChiPhi" Type="LOAICHIPHI" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.THAMQUAN" Member="THAMQUANs">
-    <Type Name="THAMQUAN">
+  <Table Name="dbo.TOURDULICH" Member="TOURDULICHes">
+    <Type Name="TOURDULICH">
       <Column Name="MaTour" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MaDiaDiem" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="ThuTu" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Association Name="DIADIEM_THAMQUAN" Member="DIADIEM" ThisKey="MaDiaDiem" OtherKey="MaDiaDiem" Type="DIADIEM" IsForeignKey="true" />
-      <Association Name="TOURDULICH_THAMQUAN" Member="TOURDULICH" ThisKey="MaTour" OtherKey="MaTour" Type="TOURDULICH" IsForeignKey="true" />
+      <Column Name="TenGoi" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="DacDiem" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaLoaiHinh" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Association Name="TOURDULICH_DOANDULICH" Member="DOANDULICHes" ThisKey="MaTour" OtherKey="MaTour" Type="DOANDULICH" />
+      <Association Name="TOURDULICH_GIATOUR" Member="GIATOURs" ThisKey="MaTour" OtherKey="MaTour" Type="GIATOUR" />
+      <Association Name="TOURDULICH_THAMQUAN" Member="THAMQUANs" ThisKey="MaTour" OtherKey="MaTour" Type="THAMQUAN" />
+      <Association Name="LOAIHINHDULICH_TOURDULICH" Member="LOAIHINHDULICH" ThisKey="MaLoaiHinh" OtherKey="MaLoaiHinh" Type="LOAIHINHDULICH" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.CHITIETDOAN" Member="CHITIETDOANs">
@@ -83,6 +86,13 @@
       <Association Name="LOAIHINHDULICH_TOURDULICH" Member="TOURDULICHes" ThisKey="MaLoaiHinh" OtherKey="MaLoaiHinh" Type="TOURDULICH" />
     </Type>
   </Table>
+  <Table Name="dbo.NHANVIEN" Member="NHANVIENs">
+    <Type Name="NHANVIEN">
+      <Column Name="MaNhanVien" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenNhanVien" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="NHANVIEN_PHANBONHANVIEN_DOAN" Member="PHANBONHANVIEN_DOANs" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="PHANBONHANVIEN_DOAN" />
+    </Type>
+  </Table>
   <Table Name="dbo.NOIDUNGTOUR" Member="NOIDUNGTOURs">
     <Type Name="NOIDUNGTOUR">
       <Column Name="MaDoan" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -90,13 +100,6 @@
       <Column Name="KhachSan" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
       <Column Name="DiaDiemThamQuan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Association Name="DOANDULICH_NOIDUNGTOUR" Member="DOANDULICH" ThisKey="MaDoan" OtherKey="MaDoan" Type="DOANDULICH" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.NHANVIEN" Member="NHANVIENs">
-    <Type Name="NHANVIEN">
-      <Column Name="MaNhanVien" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TenNhanVien" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
-      <Association Name="NHANVIEN_PHANBONHANVIEN_DOAN" Member="PHANBONHANVIEN_DOANs" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="PHANBONHANVIEN_DOAN" />
     </Type>
   </Table>
   <Table Name="dbo.PHANBONHANVIEN_DOAN" Member="PHANBONHANVIEN_DOANs">
@@ -108,16 +111,13 @@
       <Association Name="NHANVIEN_PHANBONHANVIEN_DOAN" Member="NHANVIEN" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="NHANVIEN" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.TOURDULICH" Member="TOURDULICHes">
-    <Type Name="TOURDULICH">
+  <Table Name="dbo.THAMQUAN" Member="THAMQUANs">
+    <Type Name="THAMQUAN">
       <Column Name="MaTour" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TenGoi" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
-      <Column Name="DacDiem" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="MaLoaiHinh" Type="System.String" DbType="Char(10)" CanBeNull="true" />
-      <Association Name="TOURDULICH_THAMQUAN" Member="THAMQUANs" ThisKey="MaTour" OtherKey="MaTour" Type="THAMQUAN" />
-      <Association Name="TOURDULICH_DOANDULICH" Member="DOANDULICHes" ThisKey="MaTour" OtherKey="MaTour" Type="DOANDULICH" />
-      <Association Name="TOURDULICH_GIATOUR" Member="GIATOURs" ThisKey="MaTour" OtherKey="MaTour" Type="GIATOUR" />
-      <Association Name="LOAIHINHDULICH_TOURDULICH" Member="LOAIHINHDULICH" ThisKey="MaLoaiHinh" OtherKey="MaLoaiHinh" Type="LOAIHINHDULICH" IsForeignKey="true" />
+      <Column Name="MaDiaDiem" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ThuTu" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="DIADIEM_THAMQUAN" Member="DIADIEM" ThisKey="MaDiaDiem" OtherKey="MaDiaDiem" Type="DIADIEM" IsForeignKey="true" />
+      <Association Name="TOURDULICH_THAMQUAN" Member="TOURDULICH" ThisKey="MaTour" OtherKey="MaTour" Type="TOURDULICH" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

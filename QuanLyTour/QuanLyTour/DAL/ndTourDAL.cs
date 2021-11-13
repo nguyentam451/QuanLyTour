@@ -20,9 +20,9 @@ namespace QuanLyTour.Model
         }
 
         private ndTourDAO() { }
-        public List<ndTourMODEL> getAll()
+        public List<ndTourModel> getAll()
         {
-            List<ndTourMODEL> ndtours = new List<ndTourMODEL>();
+            List<ndTourModel> ndtours = new List<ndTourModel>();
             using (QuanLyTourDataContext db = new QuanLyTourDataContext())
             {
                  var res = (
@@ -32,7 +32,7 @@ namespace QuanLyTour.Model
                     join tq in db.THAMQUANs on nd.MaTour equals tq.MaTour 
                     join gt in db.GIATOURs on nd.MaTour equals gt.MaTour
 
-                    select new ndTourMODEL()
+                    select new ndTourModel()
                     {
                         MaTour = nd.MaTour,
                         TenGoi = nd.TenGoi,

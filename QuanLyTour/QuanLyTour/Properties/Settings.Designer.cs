@@ -44,5 +44,15 @@ namespace QuanLyTour.Properties {
                 return ((string)(this["QuanLyTourConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-QTR2F8I;Initial Catalog=QuanLyTour;Integrated Security=True")]
+        public string QuanLyTourConnectionString2 {
+            get {
+                return ((string)(this["QuanLyTourConnectionString2"]));
+            }
+        }
     }
 }
