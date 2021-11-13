@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 using QuanLyTour;
 using Controller;
+using QuanLyTour.Controller;
 
 namespace QuanLyTour
 {
@@ -99,12 +100,13 @@ namespace QuanLyTour
         private void Form1_Load(object sender, EventArgs e)
         {
             //     LoadData();
-            TourDuLichBUS.Instance.getAll(dataGridViewTourDuLich); 
+            TourDuLichBUS.Instance.getAll(dataGridViewTourDuLich);
+            ndTourBUS.Instance.getAll(dataGridView1);
           //  KhachBUS.Instance.getAll(dataGridViewTourDuLich);
 
             dataGridViewTourDuLich.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewTourDuLich.Columns.Remove("LoaiHinhDuLich");
-
+           
             AddBinding();
 
         }
