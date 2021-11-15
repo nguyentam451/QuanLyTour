@@ -44,10 +44,13 @@ namespace DAL
                              where u.MaLoaiHinh == t.MaLoaiHinh
                              select new
                              {
+                                 
                                  MaTour = u.MaTour,
                                  TenTour = u.TenGoi,
                                  DacDiem = u.DacDiem,
-                                 TenLoaiHinh = t.TenLoaiHinh
+                                 MaLoaiHinh = u.LOAIHINHDULICH.MaLoaiHinh,
+                                 TenLoaiHinh = u.LOAIHINHDULICH.TenLoaiHinh,
+                                    
 
                              };
 
@@ -57,12 +60,19 @@ namespace DAL
                 {
 
                     TourDuLichModel tour = new TourDuLichModel();
+                  
 
 
                     tour.MaTour = i.MaTour;
                     tour.TenTour = i.TenTour;
                     tour.DacDiem = i.DacDiem;
-                    tour.TenLoaiHinh = i.TenLoaiHinh;
+                    tour.MaLoaiHinh = i.MaLoaiHinh;
+
+
+                    tour.LoaiHinhDuLich = new LoaiHinhDuLichModel(i.TenLoaiHinh);
+                    tour.LoaiHinhDuLich.TenLoaiHinh = i.TenLoaiHinh;
+
+
 
                     dsTour.Add(tour);
                 }
@@ -91,7 +101,7 @@ namespace DAL
                     db.TOURDULICHes.InsertOnSubmit(new TOURDULICH()
                     {
                         MaTour = obj.MaTour,
-                        TenGoi = obj.TenLoaiHinh,
+                   //     TenGoi = obj.TenLoaiHinh,
                         DacDiem = obj.DacDiem,
                         MaLoaiHinh = obj.MaLoaiHinh
                     

@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using QuanLyTour;
 using Model;
 using QuanLyTour.Model;
+using QuanLyTour.Models;
 
 namespace QuanLyTour
 {
@@ -18,6 +19,7 @@ namespace QuanLyTour
     {
         //     QuanLyTourEntities db = new QuanLyTourEntities();
         List<TourDuLichModel> allTours;
+        List<DoanDuLichModel> allDoanDuLichs;
         public Form1()
         {
             InitializeComponent();
@@ -101,22 +103,13 @@ namespace QuanLyTour
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            //   TourDuLichBUS.Instance.getAll(dataGridViewTourDuLich);
-            //  ndTourBUS.Instance.getAll(dataGridView1);
-            //  KhachBUS.Instance.getAll(dataGridViewTourDuLich);
-            /*
-                        dataGridViewTourDuLich.DataSource = TourDuLichModel.GetAll();
-
-
-                        dataGridViewTourDuLich.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                        dataGridViewTourDuLich.Columns.Remove("LoaiHinhDuLich");*/
-
-
             allTours = TourDuLichModel.GetAll();
             dataGridViewTourDuLich.DataSource = allTours;
+            dataGridViewTourDuLich.Columns.Remove("LoaiHinhDuLich");
 
+            allDoanDuLichs = DoanDuLichModel.GetAll();
+            dataGridView1.DataSource = allDoanDuLichs;
 
-      //      AddBinding();
 
         }
 

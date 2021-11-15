@@ -13,8 +13,23 @@ namespace QuanLyTour.Model
     public class TourDuLichModel
     {
         public TourDuLichModel() { }
+        public TourDuLichModel(string tentour, string dacdiem)
+        {
 
-       
+            this.TenTour = tentour;
+            this.DacDiem = dacdiem;
+
+        }
+
+        public TourDuLichModel(string maTour, string tenTour, string dacDiem, string maLoaiHinh, LoaiHinhDuLichModel loaiHinhDuLich)
+        {
+            this.MaTour = maTour;
+            this.TenTour = tenTour;
+            this.DacDiem = dacDiem;
+            this.MaLoaiHinh = maLoaiHinh;
+            this.LoaiHinhDuLich = loaiHinhDuLich;
+        }
+
         public string MaTour { get; set; }
 
         public string TenTour { get; set; }
@@ -25,9 +40,18 @@ namespace QuanLyTour.Model
         
         public LoaiHinhDuLichModel LoaiHinhDuLich { get; set; }
 
-        public string TenLoaiHinh { get; set; }
-    
-                        
+        public string TenLoaiTour
+        {
+            get { return LoaiHinhDuLich.TenLoaiHinh; }
+
+        }
+
+
+
+
+
+
+
 
         public static List<TourDuLichModel> GetAll()
         {
