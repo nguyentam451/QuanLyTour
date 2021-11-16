@@ -25,8 +25,6 @@ namespace QuanLyTour.Model
 
         public string TenLoaiHinh { get; set ; }
 
-        
-
         public List<TourDuLichModel> Tours { get; set; }
     }
 }

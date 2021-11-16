@@ -59,7 +59,9 @@
     <Compile Include="DAL\DoanDuLichDAL.cs" />
     <Compile Include="DAL\KhachDAL.cs" />
     <Compile Include="DAL\ndTourDAL.cs" />
+    <Compile Include="Models\ChiTietDoanModel.cs" />
     <Compile Include="Models\DoanDuLichModel.cs" />
+    <Compile Include="Models\KhachHangModel.cs" />
     <Compile Include="Models\LoaiHinhDuLichModel.cs" />
     <Compile Include="Models\ndTourModel.cs" />
     <Compile Include="DAL\TourDuLichDAL.cs" />

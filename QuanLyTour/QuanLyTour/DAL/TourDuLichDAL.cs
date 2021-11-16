@@ -70,7 +70,7 @@ namespace DAL
 
 
                     tour.LoaiHinhDuLich = new LoaiHinhDuLichModel(i.TenLoaiHinh);
-                    tour.LoaiHinhDuLich.TenLoaiHinh = i.TenLoaiHinh;
+                   // tour.LoaiHinhDuLich.TenLoaiHinh = i.TenLoaiHinh;
 
 
 

@@ -32,7 +32,7 @@ namespace QuanLyTour.Models
             return DoanDuLichDAL.getAll();
         }
 
-
+        public List<ChiTietDoanModel> chiTietDoans { get; set; }
 
     }
 }

@@ -47,12 +47,6 @@ namespace QuanLyTour.Model
         }
 
 
-
-
-
-
-
-
         public static List<TourDuLichModel> GetAll()
         {
             return TourDuLichDAL.getAll();

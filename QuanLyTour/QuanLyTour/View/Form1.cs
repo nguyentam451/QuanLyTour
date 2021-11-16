@@ -105,11 +105,18 @@ namespace QuanLyTour
 
             allTours = TourDuLichModel.GetAll();
             dataGridViewTourDuLich.DataSource = allTours;
-            dataGridViewTourDuLich.Columns.Remove("LoaiHinhDuLich");
+            dataGridViewTourDuLich.Columns["LoaiHinhDuLich"].Visible = false;
+            dataGridViewTourDuLich.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
 
             allDoanDuLichs = DoanDuLichModel.GetAll();
             dataGridView1.DataSource = allDoanDuLichs;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.Columns["TourDuLich"].Visible = false;
 
+
+            // add and remove tabpages
+            tabControl1.TabPages.Remove(tabPage3);
 
         }
 
@@ -150,7 +157,7 @@ namespace QuanLyTour
 
         private void label2_Click(object sender, EventArgs e)
         {
-
+               
         }
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
@@ -161,6 +168,29 @@ namespace QuanLyTour
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void lbQuanLyKhach_Click(object sender, EventArgs e)
+        {
+            tabControl1.TabPages.Remove(tabPage1);
+            tabControl1.TabPages.Remove(tabPage2);
+            
+            tabControl1.TabPages.Add(tabPage3);
+        }
+
+        private void lbQuanLyTour_Click(object sender, EventArgs e)
+        {
+            tabControl1.TabPages.Add(tabPage1);
+            tabControl1.TabPages.Add(tabPage2);
+
+            tabControl1.TabPages.Remove(tabPage3);
+
+        }
+
+        private void lbTrangChu_Click(object sender, EventArgs e)
+        {
+            tabControl1.Dispose();
+           
         }
     }
 }
