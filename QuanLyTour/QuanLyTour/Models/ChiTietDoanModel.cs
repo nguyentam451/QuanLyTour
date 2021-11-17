@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyTour.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,6 +38,12 @@ namespace QuanLyTour.Models
         public string QuocTich
         {
             get { return KhachHang.QuocTich; }
+        }
+
+
+        public static List<ChiTietDoanModel> GetAll()
+        {
+            return ChiTietDoanDAL.getAll();
         }
 
     }

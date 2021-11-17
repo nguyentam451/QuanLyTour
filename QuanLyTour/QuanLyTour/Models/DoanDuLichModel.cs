@@ -13,26 +13,31 @@ namespace QuanLyTour.Models
         public DoanDuLichModel() { }
 
         public string MaDoan { get; set; }
+        public string MaTour { get; set; }
         public DateTime NgayKhoiHanh { get; set; }
         public DateTime NgayKetThuc { get; set; }
-        public string MaTour { get; set; }
+        
         public TourDuLichModel TourDuLich { get; set; }
-
-        public string TenTour
+        public List<ChiTietDoanModel> chiTietDoans { get; set; }
+      
+        public ndTourModel NoiDungTour { get; set; }
+        public string HanhTrinh
         {
-            get { return TourDuLich.TenTour; }
-
+            get { return NoiDungTour.HanhTrinh;  }
         }
-        public string DacDiem
+        public string KhachSan
         {
-            get { return TourDuLich.DacDiem; }
+            get { return NoiDungTour.KhachSan; }
         }
+        public string DiaDiemThamQuan
+        {
+            get { return NoiDungTour.DiaDiemThamQuan; }
+        }
+
         public static List<DoanDuLichModel> GetAll()
         {
             return DoanDuLichDAL.getAll();
         }
-
-        public List<ChiTietDoanModel> chiTietDoans { get; set; }
 
     }
 }

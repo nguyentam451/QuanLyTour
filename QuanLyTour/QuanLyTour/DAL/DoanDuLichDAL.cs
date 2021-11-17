@@ -29,14 +29,15 @@ namespace QuanLyTour.DAL
             {
                
                 var result = from u in db.DOANDULICHes
-                             from t in db.TOURDULICHes
-                             where u.MaTour == t.MaTour
+                             from t in db.NOIDUNGTOURs
+                             where u.MaDoan == t.MaDoan
                              select new
                              {
                                  MaDoan = u.MaDoan,
                                  MaTour = u.MaTour,
-                                 TenTour = t.TenGoi,
-                                 DacDiem = t.DacDiem,
+                                 HanhTrinh = t.HanhTrinh,
+                                 KhachSan = t.KhachSan,
+                                 DiaDiem = t.DiaDiemThamQuan,
                                  NgayKhoiHanhh = u.NgayKhoiHanh,
                                  NgayKetThuc = u.NgayKetThuc,
 
@@ -56,7 +57,7 @@ namespace QuanLyTour.DAL
                     doan.MaTour = i.MaTour;
                     doan.NgayKhoiHanh = (DateTime)i.NgayKhoiHanhh;
                     doan.NgayKetThuc = (DateTime)i.NgayKetThuc;
-                    doan.TourDuLich = new Model.TourDuLichModel(i.TenTour, i.DacDiem);
+                    doan.NoiDungTour = new Model.ndTourModel(i.HanhTrinh, i.KhachSan, i.DiaDiem);
 
 
 

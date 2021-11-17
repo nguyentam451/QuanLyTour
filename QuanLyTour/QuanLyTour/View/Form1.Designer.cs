@@ -44,14 +44,11 @@ namespace QuanLyTour
             this.lbMaLoaiHinh = new System.Windows.Forms.Label();
             this.txtMaLoaiHinh = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lbQuanLyTour = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPageTour = new System.Windows.Forms.TabPage();
+            this.tabPageChiTietTour = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -59,15 +56,22 @@ namespace QuanLyTour
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPageKhach = new System.Windows.Forms.TabPage();
+            this.dtgvKhachHang = new System.Windows.Forms.DataGridView();
+            this.tabPageGia = new System.Windows.Forms.TabPage();
+            this.dtgvGia = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTourDuLich)).BeginInit();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.tabPageTour.SuspendLayout();
+            this.tabPageChiTietTour.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPageKhach.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvKhachHang)).BeginInit();
+            this.tabPageGia.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvGia)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewTourDuLich
@@ -133,7 +137,7 @@ namespace QuanLyTour
             this.lbTittle.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lbTittle.Location = new System.Drawing.Point(280, 33);
             this.lbTittle.Name = "lbTittle";
-            this.lbTittle.Size = new System.Drawing.Size(1014, 60);
+            this.lbTittle.Size = new System.Drawing.Size(1099, 60);
             this.lbTittle.TabIndex = 6;
             this.lbTittle.Text = "Quản lý tour du lịch";
             this.lbTittle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -218,39 +222,11 @@ namespace QuanLyTour
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SlateBlue;
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.lbQuanLyTour);
             this.panel1.Location = new System.Drawing.Point(29, 145);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(245, 670);
+            this.panel1.Size = new System.Drawing.Size(245, 698);
             this.panel1.TabIndex = 15;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.SlateGray;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 100);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(239, 71);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Quản lý khách ";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.lbQuanLyKhach_Click);
-            // 
-            // lbQuanLyTour
-            // 
-            this.lbQuanLyTour.BackColor = System.Drawing.Color.SkyBlue;
-            this.lbQuanLyTour.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbQuanLyTour.ForeColor = System.Drawing.Color.White;
-            this.lbQuanLyTour.Location = new System.Drawing.Point(3, 10);
-            this.lbQuanLyTour.Name = "lbQuanLyTour";
-            this.lbQuanLyTour.Size = new System.Drawing.Size(239, 71);
-            this.lbQuanLyTour.TabIndex = 0;
-            this.lbQuanLyTour.Text = "Quản lý tour";
-            this.lbQuanLyTour.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbQuanLyTour.Click += new System.EventHandler(this.lbQuanLyTour_Click);
             // 
             // txtTimKiem
             // 
@@ -262,16 +238,6 @@ namespace QuanLyTour
             this.txtTimKiem.Size = new System.Drawing.Size(263, 37);
             this.txtTimKiem.TabIndex = 16;
             this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.SystemColors.Control;
-            this.label1.Image = global::QuanLyTour.Properties.Resources.flight__1___1_;
-            this.label1.Location = new System.Drawing.Point(73, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 133);
-            this.label1.TabIndex = 17;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel2
             // 
@@ -294,44 +260,46 @@ namespace QuanLyTour
             this.panel2.Location = new System.Drawing.Point(3, 6);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1002, 628);
+            this.panel2.Size = new System.Drawing.Size(1081, 628);
             this.panel2.TabIndex = 18;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(285, 145);
+            this.tabControl1.Controls.Add(this.tabPageTour);
+            this.tabControl1.Controls.Add(this.tabPageChiTietTour);
+            this.tabControl1.Controls.Add(this.tabPageKhach);
+            this.tabControl1.Controls.Add(this.tabPageGia);
+            this.tabControl1.Location = new System.Drawing.Point(286, 145);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1009, 670);
+            this.tabControl1.Size = new System.Drawing.Size(1017, 667);
             this.tabControl1.TabIndex = 19;
             // 
-            // tabPage1
+            // tabPageTour
             // 
-            this.tabPage1.Controls.Add(this.panel2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(1001, 641);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Tour du lịch";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPageTour.Controls.Add(this.panel2);
+            this.tabPageTour.Location = new System.Drawing.Point(4, 25);
+            this.tabPageTour.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPageTour.Name = "tabPageTour";
+            this.tabPageTour.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPageTour.Size = new System.Drawing.Size(1009, 638);
+            this.tabPageTour.TabIndex = 0;
+            this.tabPageTour.Text = "Tour du lịch";
+            this.tabPageTour.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // tabPageChiTietTour
             // 
-            this.tabPage2.Controls.Add(this.panel3);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(1001, 641);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Nội dung tour";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPageChiTietTour.Controls.Add(this.panel3);
+            this.tabPageChiTietTour.Location = new System.Drawing.Point(4, 25);
+            this.tabPageChiTietTour.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPageChiTietTour.Name = "tabPageChiTietTour";
+            this.tabPageChiTietTour.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPageChiTietTour.Size = new System.Drawing.Size(840, 417);
+            this.tabPageChiTietTour.TabIndex = 1;
+            this.tabPageChiTietTour.Text = "Chi tiết tour";
+            this.tabPageChiTietTour.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
@@ -388,7 +356,7 @@ namespace QuanLyTour
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1001, 573);
+            this.dataGridView1.Size = new System.Drawing.Size(1069, 573);
             this.dataGridView1.TabIndex = 0;
             // 
             // button3
@@ -411,20 +379,67 @@ namespace QuanLyTour
             this.button4.Text = "Thêm";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // tabPageKhach
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1001, 641);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Thông tin ";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPageKhach.Controls.Add(this.dtgvKhachHang);
+            this.tabPageKhach.Location = new System.Drawing.Point(4, 25);
+            this.tabPageKhach.Name = "tabPageKhach";
+            this.tabPageKhach.Size = new System.Drawing.Size(840, 417);
+            this.tabPageKhach.TabIndex = 2;
+            this.tabPageKhach.Text = "Thông tin";
+            this.tabPageKhach.UseVisualStyleBackColor = true;
+            // 
+            // dtgvKhachHang
+            // 
+            this.dtgvKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvKhachHang.Location = new System.Drawing.Point(0, 127);
+            this.dtgvKhachHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtgvKhachHang.Name = "dtgvKhachHang";
+            this.dtgvKhachHang.RowHeadersWidth = 51;
+            this.dtgvKhachHang.RowTemplate.Height = 24;
+            this.dtgvKhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgvKhachHang.Size = new System.Drawing.Size(1017, 505);
+            this.dtgvKhachHang.TabIndex = 1;
+            this.dtgvKhachHang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvKhachHang_CellContentClick);
+            // 
+            // tabPageGia
+            // 
+            this.tabPageGia.Controls.Add(this.dtgvGia);
+            this.tabPageGia.Location = new System.Drawing.Point(4, 25);
+            this.tabPageGia.Name = "tabPageGia";
+            this.tabPageGia.Size = new System.Drawing.Size(840, 417);
+            this.tabPageGia.TabIndex = 3;
+            this.tabPageGia.Text = "Bảng giá";
+            this.tabPageGia.UseVisualStyleBackColor = true;
+            // 
+            // dtgvGia
+            // 
+            this.dtgvGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvGia.Location = new System.Drawing.Point(26, 65);
+            this.dtgvGia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtgvGia.Name = "dtgvGia";
+            this.dtgvGia.RowHeadersWidth = 51;
+            this.dtgvGia.RowTemplate.Height = 24;
+            this.dtgvGia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgvGia.Size = new System.Drawing.Size(1019, 540);
+            this.dtgvGia.TabIndex = 2;
+            this.dtgvGia.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvGia_CellContentClick);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.Image = global::QuanLyTour.Properties.Resources.flight__1___1_;
+            this.label1.Location = new System.Drawing.Point(73, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(167, 133);
+            this.label1.TabIndex = 17;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1321, 824);
+            this.ClientSize = new System.Drawing.Size(1395, 870);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -434,15 +449,18 @@ namespace QuanLyTour
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTourDuLich)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
+            this.tabPageTour.ResumeLayout(false);
+            this.tabPageChiTietTour.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPageKhach.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvKhachHang)).EndInit();
+            this.tabPageGia.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvGia)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -466,12 +484,10 @@ namespace QuanLyTour
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lbQuanLyTour;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPageTour;
+        private System.Windows.Forms.TabPage tabPageChiTietTour;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
@@ -479,7 +495,10 @@ namespace QuanLyTour
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPageKhach;
+        private System.Windows.Forms.DataGridView dtgvKhachHang;
+        private System.Windows.Forms.TabPage tabPageGia;
+        private System.Windows.Forms.DataGridView dtgvGia;
     }
 }
 

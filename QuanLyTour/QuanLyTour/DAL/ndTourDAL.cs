@@ -20,7 +20,7 @@ namespace QuanLyTour.Model
         }
 
         private ndTourDAO() { }
-        public List<ndTourModel> getAll()
+       /* public List<ndTourModel> getAll()
         {
             List<ndTourModel> ndtours = new List<ndTourModel>();
             using (QuanLyTourDataContext db = new QuanLyTourDataContext())
@@ -43,7 +43,7 @@ namespace QuanLyTour.Model
                         TGBatDau = gt.ThoiGianBatDau.Value,
                         TGKetThuc = gt.ThoiGianKetThuc.Value
                     });
-             foreach(var i in res)
+                foreach (var i in res)
                 {
                     ndtours.Add(i);
                 }
@@ -51,7 +51,7 @@ namespace QuanLyTour.Model
                
             }
             return ndtours;
-        }
+        }*/
 
     }
 }

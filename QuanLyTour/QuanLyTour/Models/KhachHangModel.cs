@@ -8,6 +8,15 @@ namespace QuanLyTour.Models
 {
     public class KhachHangModel
     {
+        public KhachHangModel(string hoten, string socmnd, string diachi, string gioitinh, string sdt, string quoctich)
+        {
+            this.HoTen = hoten;
+            this.SoCMND = socmnd;
+            this.DiaChi = diachi;
+            this.GioiTinh = gioitinh;
+            this.SDT = sdt;
+            this.QuocTich = quoctich;
+        }
         public string MaKhachHang { get; set; }
         public string HoTen { get; set; }
         public string SoCMND { get; set; }

@@ -20,6 +20,8 @@ namespace QuanLyTour
         //     QuanLyTourEntities db = new QuanLyTourEntities();
         List<TourDuLichModel> allTours;
         List<DoanDuLichModel> allDoanDuLichs;
+        List<ChiTietDoanModel> allThongTinKhachHangs;
+        List<GiaTourModel> allBangGias;
         public Form1()
         {
             InitializeComponent();
@@ -111,13 +113,23 @@ namespace QuanLyTour
 
             allDoanDuLichs = DoanDuLichModel.GetAll();
             dataGridView1.DataSource = allDoanDuLichs;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+         //   dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.Columns["TourDuLich"].Visible = false;
+            dataGridView1.Columns["NoiDungTour"].Visible = false;
 
+
+            allThongTinKhachHangs = ChiTietDoanModel.GetAll();
+            dtgvKhachHang.DataSource = allThongTinKhachHangs;
+            dtgvKhachHang.Columns["DoanDuLich"].Visible = false;
+            dtgvKhachHang.Columns["KhachHang"].Visible = false;
+
+            allBangGias = GiaTourModel.GetAll();
+            dtgvGia.DataSource = allBangGias;
+            dtgvGia.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             // add and remove tabpages
-            tabControl1.TabPages.Remove(tabPage3);
-
+            tabControl1.TabPages.Remove(tabPageKhach);
+            tabControl1.TabPages.Remove(tabPageGia);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -172,25 +184,51 @@ namespace QuanLyTour
 
         private void lbQuanLyKhach_Click(object sender, EventArgs e)
         {
-            tabControl1.TabPages.Remove(tabPage1);
-            tabControl1.TabPages.Remove(tabPage2);
-            
-            tabControl1.TabPages.Add(tabPage3);
+            tabControl1.TabPages.Remove(tabPageTour);
+            tabControl1.TabPages.Remove(tabPageChiTietTour);
+            tabControl1.TabPages.Remove(tabPageGia);
+
+            tabControl1.TabPages.Add(tabPageKhach);
         }
 
         private void lbQuanLyTour_Click(object sender, EventArgs e)
         {
-            tabControl1.TabPages.Add(tabPage1);
-            tabControl1.TabPages.Add(tabPage2);
+            tabControl1.TabPages.Add(tabPageTour);
+            tabControl1.TabPages.Add(tabPageChiTietTour);
 
-            tabControl1.TabPages.Remove(tabPage3);
+            tabControl1.TabPages.Remove(tabPageKhach);
+            tabControl1.TabPages.Remove(tabPageGia);
 
         }
 
         private void lbTrangChu_Click(object sender, EventArgs e)
         {
-            tabControl1.Dispose();
+           // tabControl1.Dispose();
            
+        }
+
+        private void dtgvKhachHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dtgvGia_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void lbBangGia_Click(object sender, EventArgs e)
+        {
+            tabControl1.TabPages.Remove(tabPageTour);
+            tabControl1.TabPages.Remove(tabPageChiTietTour);
+            tabControl1.TabPages.Remove(tabPageKhach);
+
+            tabControl1.TabPages.Add(tabPageGia);
         }
     }
 }

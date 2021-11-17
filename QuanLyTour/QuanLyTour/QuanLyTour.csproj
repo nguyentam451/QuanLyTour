@@ -56,11 +56,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\ChiTietDoanDAL.cs" />
     <Compile Include="DAL\DoanDuLichDAL.cs" />
+    <Compile Include="DAL\GiaTourDAL.cs" />
     <Compile Include="DAL\KhachDAL.cs" />
     <Compile Include="DAL\ndTourDAL.cs" />
+    <Compile Include="View\FormBangGia\FormBangGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormBangGia\FormBangGia.Designer.cs">
+      <DependentUpon>FormBangGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormKhachHang\FormKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormKhachHang\FormKhachHang.Designer.cs">
+      <DependentUpon>FormKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormTour\FormTour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormTour\FormTour.Designer.cs">
+      <DependentUpon>FormTour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormTrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormTrangChu.Designer.cs">
+      <DependentUpon>FormTrangChu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\ChiTietDoanModel.cs" />
     <Compile Include="Models\DoanDuLichModel.cs" />
+    <Compile Include="Models\GiaTourModel.cs" />
     <Compile Include="Models\KhachHangModel.cs" />
     <Compile Include="Models\LoaiHinhDuLichModel.cs" />
     <Compile Include="Models\ndTourModel.cs" />
@@ -85,6 +112,18 @@
     <Compile Include="View\ThemTour.Designer.cs">
       <DependentUpon>ThemTour.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\FormBangGia\FormBangGia.resx">
+      <DependentUpon>FormBangGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormKhachHang\FormKhachHang.resx">
+      <DependentUpon>FormKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormTour\FormTour.resx">
+      <DependentUpon>FormTour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormTrangChu.resx">
+      <DependentUpon>FormTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

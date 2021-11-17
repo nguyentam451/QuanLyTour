@@ -7,15 +7,19 @@ using System.Threading.Tasks;
 
 namespace QuanLyTour.Model
 {
-    class ndTourModel
+   public class ndTourModel
     {
-        public String MaTour { set; get; }
-        public String TenGoi { set; get; }
-        public String DacDiem { set; get; }
-        public IEnumerable TenLoaiHinh { set; get; }
-        public IEnumerable MaDiaDiem { set; get; }
-        public int ThanhTien { set; get; }
-        public DateTime TGBatDau { set; get; }
-        public DateTime TGKetThuc { set; get; }
+        public ndTourModel(string hanhtrinh, string khachsan, string diadiem)
+        {
+            this.HanhTrinh = hanhtrinh;
+            this.KhachSan = khachsan;
+            this.DiaDiemThamQuan = diadiem;
+        }
+        public string MaDoan { get; set; }
+        public string HanhTrinh { get; set; }
+        public string KhachSan { get; set; }
+        public string DiaDiemThamQuan { get; set; }
+
+
     }
 }
