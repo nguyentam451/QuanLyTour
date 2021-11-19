@@ -15,7 +15,6 @@ namespace QuanLyTour.Model
         }
         public LoaiHinhDuLichModel(string tenLoaiHinh)
         {
-          
             this.TenLoaiHinh = tenLoaiHinh;
          
         }
@@ -26,5 +25,10 @@ namespace QuanLyTour.Model
         public string TenLoaiHinh { get; set ; }
 
         public List<TourDuLichModel> Tours { get; set; }
+
+        public static List<LoaiHinhDuLichModel> GetAll()
+        {
+            return DAL.LoaiHinhDuLichDAL.getAll();
+        }
     }
 }

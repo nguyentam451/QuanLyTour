@@ -35,7 +35,6 @@ namespace QuanLyTour.Model
         public string TenTour { get; set; }
         public string DacDiem { get; set; }
 
-
         public string MaLoaiHinh { get; set; }
         
         public LoaiHinhDuLichModel LoaiHinhDuLich { get; set; }
@@ -46,6 +45,7 @@ namespace QuanLyTour.Model
 
         }
 
+        public string TenDacDiem { get; set; }
 
         public static List<TourDuLichModel> GetAll()
         {
@@ -57,15 +57,37 @@ namespace QuanLyTour.Model
             return TourDuLichDAL.Insert(this);
         }
 
+        public bool DeleteToDB()
+        {
+            return TourDuLichDAL.Delete(this);
+        }
+        public bool UpdateDB()
+        {
+            return TourDuLichDAL.Update(this);
+        }
+
         public static int getCount()
         {
             return TourDuLichDAL.getCount();
         }
 
-        /* public int UpdateToDB()
-         {
-             return TourDuLichDAL.Update(this);
-         }
-     }*/
+        public static TourDuLichModel findTourDuLich_Ma(List<TourDuLichModel> list , string maTour)
+        {
+            TourDuLichModel res = new TourDuLichModel();
+            for (int i = 0; i < list.Count; i++)
+            {
+                TourDuLichModel a = list[i];
+                if (a.MaTour.Equals(maTour))
+                {
+                    res.MaTour = a.MaTour;
+                    res.TenTour = a.TenTour;
+                    res.DacDiem = a.DacDiem;
+                    res.MaLoaiHinh = a.MaLoaiHinh;
+                }
+            }
+            return res;
+        }
+
+        
     }
 }

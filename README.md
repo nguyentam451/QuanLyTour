@@ -13,5 +13,5 @@ Mỗi khách hàng có mã số khách hàng, họ tên khách hàng, số chứ
 
 # Database 
 <div>
-  <img  src="./DataBase/ERD.png">
+  <img  src="./DataBase/ERD.pdf">
 </div>  
