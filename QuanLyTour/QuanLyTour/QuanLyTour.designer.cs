@@ -72,7 +72,7 @@ namespace QuanLyTour
     #endregion
 		
 		public QuanLyTourDataContext() : 
-				base(global::QuanLyTour.Properties.Settings.Default.QuanLyTourConnectionString2, mappingSource)
+				base(global::QuanLyTour.Properties.Settings.Default.QuanLyTourConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
