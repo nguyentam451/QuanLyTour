@@ -296,7 +296,7 @@ namespace QuanLyTour
             this.tabPageChiTietTour.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPageChiTietTour.Name = "tabPageChiTietTour";
             this.tabPageChiTietTour.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPageChiTietTour.Size = new System.Drawing.Size(840, 417);
+            this.tabPageChiTietTour.Size = new System.Drawing.Size(1009, 638);
             this.tabPageChiTietTour.TabIndex = 1;
             this.tabPageChiTietTour.Text = "Chi tiết tour";
             this.tabPageChiTietTour.UseVisualStyleBackColor = true;
@@ -358,6 +358,7 @@ namespace QuanLyTour
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1069, 573);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // button3
             // 
@@ -384,7 +385,7 @@ namespace QuanLyTour
             this.tabPageKhach.Controls.Add(this.dtgvKhachHang);
             this.tabPageKhach.Location = new System.Drawing.Point(4, 25);
             this.tabPageKhach.Name = "tabPageKhach";
-            this.tabPageKhach.Size = new System.Drawing.Size(840, 417);
+            this.tabPageKhach.Size = new System.Drawing.Size(1009, 638);
             this.tabPageKhach.TabIndex = 2;
             this.tabPageKhach.Text = "Thông tin";
             this.tabPageKhach.UseVisualStyleBackColor = true;
@@ -407,7 +408,7 @@ namespace QuanLyTour
             this.tabPageGia.Controls.Add(this.dtgvGia);
             this.tabPageGia.Location = new System.Drawing.Point(4, 25);
             this.tabPageGia.Name = "tabPageGia";
-            this.tabPageGia.Size = new System.Drawing.Size(840, 417);
+            this.tabPageGia.Size = new System.Drawing.Size(1009, 638);
             this.tabPageGia.TabIndex = 3;
             this.tabPageGia.Text = "Bảng giá";
             this.tabPageGia.UseVisualStyleBackColor = true;

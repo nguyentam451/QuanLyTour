@@ -66,3 +66,7 @@ C:\Users\Admin\source\repos\Git\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanL
 C:\Users\Admin\source\repos\Git\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.exe
 C:\Users\Admin\source\repos\Git\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.pdb
 C:\Users\Admin\source\repos\Git\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.View.ThemTour.resources
+C:\Users\Admin\source\repos\Git\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.View.FormBangGia.FormBangGia.resources
+C:\Users\Admin\source\repos\Git\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.View.FormKhachHang.FormKhachHang.resources
+C:\Users\Admin\source\repos\Git\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.View.FormTour.FormTour.resources
+C:\Users\Admin\source\repos\Git\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.Form3.resources

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyTour.View.FormTour;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,14 @@ namespace QuanLyTour
         public Form3()
         {
             InitializeComponent();
+        }
+
+        private void lbQuanLyTour_Click(object sender, EventArgs e)
+        {
+            FormTour form = new FormTour();
+            form.ShowDialog();
+
+           
         }
     }
 }

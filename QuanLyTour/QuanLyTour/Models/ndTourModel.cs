@@ -9,6 +9,13 @@ namespace QuanLyTour.Model
 {
    public class ndTourModel
     {
+        public ndTourModel(string madoan, string hanhtrinh, string khachsan, string diadiem)
+        {
+            this.MaDoan = madoan;
+            this.HanhTrinh = hanhtrinh;
+            this.KhachSan = khachsan;
+            this.DiaDiemThamQuan = diadiem;
+        }
         public ndTourModel(string hanhtrinh, string khachsan, string diadiem)
         {
             this.HanhTrinh = hanhtrinh;

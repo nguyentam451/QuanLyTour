@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyTour.View.FormTour;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,9 +15,10 @@ namespace QuanLyTour
         [STAThread]
         static void Main()
         {
+            //FormTour t = new FormTour();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FormTour());
         }
     }
 }

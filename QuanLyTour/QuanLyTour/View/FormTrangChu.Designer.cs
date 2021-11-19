@@ -45,6 +45,7 @@ namespace QuanLyTour
             this.lbQuanLyTour.TabIndex = 1;
             this.lbQuanLyTour.Text = "Tour Du Lịch";
             this.lbQuanLyTour.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbQuanLyTour.Click += new System.EventHandler(this.lbQuanLyTour_Click);
             // 
             // label2
             // 

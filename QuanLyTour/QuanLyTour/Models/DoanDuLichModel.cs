@@ -39,5 +39,18 @@ namespace QuanLyTour.Models
             return DoanDuLichDAL.getAll();
         }
 
+        public bool InsertToDB()
+        {
+            return DoanDuLichDAL.Insert(this);
+        }
+
+        public static bool DeleteToDB(string id)
+        {
+            return DoanDuLichDAL.Delete(id);
+        }
+        public bool UpdateToDB()
+        {
+            return DoanDuLichDAL.Update(this);
+        }
     }
 }
