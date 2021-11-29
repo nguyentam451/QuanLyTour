@@ -18,10 +18,9 @@ namespace QuanLyTour
     public partial class Form1 : Form
     {
         //     QuanLyTourEntities db = new QuanLyTourEntities();
-        List<TourDuLichModel> allTours;
+      
         List<DoanDuLichModel> allDoanDuLichs;
-        List<ChiTietDoanModel> allThongTinKhachHangs;
-        List<GiaTourModel> allBangGias;
+        int currentIndex;
         public Form1()
         {
             InitializeComponent();
@@ -52,10 +51,7 @@ namespace QuanLyTour
 
         void AddBinding()
         {
-            txtMaTour.DataBindings.Add(new Binding("Text", dataGridViewTourDuLich.DataSource, "MaTour"));
-            txtTenTour.DataBindings.Add(new Binding("Text", dataGridViewTourDuLich.DataSource, "TenTour"));
-            txtDacDiem.DataBindings.Add(new Binding("Text", dataGridViewTourDuLich.DataSource, "DacDiem"));
-            txtMaLoaiHinh.DataBindings.Add(new Binding("Text", dataGridViewTourDuLich.DataSource, "MaLoaiHinh"));
+
         }
 
         void addTour()
@@ -105,31 +101,11 @@ namespace QuanLyTour
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            allTours = TourDuLichModel.GetAll();
-            dataGridViewTourDuLich.DataSource = allTours;
-            dataGridViewTourDuLich.Columns["LoaiHinhDuLich"].Visible = false;
-            dataGridViewTourDuLich.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-
             allDoanDuLichs = DoanDuLichModel.GetAll();
-            dataGridView1.DataSource = allDoanDuLichs;
-         //   dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.Columns["TourDuLich"].Visible = false;
-            dataGridView1.Columns["NoiDungTour"].Visible = false;
-
-
-            allThongTinKhachHangs = ChiTietDoanModel.GetAll();
-            dtgvKhachHang.DataSource = allThongTinKhachHangs;
-            dtgvKhachHang.Columns["DoanDuLich"].Visible = false;
-            dtgvKhachHang.Columns["KhachHang"].Visible = false;
-
-            allBangGias = GiaTourModel.GetAll();
-            dtgvGia.DataSource = allBangGias;
-            dtgvGia.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-            // add and remove tabpages
-            tabControl1.TabPages.Remove(tabPageKhach);
-            tabControl1.TabPages.Remove(tabPageGia);
+            dtgvChiTietTour.DataSource = allDoanDuLichs;
+            //   dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtgvChiTietTour.Columns["TourDuLich"].Visible = false;
+            dtgvChiTietTour.Columns["NoiDungTour"].Visible = false;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -184,20 +160,6 @@ namespace QuanLyTour
 
         private void lbQuanLyKhach_Click(object sender, EventArgs e)
         {
-            tabControl1.TabPages.Remove(tabPageTour);
-            tabControl1.TabPages.Remove(tabPageChiTietTour);
-            tabControl1.TabPages.Remove(tabPageGia);
-
-            tabControl1.TabPages.Add(tabPageKhach);
-        }
-
-        private void lbQuanLyTour_Click(object sender, EventArgs e)
-        {
-            tabControl1.TabPages.Add(tabPageTour);
-            tabControl1.TabPages.Add(tabPageChiTietTour);
-
-            tabControl1.TabPages.Remove(tabPageKhach);
-            tabControl1.TabPages.Remove(tabPageGia);
 
         }
 
@@ -224,16 +186,132 @@ namespace QuanLyTour
 
         private void lbBangGia_Click(object sender, EventArgs e)
         {
-            tabControl1.TabPages.Remove(tabPageTour);
-            tabControl1.TabPages.Remove(tabPageChiTietTour);
-            tabControl1.TabPages.Remove(tabPageKhach);
 
-            tabControl1.TabPages.Add(tabPageGia);
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnThemChiTietTour_Click(object sender, EventArgs e)
+        {
+            DoanDuLichModel doan = new DoanDuLichModel();
+            doan.MaDoan = txtMaDoan.Text;
+            doan.MaTour = txtMaTour1.Text;
+            doan.NgayKhoiHanh = DateTime.Parse(txtNgayKH.Text);
+            doan.NgayKetThuc = DateTime.Parse(txtNgayKT.Text);
+            doan.NoiDungTour = new ndTourModel(txtHanhTrinh.Text, txtKhachSan.Text, txtDiaDiem.Text);
+
+
+            if (doan.InsertToDB() == true)
+            {
+                MessageBox.Show("Thêm thành công");
+                allDoanDuLichs.Add(doan);
+                dtgvChiTietTour.DataSource = null;
+                dtgvChiTietTour.DataSource = allDoanDuLichs;
+
+                dtgvChiTietTour.Columns["TourDuLich"].Visible = false;
+                dtgvChiTietTour.Columns["NoiDungTour"].Visible = false;
+
+            }
+            else
+            {
+                MessageBox.Show("Thêm thất bại");
+            }
+
+        }
+
+        private void btnXoaChiTietTour_Click(object sender, EventArgs e)
+        {
+            string id = txtMaDoan.Text;
+
+            if (DoanDuLichModel.DeleteToDB(id))
+            {
+                MessageBox.Show("Xóa thành công");
+                allDoanDuLichs.RemoveAt(currentIndex);
+                dtgvChiTietTour.DataSource = null;
+                dtgvChiTietTour.DataSource = allDoanDuLichs;
+
+                dtgvChiTietTour.Columns["TourDuLich"].Visible = false;
+                dtgvChiTietTour.Columns["NoiDungTour"].Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Xóa thất bại");
+            }
+        }
+
+        private void dtgvChiTietTour_SelectionChanged(object sender, EventArgs e)
+        {
+            currentIndex = dtgvChiTietTour.CurrentCell.RowIndex;
+
+            // update current tour details
+            var doan = allDoanDuLichs[currentIndex];
+            if (doan != null)
+            {
+                txtMaDoan.Text = doan.MaDoan;
+                //cbLoaiTour.SelectedValue = tour.MaLoai;
+                txtMaTour1.Text = doan.MaTour;
+                txtNgayKH.Text = doan.NgayKhoiHanh.ToString();
+                txtNgayKT.Text = doan.NgayKetThuc.ToString();
+                txtHanhTrinh.Text = doan.HanhTrinh;
+                txtKhachSan.Text = doan.KhachSan;
+                txtDiaDiem.Text = doan.DiaDiemThamQuan;
+            }
+
+        }
+
+        private void dtgvChiTietTour_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnSuaChiTietTour_Click(object sender, EventArgs e)
+        {
+            var doan = allDoanDuLichs[currentIndex];
+            doan.MaDoan = txtMaDoan.Text;
+            doan.MaTour = txtMaTour1.Text;
+            doan.NgayKhoiHanh = DateTime.Parse(txtNgayKH.Text);
+            doan.NgayKetThuc = DateTime.Parse(txtNgayKT.Text);
+            doan.NoiDungTour = new ndTourModel(txtHanhTrinh.Text, txtKhachSan.Text, txtDiaDiem.Text);
+
+
+
+            if (doan.UpdateToDB())
+            {
+                MessageBox.Show("Sửa thành công");
+                dtgvChiTietTour.DataSource = null;
+                dtgvChiTietTour.DataSource = allDoanDuLichs;
+                dtgvChiTietTour.Columns["TourDuLich"].Visible = false;
+                dtgvChiTietTour.Columns["NoiDungTour"].Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Sửa thất bại");
+            }
+
+
+            // refresh GUI
+            dtgvChiTietTour.DataSource = null;
+            dtgvChiTietTour.DataSource = allDoanDuLichs;//TourBUS.GetAll();
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+            panelDoanDuLich.Show();
+            panelTour.Hide();
+        }
+
+        private void lbTourDuLich_Click(object sender, EventArgs e)
+        {
+            panelTour.Show();
+            panelDoanDuLich.Hide();
         }
     }
 }

@@ -29,106 +29,38 @@ namespace QuanLyTour
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridViewTourDuLich = new System.Windows.Forms.DataGridView();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnTim = new System.Windows.Forms.Button();
             this.lbTittle = new System.Windows.Forms.Label();
-            this.lbMaTour = new System.Windows.Forms.Label();
-            this.txtMaTour = new System.Windows.Forms.TextBox();
-            this.txtDacDiem = new System.Windows.Forms.TextBox();
-            this.lbTenTour = new System.Windows.Forms.Label();
-            this.txtTenTour = new System.Windows.Forms.TextBox();
-            this.lbDacDiem = new System.Windows.Forms.Label();
-            this.lbMaLoaiHinh = new System.Windows.Forms.Label();
-            this.txtMaLoaiHinh = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPageTour = new System.Windows.Forms.TabPage();
-            this.tabPageChiTietTour = new System.Windows.Forms.TabPage();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.tabPageKhach = new System.Windows.Forms.TabPage();
-            this.dtgvKhachHang = new System.Windows.Forms.DataGridView();
-            this.tabPageGia = new System.Windows.Forms.TabPage();
-            this.dtgvGia = new System.Windows.Forms.DataGridView();
+            this.lbDoanDuLich = new System.Windows.Forms.Label();
+            this.lbTourDuLich = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTourDuLich)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPageTour.SuspendLayout();
-            this.tabPageChiTietTour.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.panelDoanDuLich = new System.Windows.Forms.Panel();
+            this.btnSuaChiTietTour = new System.Windows.Forms.Button();
+            this.btnXoaChiTietTour = new System.Windows.Forms.Button();
+            this.btnThemChiTietTour = new System.Windows.Forms.Button();
+            this.txtDiaDiem = new System.Windows.Forms.TextBox();
+            this.txtKhachSan = new System.Windows.Forms.TextBox();
+            this.txtHanhTrinh = new System.Windows.Forms.TextBox();
+            this.txtNgayKT = new System.Windows.Forms.TextBox();
+            this.txtNgayKH = new System.Windows.Forms.TextBox();
+            this.txtMaTour1 = new System.Windows.Forms.TextBox();
+            this.txtMaDoan = new System.Windows.Forms.TextBox();
+            this.lbDiaDiem = new System.Windows.Forms.Label();
+            this.lbKhachSan = new System.Windows.Forms.Label();
+            this.lbHanhTrinh = new System.Windows.Forms.Label();
+            this.lbNgayKT = new System.Windows.Forms.Label();
+            this.lbNgayKH = new System.Windows.Forms.Label();
+            this.lbMaTour1 = new System.Windows.Forms.Label();
+            this.lbMaDoan = new System.Windows.Forms.Label();
+            this.dtgvChiTietTour = new System.Windows.Forms.DataGridView();
+            this.panelTour = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel1.SuspendLayout();
+            this.panelDoanDuLich.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvChiTietTour)).BeginInit();
+            this.panelTour.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tabPageKhach.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvKhachHang)).BeginInit();
-            this.tabPageGia.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvGia)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridViewTourDuLich
-            // 
-            this.dataGridViewTourDuLich.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTourDuLich.Location = new System.Drawing.Point(12, 148);
-            this.dataGridViewTourDuLich.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridViewTourDuLich.Name = "dataGridViewTourDuLich";
-            this.dataGridViewTourDuLich.RowHeadersWidth = 51;
-            this.dataGridViewTourDuLich.RowTemplate.Height = 24;
-            this.dataGridViewTourDuLich.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewTourDuLich.Size = new System.Drawing.Size(965, 422);
-            this.dataGridViewTourDuLich.TabIndex = 0;
-            this.dataGridViewTourDuLich.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // btnThem
-            // 
-            this.btnThem.Location = new System.Drawing.Point(12, 578);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(112, 37);
-            this.btnThem.TabIndex = 1;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Location = new System.Drawing.Point(208, 578);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(112, 37);
-            this.btnXoa.TabIndex = 2;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.Location = new System.Drawing.Point(395, 578);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(112, 37);
-            this.btnSua.TabIndex = 4;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnTim
-            // 
-            this.btnTim.Location = new System.Drawing.Point(867, 578);
-            this.btnTim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(112, 37);
-            this.btnTim.TabIndex = 5;
-            this.btnTim.Text = "Tìm";
-            this.btnTim.UseVisualStyleBackColor = true;
             // 
             // lbTittle
             // 
@@ -137,294 +69,47 @@ namespace QuanLyTour
             this.lbTittle.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lbTittle.Location = new System.Drawing.Point(280, 33);
             this.lbTittle.Name = "lbTittle";
-            this.lbTittle.Size = new System.Drawing.Size(1099, 60);
+            this.lbTittle.Size = new System.Drawing.Size(1223, 60);
             this.lbTittle.TabIndex = 6;
             this.lbTittle.Text = "Quản lý tour du lịch";
             this.lbTittle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbMaTour
-            // 
-            this.lbMaTour.AutoSize = true;
-            this.lbMaTour.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMaTour.Location = new System.Drawing.Point(8, 43);
-            this.lbMaTour.Name = "lbMaTour";
-            this.lbMaTour.Size = new System.Drawing.Size(73, 24);
-            this.lbMaTour.TabIndex = 7;
-            this.lbMaTour.Text = "Mã tour";
-            // 
-            // txtMaTour
-            // 
-            this.txtMaTour.Location = new System.Drawing.Point(115, 36);
-            this.txtMaTour.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtMaTour.Multiline = true;
-            this.txtMaTour.Name = "txtMaTour";
-            this.txtMaTour.Size = new System.Drawing.Size(167, 31);
-            this.txtMaTour.TabIndex = 8;
-            // 
-            // txtDacDiem
-            // 
-            this.txtDacDiem.Location = new System.Drawing.Point(115, 94);
-            this.txtDacDiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtDacDiem.Multiline = true;
-            this.txtDacDiem.Name = "txtDacDiem";
-            this.txtDacDiem.Size = new System.Drawing.Size(167, 31);
-            this.txtDacDiem.TabIndex = 9;
-            // 
-            // lbTenTour
-            // 
-            this.lbTenTour.AutoSize = true;
-            this.lbTenTour.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTenTour.Location = new System.Drawing.Point(669, 43);
-            this.lbTenTour.Name = "lbTenTour";
-            this.lbTenTour.Size = new System.Drawing.Size(81, 24);
-            this.lbTenTour.TabIndex = 10;
-            this.lbTenTour.Text = "Tên tour";
-            // 
-            // txtTenTour
-            // 
-            this.txtTenTour.Location = new System.Drawing.Point(811, 36);
-            this.txtTenTour.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtTenTour.Multiline = true;
-            this.txtTenTour.Name = "txtTenTour";
-            this.txtTenTour.Size = new System.Drawing.Size(167, 31);
-            this.txtTenTour.TabIndex = 11;
-            // 
-            // lbDacDiem
-            // 
-            this.lbDacDiem.AutoSize = true;
-            this.lbDacDiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDacDiem.Location = new System.Drawing.Point(8, 101);
-            this.lbDacDiem.Name = "lbDacDiem";
-            this.lbDacDiem.Size = new System.Drawing.Size(91, 24);
-            this.lbDacDiem.TabIndex = 12;
-            this.lbDacDiem.Text = "Đặc điểm";
-            this.lbDacDiem.Click += new System.EventHandler(this.lbDacDiem_Click);
-            // 
-            // lbMaLoaiHinh
-            // 
-            this.lbMaLoaiHinh.AutoSize = true;
-            this.lbMaLoaiHinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMaLoaiHinh.Location = new System.Drawing.Point(669, 101);
-            this.lbMaLoaiHinh.Name = "lbMaLoaiHinh";
-            this.lbMaLoaiHinh.Size = new System.Drawing.Size(118, 24);
-            this.lbMaLoaiHinh.TabIndex = 13;
-            this.lbMaLoaiHinh.Text = "Mã Loại hình";
-            // 
-            // txtMaLoaiHinh
-            // 
-            this.txtMaLoaiHinh.Location = new System.Drawing.Point(811, 94);
-            this.txtMaLoaiHinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtMaLoaiHinh.Multiline = true;
-            this.txtMaLoaiHinh.Name = "txtMaLoaiHinh";
-            this.txtMaLoaiHinh.Size = new System.Drawing.Size(167, 31);
-            this.txtMaLoaiHinh.TabIndex = 14;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SlateBlue;
+            this.panel1.Controls.Add(this.lbDoanDuLich);
+            this.panel1.Controls.Add(this.lbTourDuLich);
             this.panel1.Location = new System.Drawing.Point(29, 145);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(245, 698);
+            this.panel1.Size = new System.Drawing.Size(245, 772);
             this.panel1.TabIndex = 15;
             // 
-            // txtTimKiem
+            // lbDoanDuLich
             // 
-            this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.Location = new System.Drawing.Point(569, 576);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtTimKiem.Multiline = true;
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(263, 37);
-            this.txtTimKiem.TabIndex = 16;
-            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            this.lbDoanDuLich.BackColor = System.Drawing.Color.SlateGray;
+            this.lbDoanDuLich.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDoanDuLich.ForeColor = System.Drawing.Color.White;
+            this.lbDoanDuLich.Location = new System.Drawing.Point(3, 113);
+            this.lbDoanDuLich.Name = "lbDoanDuLich";
+            this.lbDoanDuLich.Size = new System.Drawing.Size(239, 71);
+            this.lbDoanDuLich.TabIndex = 3;
+            this.lbDoanDuLich.Text = "Đoàn du lịch";
+            this.lbDoanDuLich.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbDoanDuLich.Click += new System.EventHandler(this.label2_Click_1);
             // 
-            // panel2
+            // lbTourDuLich
             // 
-            this.panel2.BackColor = System.Drawing.Color.GhostWhite;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.btnTim);
-            this.panel2.Controls.Add(this.txtTimKiem);
-            this.panel2.Controls.Add(this.btnSua);
-            this.panel2.Controls.Add(this.txtTenTour);
-            this.panel2.Controls.Add(this.lbMaLoaiHinh);
-            this.panel2.Controls.Add(this.lbTenTour);
-            this.panel2.Controls.Add(this.txtMaLoaiHinh);
-            this.panel2.Controls.Add(this.dataGridViewTourDuLich);
-            this.panel2.Controls.Add(this.btnXoa);
-            this.panel2.Controls.Add(this.lbDacDiem);
-            this.panel2.Controls.Add(this.btnThem);
-            this.panel2.Controls.Add(this.lbMaTour);
-            this.panel2.Controls.Add(this.txtDacDiem);
-            this.panel2.Controls.Add(this.txtMaTour);
-            this.panel2.Location = new System.Drawing.Point(3, 6);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1081, 628);
-            this.panel2.TabIndex = 18;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPageTour);
-            this.tabControl1.Controls.Add(this.tabPageChiTietTour);
-            this.tabControl1.Controls.Add(this.tabPageKhach);
-            this.tabControl1.Controls.Add(this.tabPageGia);
-            this.tabControl1.Location = new System.Drawing.Point(286, 145);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1017, 667);
-            this.tabControl1.TabIndex = 19;
-            // 
-            // tabPageTour
-            // 
-            this.tabPageTour.Controls.Add(this.panel2);
-            this.tabPageTour.Location = new System.Drawing.Point(4, 25);
-            this.tabPageTour.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPageTour.Name = "tabPageTour";
-            this.tabPageTour.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPageTour.Size = new System.Drawing.Size(1009, 638);
-            this.tabPageTour.TabIndex = 0;
-            this.tabPageTour.Text = "Tour du lịch";
-            this.tabPageTour.UseVisualStyleBackColor = true;
-            // 
-            // tabPageChiTietTour
-            // 
-            this.tabPageChiTietTour.Controls.Add(this.panel3);
-            this.tabPageChiTietTour.Location = new System.Drawing.Point(4, 25);
-            this.tabPageChiTietTour.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPageChiTietTour.Name = "tabPageChiTietTour";
-            this.tabPageChiTietTour.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPageChiTietTour.Size = new System.Drawing.Size(1009, 638);
-            this.tabPageChiTietTour.TabIndex = 1;
-            this.tabPageChiTietTour.Text = "Chi tiết tour";
-            this.tabPageChiTietTour.UseVisualStyleBackColor = true;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.GhostWhite;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.dataGridView1);
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.button4);
-            this.panel3.Location = new System.Drawing.Point(-1, 6);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1002, 628);
-            this.panel3.TabIndex = 19;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(867, 578);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 37);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Tìm";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(569, 576);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(263, 37);
-            this.textBox1.TabIndex = 16;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(395, 578);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 37);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Sửa";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(-4, -1);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1069, 573);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(208, 578);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(112, 37);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Xóa";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(12, 578);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(112, 37);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Thêm";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // tabPageKhach
-            // 
-            this.tabPageKhach.Controls.Add(this.dtgvKhachHang);
-            this.tabPageKhach.Location = new System.Drawing.Point(4, 25);
-            this.tabPageKhach.Name = "tabPageKhach";
-            this.tabPageKhach.Size = new System.Drawing.Size(1009, 638);
-            this.tabPageKhach.TabIndex = 2;
-            this.tabPageKhach.Text = "Thông tin";
-            this.tabPageKhach.UseVisualStyleBackColor = true;
-            // 
-            // dtgvKhachHang
-            // 
-            this.dtgvKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvKhachHang.Location = new System.Drawing.Point(0, 127);
-            this.dtgvKhachHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtgvKhachHang.Name = "dtgvKhachHang";
-            this.dtgvKhachHang.RowHeadersWidth = 51;
-            this.dtgvKhachHang.RowTemplate.Height = 24;
-            this.dtgvKhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvKhachHang.Size = new System.Drawing.Size(1017, 505);
-            this.dtgvKhachHang.TabIndex = 1;
-            this.dtgvKhachHang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvKhachHang_CellContentClick);
-            // 
-            // tabPageGia
-            // 
-            this.tabPageGia.Controls.Add(this.dtgvGia);
-            this.tabPageGia.Location = new System.Drawing.Point(4, 25);
-            this.tabPageGia.Name = "tabPageGia";
-            this.tabPageGia.Size = new System.Drawing.Size(1009, 638);
-            this.tabPageGia.TabIndex = 3;
-            this.tabPageGia.Text = "Bảng giá";
-            this.tabPageGia.UseVisualStyleBackColor = true;
-            // 
-            // dtgvGia
-            // 
-            this.dtgvGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvGia.Location = new System.Drawing.Point(26, 65);
-            this.dtgvGia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtgvGia.Name = "dtgvGia";
-            this.dtgvGia.RowHeadersWidth = 51;
-            this.dtgvGia.RowTemplate.Height = 24;
-            this.dtgvGia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvGia.Size = new System.Drawing.Size(1019, 540);
-            this.dtgvGia.TabIndex = 2;
-            this.dtgvGia.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvGia_CellContentClick);
+            this.lbTourDuLich.BackColor = System.Drawing.Color.SkyBlue;
+            this.lbTourDuLich.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTourDuLich.ForeColor = System.Drawing.Color.White;
+            this.lbTourDuLich.Location = new System.Drawing.Point(3, 10);
+            this.lbTourDuLich.Name = "lbTourDuLich";
+            this.lbTourDuLich.Size = new System.Drawing.Size(239, 71);
+            this.lbTourDuLich.TabIndex = 2;
+            this.lbTourDuLich.Text = "Tour du lịch";
+            this.lbTourDuLich.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbTourDuLich.Click += new System.EventHandler(this.lbTourDuLich_Click);
             // 
             // label1
             // 
@@ -436,12 +121,230 @@ namespace QuanLyTour
             this.label1.TabIndex = 17;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // panelDoanDuLich
+            // 
+            this.panelDoanDuLich.BackColor = System.Drawing.Color.GhostWhite;
+            this.panelDoanDuLich.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelDoanDuLich.Controls.Add(this.btnSuaChiTietTour);
+            this.panelDoanDuLich.Controls.Add(this.btnXoaChiTietTour);
+            this.panelDoanDuLich.Controls.Add(this.btnThemChiTietTour);
+            this.panelDoanDuLich.Controls.Add(this.txtDiaDiem);
+            this.panelDoanDuLich.Controls.Add(this.txtKhachSan);
+            this.panelDoanDuLich.Controls.Add(this.txtHanhTrinh);
+            this.panelDoanDuLich.Controls.Add(this.txtNgayKT);
+            this.panelDoanDuLich.Controls.Add(this.txtNgayKH);
+            this.panelDoanDuLich.Controls.Add(this.txtMaTour1);
+            this.panelDoanDuLich.Controls.Add(this.txtMaDoan);
+            this.panelDoanDuLich.Controls.Add(this.lbDiaDiem);
+            this.panelDoanDuLich.Controls.Add(this.lbKhachSan);
+            this.panelDoanDuLich.Controls.Add(this.lbHanhTrinh);
+            this.panelDoanDuLich.Controls.Add(this.lbNgayKT);
+            this.panelDoanDuLich.Controls.Add(this.lbNgayKH);
+            this.panelDoanDuLich.Controls.Add(this.lbMaTour1);
+            this.panelDoanDuLich.Controls.Add(this.lbMaDoan);
+            this.panelDoanDuLich.Controls.Add(this.dtgvChiTietTour);
+            this.panelDoanDuLich.Location = new System.Drawing.Point(280, 145);
+            this.panelDoanDuLich.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelDoanDuLich.Name = "panelDoanDuLich";
+            this.panelDoanDuLich.Size = new System.Drawing.Size(1220, 698);
+            this.panelDoanDuLich.TabIndex = 20;
+            this.panelDoanDuLich.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // btnSuaChiTietTour
+            // 
+            this.btnSuaChiTietTour.Location = new System.Drawing.Point(953, 574);
+            this.btnSuaChiTietTour.Name = "btnSuaChiTietTour";
+            this.btnSuaChiTietTour.Size = new System.Drawing.Size(125, 37);
+            this.btnSuaChiTietTour.TabIndex = 33;
+            this.btnSuaChiTietTour.Text = "Sửa";
+            this.btnSuaChiTietTour.UseVisualStyleBackColor = true;
+            this.btnSuaChiTietTour.Click += new System.EventHandler(this.btnSuaChiTietTour_Click);
+            // 
+            // btnXoaChiTietTour
+            // 
+            this.btnXoaChiTietTour.Location = new System.Drawing.Point(635, 574);
+            this.btnXoaChiTietTour.Name = "btnXoaChiTietTour";
+            this.btnXoaChiTietTour.Size = new System.Drawing.Size(125, 37);
+            this.btnXoaChiTietTour.TabIndex = 32;
+            this.btnXoaChiTietTour.Text = "Xóa";
+            this.btnXoaChiTietTour.UseVisualStyleBackColor = true;
+            this.btnXoaChiTietTour.Click += new System.EventHandler(this.btnXoaChiTietTour_Click);
+            // 
+            // btnThemChiTietTour
+            // 
+            this.btnThemChiTietTour.Location = new System.Drawing.Point(287, 574);
+            this.btnThemChiTietTour.Name = "btnThemChiTietTour";
+            this.btnThemChiTietTour.Size = new System.Drawing.Size(125, 37);
+            this.btnThemChiTietTour.TabIndex = 31;
+            this.btnThemChiTietTour.Text = "Thêm";
+            this.btnThemChiTietTour.UseVisualStyleBackColor = true;
+            this.btnThemChiTietTour.Click += new System.EventHandler(this.btnThemChiTietTour_Click);
+            // 
+            // txtDiaDiem
+            // 
+            this.txtDiaDiem.Location = new System.Drawing.Point(102, 493);
+            this.txtDiaDiem.Multiline = true;
+            this.txtDiaDiem.Name = "txtDiaDiem";
+            this.txtDiaDiem.Size = new System.Drawing.Size(159, 27);
+            this.txtDiaDiem.TabIndex = 30;
+            // 
+            // txtKhachSan
+            // 
+            this.txtKhachSan.Location = new System.Drawing.Point(102, 416);
+            this.txtKhachSan.Multiline = true;
+            this.txtKhachSan.Name = "txtKhachSan";
+            this.txtKhachSan.Size = new System.Drawing.Size(159, 27);
+            this.txtKhachSan.TabIndex = 29;
+            // 
+            // txtHanhTrinh
+            // 
+            this.txtHanhTrinh.Location = new System.Drawing.Point(102, 333);
+            this.txtHanhTrinh.Multiline = true;
+            this.txtHanhTrinh.Name = "txtHanhTrinh";
+            this.txtHanhTrinh.Size = new System.Drawing.Size(159, 27);
+            this.txtHanhTrinh.TabIndex = 28;
+            // 
+            // txtNgayKT
+            // 
+            this.txtNgayKT.Location = new System.Drawing.Point(102, 253);
+            this.txtNgayKT.Multiline = true;
+            this.txtNgayKT.Name = "txtNgayKT";
+            this.txtNgayKT.Size = new System.Drawing.Size(159, 27);
+            this.txtNgayKT.TabIndex = 27;
+            // 
+            // txtNgayKH
+            // 
+            this.txtNgayKH.Location = new System.Drawing.Point(102, 174);
+            this.txtNgayKH.Multiline = true;
+            this.txtNgayKH.Name = "txtNgayKH";
+            this.txtNgayKH.Size = new System.Drawing.Size(159, 27);
+            this.txtNgayKH.TabIndex = 26;
+            // 
+            // txtMaTour1
+            // 
+            this.txtMaTour1.Location = new System.Drawing.Point(102, 94);
+            this.txtMaTour1.Multiline = true;
+            this.txtMaTour1.Name = "txtMaTour1";
+            this.txtMaTour1.Size = new System.Drawing.Size(159, 27);
+            this.txtMaTour1.TabIndex = 25;
+            // 
+            // txtMaDoan
+            // 
+            this.txtMaDoan.Location = new System.Drawing.Point(102, 28);
+            this.txtMaDoan.Multiline = true;
+            this.txtMaDoan.Name = "txtMaDoan";
+            this.txtMaDoan.Size = new System.Drawing.Size(159, 27);
+            this.txtMaDoan.TabIndex = 24;
+            // 
+            // lbDiaDiem
+            // 
+            this.lbDiaDiem.AutoSize = true;
+            this.lbDiaDiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDiaDiem.Location = new System.Drawing.Point(12, 500);
+            this.lbDiaDiem.Name = "lbDiaDiem";
+            this.lbDiaDiem.Size = new System.Drawing.Size(78, 20);
+            this.lbDiaDiem.TabIndex = 23;
+            this.lbDiaDiem.Text = "Địa Điểm";
+            // 
+            // lbKhachSan
+            // 
+            this.lbKhachSan.AutoSize = true;
+            this.lbKhachSan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbKhachSan.Location = new System.Drawing.Point(8, 423);
+            this.lbKhachSan.Name = "lbKhachSan";
+            this.lbKhachSan.Size = new System.Drawing.Size(90, 20);
+            this.lbKhachSan.TabIndex = 22;
+            this.lbKhachSan.Text = "Khách Sạn";
+            // 
+            // lbHanhTrinh
+            // 
+            this.lbHanhTrinh.AutoSize = true;
+            this.lbHanhTrinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHanhTrinh.Location = new System.Drawing.Point(8, 340);
+            this.lbHanhTrinh.Name = "lbHanhTrinh";
+            this.lbHanhTrinh.Size = new System.Drawing.Size(92, 20);
+            this.lbHanhTrinh.TabIndex = 21;
+            this.lbHanhTrinh.Text = "Hành Trình";
+            // 
+            // lbNgayKT
+            // 
+            this.lbNgayKT.AutoSize = true;
+            this.lbNgayKT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNgayKT.Location = new System.Drawing.Point(8, 260);
+            this.lbNgayKT.Name = "lbNgayKT";
+            this.lbNgayKT.Size = new System.Drawing.Size(73, 20);
+            this.lbNgayKT.TabIndex = 20;
+            this.lbNgayKT.Text = "Ngày KT";
+            // 
+            // lbNgayKH
+            // 
+            this.lbNgayKH.AutoSize = true;
+            this.lbNgayKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNgayKH.Location = new System.Drawing.Point(8, 181);
+            this.lbNgayKH.Name = "lbNgayKH";
+            this.lbNgayKH.Size = new System.Drawing.Size(76, 20);
+            this.lbNgayKH.TabIndex = 19;
+            this.lbNgayKH.Text = "Ngày KH";
+            // 
+            // lbMaTour1
+            // 
+            this.lbMaTour1.AutoSize = true;
+            this.lbMaTour1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaTour1.Location = new System.Drawing.Point(8, 101);
+            this.lbMaTour1.Name = "lbMaTour1";
+            this.lbMaTour1.Size = new System.Drawing.Size(71, 20);
+            this.lbMaTour1.TabIndex = 18;
+            this.lbMaTour1.Text = "Mã Tour";
+            // 
+            // lbMaDoan
+            // 
+            this.lbMaDoan.AutoSize = true;
+            this.lbMaDoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaDoan.Location = new System.Drawing.Point(5, 35);
+            this.lbMaDoan.Name = "lbMaDoan";
+            this.lbMaDoan.Size = new System.Drawing.Size(76, 20);
+            this.lbMaDoan.TabIndex = 17;
+            this.lbMaDoan.Text = "Mã Đoàn";
+            // 
+            // dtgvChiTietTour
+            // 
+            this.dtgvChiTietTour.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvChiTietTour.Location = new System.Drawing.Point(287, 28);
+            this.dtgvChiTietTour.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtgvChiTietTour.Name = "dtgvChiTietTour";
+            this.dtgvChiTietTour.RowHeadersWidth = 51;
+            this.dtgvChiTietTour.RowTemplate.Height = 24;
+            this.dtgvChiTietTour.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgvChiTietTour.Size = new System.Drawing.Size(791, 492);
+            this.dtgvChiTietTour.TabIndex = 0;
+            this.dtgvChiTietTour.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvChiTietTour_CellContentClick);
+            this.dtgvChiTietTour.SelectionChanged += new System.EventHandler(this.dtgvChiTietTour_SelectionChanged);
+            // 
+            // panelTour
+            // 
+            this.panelTour.Controls.Add(this.dataGridView1);
+            this.panelTour.Location = new System.Drawing.Point(280, 144);
+            this.panelTour.Name = "panelTour";
+            this.panelTour.Size = new System.Drawing.Size(1223, 772);
+            this.panelTour.TabIndex = 34;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(129, 156);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(430, 279);
+            this.dataGridView1.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1395, 870);
-            this.Controls.Add(this.tabControl1);
+            this.ClientSize = new System.Drawing.Size(1515, 928);
+            this.Controls.Add(this.panelTour);
+            this.Controls.Add(this.panelDoanDuLich);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbTittle);
@@ -449,57 +352,43 @@ namespace QuanLyTour
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTourDuLich)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPageTour.ResumeLayout(false);
-            this.tabPageChiTietTour.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panelDoanDuLich.ResumeLayout(false);
+            this.panelDoanDuLich.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvChiTietTour)).EndInit();
+            this.panelTour.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tabPageKhach.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvKhachHang)).EndInit();
-            this.tabPageGia.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvGia)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridViewTourDuLich;
-        private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button btnTim;
         private System.Windows.Forms.Label lbTittle;
-        private System.Windows.Forms.Label lbMaTour;
-        private System.Windows.Forms.TextBox txtMaTour;
-        private System.Windows.Forms.TextBox txtDacDiem;
-        private System.Windows.Forms.Label lbTenTour;
-        private System.Windows.Forms.TextBox txtTenTour;
-        private System.Windows.Forms.Label lbDacDiem;
-        private System.Windows.Forms.Label lbMaLoaiHinh;
-        private System.Windows.Forms.TextBox txtMaLoaiHinh;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPageTour;
-        private System.Windows.Forms.TabPage tabPageChiTietTour;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panelDoanDuLich;
+        private System.Windows.Forms.TextBox txtDiaDiem;
+        private System.Windows.Forms.TextBox txtKhachSan;
+        private System.Windows.Forms.TextBox txtHanhTrinh;
+        private System.Windows.Forms.TextBox txtNgayKT;
+        private System.Windows.Forms.TextBox txtNgayKH;
+        private System.Windows.Forms.TextBox txtMaTour1;
+        private System.Windows.Forms.TextBox txtMaDoan;
+        private System.Windows.Forms.Label lbDiaDiem;
+        private System.Windows.Forms.Label lbKhachSan;
+        private System.Windows.Forms.Label lbHanhTrinh;
+        private System.Windows.Forms.Label lbNgayKT;
+        private System.Windows.Forms.Label lbNgayKH;
+        private System.Windows.Forms.Label lbMaTour1;
+        private System.Windows.Forms.Label lbMaDoan;
+        private System.Windows.Forms.DataGridView dtgvChiTietTour;
+        private System.Windows.Forms.Button btnThemChiTietTour;
+        private System.Windows.Forms.Button btnXoaChiTietTour;
+        private System.Windows.Forms.Button btnSuaChiTietTour;
+        private System.Windows.Forms.Label lbDoanDuLich;
+        private System.Windows.Forms.Label lbTourDuLich;
+        private System.Windows.Forms.Panel panelTour;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TabPage tabPageKhach;
-        private System.Windows.Forms.DataGridView dtgvKhachHang;
-        private System.Windows.Forms.TabPage tabPageGia;
-        private System.Windows.Forms.DataGridView dtgvGia;
     }
 }
 

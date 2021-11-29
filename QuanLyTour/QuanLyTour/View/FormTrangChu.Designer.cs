@@ -29,23 +29,9 @@ namespace QuanLyTour
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbQuanLyTour = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lbBangGia = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // lbQuanLyTour
-            // 
-            this.lbQuanLyTour.BackColor = System.Drawing.Color.SkyBlue;
-            this.lbQuanLyTour.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbQuanLyTour.ForeColor = System.Drawing.Color.White;
-            this.lbQuanLyTour.Location = new System.Drawing.Point(24, 29);
-            this.lbQuanLyTour.Name = "lbQuanLyTour";
-            this.lbQuanLyTour.Size = new System.Drawing.Size(239, 71);
-            this.lbQuanLyTour.TabIndex = 1;
-            this.lbQuanLyTour.Text = "Tour Du Lịch";
-            this.lbQuanLyTour.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbQuanLyTour.Click += new System.EventHandler(this.lbQuanLyTour_Click);
             // 
             // label2
             // 
@@ -78,7 +64,6 @@ namespace QuanLyTour
             this.ClientSize = new System.Drawing.Size(814, 503);
             this.Controls.Add(this.lbBangGia);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.lbQuanLyTour);
             this.Name = "Form3";
             this.Text = "Form3";
             this.ResumeLayout(false);
@@ -86,8 +71,6 @@ namespace QuanLyTour
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lbQuanLyTour;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbBangGia;
     }

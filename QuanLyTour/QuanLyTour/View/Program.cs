@@ -18,7 +18,7 @@ namespace QuanLyTour
             //FormTour t = new FormTour();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormTour());
+            Application.Run(new Form1());
         }
     }
 }
