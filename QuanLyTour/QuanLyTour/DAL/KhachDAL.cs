@@ -5,35 +5,67 @@ using System.Text;
 using System.Threading.Tasks;
 
 using QuanLyTour;
+using QuanLyTour.Models;
 
-namespace Model
+namespace QuanLyTour.DAL
 {
-    public class KhachDAO
+    public class KhachDAL
     {
-        private static KhachDAO instance;
-        public static KhachDAO Instance
+        private static KhachDAL instance;
+        public static KhachDAL Instance
         {
             get
             {
                 if (instance == null)
-                    instance = new KhachDAO();
+                    instance = new KhachDAL();
                 return instance;
             }
         }
 
-        private KhachDAO() { }
+        private KhachDAL() { }
 
-        public List<KHACH> getAll()
+        public static List<KhachHangModel> getAll()
         {
-            List<KHACH> tour = new List<KHACH>();
+            List<KhachHangModel> dsKhach = new List<KhachHangModel>();
 
             using (QuanLyTourDataContext db = new QuanLyTourDataContext())
             {
-                tour = db.KHACHes.Select(p => p).ToList();
+                var result = from u in db.KHACHes
+                             select new
+                             {
+
+                                 MaKhach = u.MaKhachHang,
+                                 HoTen = u.HoTen,
+                                 SoCmnd = u.SoCMND,
+                                 DiaChi = u.DiaChi,
+                                 GioiTinh = u.GioiTinh,
+                                 SDT = u.SDT,
+                                 QuocTich = u.QuocTich,
+
+                             };
+
+
+
+                foreach (var i in result)
+                {
+
+                    KhachHangModel khach = new KhachHangModel();
+
+                    khach.MaKhachHang = i.MaKhach;
+                    khach.HoTen = i.HoTen;
+                    khach.SoCMND = i.SoCmnd;
+                    khach.DiaChi = i.DiaChi;
+                    khach.GioiTinh = i.GioiTinh;
+                    khach.SDT = i.DiaChi;
+                    khach.QuocTich = i.QuocTich;
+
+
+                    dsKhach.Add(khach);
+                }
 
             }
 
-            return tour;
+            return dsKhach;
         }
     }
 

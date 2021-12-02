@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using QuanLyTour;
-using Model;
 using QuanLyTour.Model;
 using QuanLyTour.Models;
 
@@ -20,6 +19,8 @@ namespace QuanLyTour
         //     QuanLyTourEntities db = new QuanLyTourEntities();
       
         List<DoanDuLichModel> allDoanDuLichs;
+        List<KhachHangModel> allKhachHangs;
+        List<NhanVienModel> allNhanViens;
         int currentIndex;
         public Form1()
         {
@@ -106,6 +107,12 @@ namespace QuanLyTour
             //   dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dtgvChiTietTour.Columns["TourDuLich"].Visible = false;
             dtgvChiTietTour.Columns["NoiDungTour"].Visible = false;
+
+            allKhachHangs = KhachHangModel.GetAll();
+            dtgvKhach.DataSource = allKhachHangs;
+
+            allNhanViens = NhanVienModel.GetAll();
+            dtgvNhanVien.DataSource = allNhanViens;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -305,13 +312,67 @@ namespace QuanLyTour
         private void label2_Click_1(object sender, EventArgs e)
         {
             panelDoanDuLich.Show();
-            panelTour.Hide();
+            panelNhanVien.Hide();
+            panelKhach.Hide();
         }
 
         private void lbTourDuLich_Click(object sender, EventArgs e)
         {
-            panelTour.Show();
+         
+        }
+
+        private void panelTour_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThemKhach_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnXoaKhach_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSuaKhach_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbKhachHang_Click(object sender, EventArgs e)
+        {
+            panelKhach.Show();
             panelDoanDuLich.Hide();
+            panelNhanVien.Hide();
+        }
+
+        private void lbTenNhanVien_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtgvNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label2_Click_2(object sender, EventArgs e)
+        {
+            panelNhanVien.Show();
+            panelDoanDuLich.Hide();
+            panelKhach.Hide();
         }
     }
 }

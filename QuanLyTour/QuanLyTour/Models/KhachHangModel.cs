@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyTour.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace QuanLyTour.Models
 {
     public class KhachHangModel
     {
+        public KhachHangModel(){}
         public KhachHangModel(string hoten, string socmnd, string diachi, string gioitinh, string sdt, string quoctich)
         {
             this.HoTen = hoten;
@@ -26,6 +28,19 @@ namespace QuanLyTour.Models
         public string QuocTich { get; set; }
 
         List<ChiTietDoanModel> chiTietDoans { get; set; }
+        public static List<KhachHangModel> GetAll()
+        {
+            return KhachDAL.getAll();
+        }
 
+      /*  public bool InserToDB()
+        {
+            return TourDuLichDAL.Insert(this);
+        }
+
+        public static int getCount()
+        {
+            return TourDuLichDAL.getCount();
+        }*/
     }
 }

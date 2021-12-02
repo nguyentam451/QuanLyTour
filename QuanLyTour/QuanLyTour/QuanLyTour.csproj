@@ -61,6 +61,13 @@
     <Compile Include="DAL\GiaTourDAL.cs" />
     <Compile Include="DAL\KhachDAL.cs" />
     <Compile Include="DAL\ndTourDAL.cs" />
+    <Compile Include="DAL\NhanVienDAL.cs" />
+    <Compile Include="Models\NhanVienModel.cs" />
+    <Compile Include="QuanLyTour.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyTour.dbml</DependentUpon>
+    </Compile>
     <Compile Include="View\FormBangGia\FormBangGia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,11 +100,6 @@
     <Compile Include="Models\ndTourModel.cs" />
     <Compile Include="DAL\TourDuLichDAL.cs" />
     <Compile Include="Models\TourDuLichModel.cs" />
-    <Compile Include="QuanLyTour.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLyTour.dbml</DependentUpon>
-    </Compile>
     <Compile Include="View\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
