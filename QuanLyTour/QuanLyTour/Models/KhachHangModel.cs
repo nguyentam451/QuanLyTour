@@ -32,15 +32,18 @@ namespace QuanLyTour.Models
         {
             return KhachDAL.getAll();
         }
-
-      /*  public bool InserToDB()
+        public bool InserToDB()
         {
-            return TourDuLichDAL.Insert(this);
+            return KhachDAL.Insert(this);
         }
 
-        public static int getCount()
+        public static bool DeleteToDB(string id)
         {
-            return TourDuLichDAL.getCount();
-        }*/
+            return KhachDAL.Delete(id);
+        }
+        public bool UpdateToDB()
+        {
+            return KhachDAL.Update(this);
+        }
     }
 }

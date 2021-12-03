@@ -11,7 +11,12 @@ namespace QuanLyTour.Models
     public class DoanDuLichModel
     {
         public DoanDuLichModel() { }
-
+        public DoanDuLichModel(string matour, DateTime ngaykh, DateTime ngaykt)
+        {
+            this.MaTour = matour;
+            this.NgayKhoiHanh = ngaykh;
+            this.NgayKetThuc = ngaykt;
+        }
         public string MaDoan { get; set; }
         public string MaTour { get; set; }
         public DateTime NgayKhoiHanh { get; set; }

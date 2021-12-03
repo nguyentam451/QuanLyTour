@@ -10,6 +10,10 @@ namespace QuanLyTour.Models
     public class NhanVienModel
     {
         public NhanVienModel() { }
+        public NhanVienModel(string tenNhanVien)
+        {
+            this.TenNhanVien = tenNhanVien;
+        }
         public string MaNhanVien { get; set; }
         public string TenNhanVien { get; set; }
 

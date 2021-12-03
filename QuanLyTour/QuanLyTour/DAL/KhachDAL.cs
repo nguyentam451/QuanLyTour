@@ -56,7 +56,7 @@ namespace QuanLyTour.DAL
                     khach.SoCMND = i.SoCmnd;
                     khach.DiaChi = i.DiaChi;
                     khach.GioiTinh = i.GioiTinh;
-                    khach.SDT = i.DiaChi;
+                    khach.SDT = i.SDT;
                     khach.QuocTich = i.QuocTich;
 
 
@@ -66,6 +66,89 @@ namespace QuanLyTour.DAL
             }
 
             return dsKhach;
+        }
+
+        public static bool Insert(KhachHangModel obj)
+        {
+            try
+            {
+                using (QuanLyTourDataContext db = new QuanLyTourDataContext())
+                {
+                    db.KHACHes.InsertOnSubmit(new KHACH()
+                    {
+                        MaKhachHang = obj.MaKhachHang,
+                        HoTen = obj.HoTen,
+                        SoCMND = obj.SoCMND,
+                        DiaChi = obj.DiaChi,
+                        GioiTinh = obj.GioiTinh,
+                        SDT = obj.SDT,
+                        QuocTich = obj.QuocTich,
+                     
+
+                    }
+                    );
+
+                    db.SubmitChanges();
+                }
+
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+        }
+
+        public static bool Delete(String maKH)
+        {
+            try
+            {
+                String id = maKH;
+                using (QuanLyTourDataContext db = new QuanLyTourDataContext())
+                {
+                    var kh = db.KHACHes.Where(p => p.MaKhachHang.Equals(id)).SingleOrDefault();
+                    db.KHACHes.DeleteOnSubmit(kh);
+  
+
+                    db.SubmitChanges();
+
+                }
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+
+        }
+        public static bool Update(KhachHangModel obj)
+        {
+            try
+            {
+                using (QuanLyTourDataContext db = new QuanLyTourDataContext())
+                {
+
+                    var kh = db.KHACHes.Where(p => p.MaKhachHang.Equals(obj.MaKhachHang)).SingleOrDefault();
+                    kh.MaKhachHang = obj.MaKhachHang;
+                    kh.HoTen = obj.HoTen;
+                    kh.SoCMND = obj.SoCMND;
+                    kh.DiaChi = obj.DiaChi;
+                    kh.GioiTinh = obj.GioiTinh;
+                    kh.SDT = obj.SDT;
+                    kh.QuocTich = obj.QuocTich;
+
+                    db.SubmitChanges();
+                }
+
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
         }
     }
 
