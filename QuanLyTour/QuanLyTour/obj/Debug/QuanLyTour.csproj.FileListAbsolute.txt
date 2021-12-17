@@ -70,3 +70,9 @@ C:\Users\Admin\source\repos\Git\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanL
 C:\Users\Admin\source\repos\Git\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.View.FormKhachHang.FormKhachHang.resources
 C:\Users\Admin\source\repos\Git\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.View.FormTour.FormTour.resources
 C:\Users\Admin\source\repos\Git\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.Form3.resources
+E:\DATA\phanlop\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.View.FormBangGia.FormBangGia.resources
+E:\DATA\phanlop\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.View.FormKhachHang.FormKhachHang.resources
+E:\DATA\phanlop\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.View.FormTour.FormTour.resources
+E:\DATA\phanlop\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.Form3.resources
+E:\DATA\phanlop\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.View.ThemTour.resources
+E:\DATA\phanlop\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.csproj.CopyComplete
