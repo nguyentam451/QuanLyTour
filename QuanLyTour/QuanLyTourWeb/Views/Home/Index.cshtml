@@ -1,4 +1,4 @@
-﻿@model IEnumerable < QuanLyTour.Models.DoanDuLichModel>
+﻿@model IEnumerable<QuanLyTour.Models.DoanDuLichModel>
 
 @{
 	ViewBag.Title = "Quan ly tour";
@@ -6,6 +6,10 @@
 
 
 <h1>Quan lý tour</h1>
+<br>
+<button>Thêm đoàn du lịch</button>
+<br>
+<br>
 <table class="table">
 	<tr>
 		<th>
@@ -33,12 +37,13 @@
 		<th></th>
 	</tr>
 
-	@foreach (var item in Model) {
+	@foreach (var item in Model)
+	{
 		<tr>
 			<td>
 				@Html.DisplayFor(modelItem => item.MaDoan)
 			</td>
-			
+
 			<td>
 				@Html.DisplayFor(modelItem => item.HanhTrinh)
 			</td>
