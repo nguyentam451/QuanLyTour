@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyTour", "QuanLyTour\QuanLyTour.csproj", "{5740D3C2-B78F-40A0-B3E8-79C9E31869FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyTourWeb", "QuanLyTourWeb\QuanLyTourWeb.csproj", "{CA11BB0A-5DE7-49C5-A480-F323288EBF38}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyTourWeb", "QuanLyTourWeb\QuanLyTourWeb.csproj", "{B8A402C4-590B-4C23-8322-34C8035091CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{5740D3C2-B78F-40A0-B3E8-79C9E31869FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5740D3C2-B78F-40A0-B3E8-79C9E31869FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5740D3C2-B78F-40A0-B3E8-79C9E31869FB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CA11BB0A-5DE7-49C5-A480-F323288EBF38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CA11BB0A-5DE7-49C5-A480-F323288EBF38}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CA11BB0A-5DE7-49C5-A480-F323288EBF38}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CA11BB0A-5DE7-49C5-A480-F323288EBF38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8A402C4-590B-4C23-8322-34C8035091CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8A402C4-590B-4C23-8322-34C8035091CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8A402C4-590B-4C23-8322-34C8035091CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8A402C4-590B-4C23-8322-34C8035091CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
