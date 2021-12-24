@@ -10,7 +10,13 @@ namespace QuanLyTourWeb.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var list = QuanLyTour.Models.DoanDuLichModel.GetAll();
+            return View(list);
+        }
+        public ActionResult Client()
+        {
+            var list = QuanLyTour.Models.DoanDuLichModel.GetAll();
+            return View(list);
         }
 
         public ActionResult About()
