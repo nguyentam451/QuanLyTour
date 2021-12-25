@@ -1,4 +1,5 @@
 ﻿using DAL;
+using QuanLyTour.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -45,7 +46,7 @@ namespace QuanLyTour.Model
             get { return LoaiHinhDuLich.TenLoaiHinh; }
 
         }
-
+        public virtual ICollection<DoanDuLichModel> DoanDuLich { get; set; }
 
         public static List<TourDuLichModel> GetAll()
         {

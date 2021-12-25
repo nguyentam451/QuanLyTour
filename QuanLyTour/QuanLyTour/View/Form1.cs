@@ -23,8 +23,14 @@ namespace QuanLyTour
         List<NhanVienModel> allNhanViens;
         List<PhanBoNhanVienModel> allPhanBos;
         List<ChiTietDoanModel> allChiTietDoans;
+        List<TourDuLichModel> allTours;
+        List<ThamQuanModel> allThamQuans;
+        List<GiaTourModel> allGias;
+        int currentTourIndex;
         int currentDoanIndex;
         int currentKhachIndex;
+        int currentGiaTourIndex;
+        int currentNhanVienIndex;
         public Form1()
         {
             InitializeComponent();
@@ -107,7 +113,7 @@ namespace QuanLyTour
 
             allDoanDuLichs = DoanDuLichModel.GetAll();
             dtgvDoan.DataSource = allDoanDuLichs;
-            //   dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtgvDoan.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dtgvDoan.Columns["TourDuLich"].Visible = false;
             dtgvDoan.Columns["NoiDungTour"].Visible = false;
 
@@ -129,7 +135,24 @@ namespace QuanLyTour
             dtgvChiTietDoan.DataSource = allChiTietDoans;
             dtgvChiTietDoan.Columns["DoanDuLich"].Visible = false;
             dtgvChiTietDoan.Columns["KhachHang"].Visible = false;
-            dtgvChiTietDoan.Columns["MaDoan"].Visible = false;
+            //        dtgvChiTietDoan.Columns["MaDoan"].Visible = false;
+
+            // tour
+            allTours = TourDuLichModel.GetAll();
+            dtgvTour.DataSource = allTours;
+            dtgvTour.Columns["MaLoaiHinh"].Visible = false;
+            dtgvTour.Columns["LoaiHinhDuLich"].Visible = false;
+
+            // tham quan
+            allThamQuans = ThamQuanModel.GetAll();
+            dtgvThamQuan.DataSource = allThamQuans;
+            dtgvThamQuan.Columns["DiaDiem"].Visible = false;
+
+            // giá tour
+            allGias = GiaTourModel.GetAll();
+            dtgvGiaTour.DataSource = allGias;
+            dtgvGiaTour.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -210,7 +233,7 @@ namespace QuanLyTour
             doan.MaTour = txtMaTour1.Text;
             doan.NgayKhoiHanh = DateTime.Parse(txtNgayKH.Text);
             doan.NgayKetThuc = DateTime.Parse(txtNgayKT.Text);
-            doan.NoiDungTour = new ndTourModel(txtHanhTrinh.Text, txtKhachSan.Text, txtDiaDiem.Text);
+ //           doan.NoiDungTour = new ndTourModel(txtHanhTrinh.Text, txtKhachSan.Text, txtDiaDiem.Text);
 
 
             if (doan.InsertToDB() == true)
@@ -264,9 +287,9 @@ namespace QuanLyTour
                 txtMaTour1.Text = doan.MaTour;
                 txtNgayKH.Text = doan.NgayKhoiHanh.ToString();
                 txtNgayKT.Text = doan.NgayKetThuc.ToString();
-                txtHanhTrinh.Text = doan.HanhTrinh;
+/*                txtHanhTrinh.Text = doan.HanhTrinh;
                 txtKhachSan.Text = doan.KhachSan;
-                txtDiaDiem.Text = doan.DiaDiemThamQuan;
+                txtDiaDiem.Text = doan.DiaDiemThamQuan;*/
             }
 
         }
@@ -283,7 +306,7 @@ namespace QuanLyTour
             doan.MaTour = txtMaTour1.Text;
             doan.NgayKhoiHanh = DateTime.Parse(txtNgayKH.Text);
             doan.NgayKetThuc = DateTime.Parse(txtNgayKT.Text);
-            doan.NoiDungTour = new ndTourModel(txtHanhTrinh.Text, txtKhachSan.Text, txtDiaDiem.Text);
+ //           doan.NoiDungTour = new ndTourModel(txtHanhTrinh.Text, txtKhachSan.Text, txtDiaDiem.Text);
 
 
 
@@ -313,7 +336,12 @@ namespace QuanLyTour
 
         private void lbTourDuLich_Click(object sender, EventArgs e)
         {
-         
+            panelTour.Show();
+            panelKhach.Hide();
+            panelDoanDuLich.Hide();
+            panelNhanVien.Hide();
+            panelGiaTour.Hide();
+
         }
 
         private void panelTour_Paint(object sender, PaintEventArgs e)
@@ -409,6 +437,8 @@ namespace QuanLyTour
             panelKhach.Show();
             panelDoanDuLich.Hide();
             panelNhanVien.Hide();
+            panelTour.Hide();
+            panelGiaTour.Hide();
         }
 
         private void lbTenNhanVien_Click(object sender, EventArgs e)
@@ -426,6 +456,8 @@ namespace QuanLyTour
             panelNhanVien.Show();
             panelDoanDuLich.Hide();
             panelKhach.Hide();
+            panelTour.Hide();
+            panelGiaTour.Hide();
         }
 
         private void lbDoanDuLich_Click_1(object sender, EventArgs e)
@@ -433,6 +465,8 @@ namespace QuanLyTour
             panelDoanDuLich.Show();
             panelNhanVien.Hide();
             panelKhach.Hide();
+            panelTour.Hide();
+            panelGiaTour.Hide();
         }
 
         private void dtgvChiTietDoan_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -457,9 +491,9 @@ namespace QuanLyTour
                 txtMaTour1.Text = doan.MaTour.ToString();
                 txtNgayKH.Text = doan.NgayKhoiHanh.ToString();
                 txtNgayKT.Text = doan.NgayKetThuc.ToString();
-                txtHanhTrinh.Text = doan.HanhTrinh.ToString();
-                txtKhachSan.Text = doan.KhachSan.ToString();
-                txtDiaDiem.Text = doan.DiaDiemThamQuan.ToString();
+            //    txtHanhTrinh.Text = doan.HanhTrinh.ToString();
+            //    txtKhachSan.Text = doan.KhachSan.ToString();
+            //    txtDiaDiem.Text = doan.DiaDiemThamQuan.ToString();
             }
         }
 
@@ -475,7 +509,7 @@ namespace QuanLyTour
             doan.MaTour = txtMaTour1.Text;
             doan.NgayKhoiHanh = DateTime.Parse(txtNgayKH.Text);
             doan.NgayKetThuc = DateTime.Parse(txtNgayKT.Text);
-            doan.NoiDungTour = new ndTourModel(txtHanhTrinh.Text, txtKhachSan.Text, txtDiaDiem.Text);
+    //        doan.NoiDungTour = new ndTourModel(txtHanhTrinh.Text, txtKhachSan.Text, txtDiaDiem.Text);
 
 
             if (doan.InsertToDB() == true)
@@ -523,7 +557,7 @@ namespace QuanLyTour
             doan.MaTour = txtMaTour1.Text;
             doan.NgayKhoiHanh = DateTime.Parse(txtNgayKH.Text);
             doan.NgayKetThuc = DateTime.Parse(txtNgayKT.Text);
-            doan.NoiDungTour = new ndTourModel(txtHanhTrinh.Text, txtKhachSan.Text, txtDiaDiem.Text);
+ //           doan.NoiDungTour = new ndTourModel(txtHanhTrinh.Text, txtKhachSan.Text, txtDiaDiem.Text);
 
 
 
@@ -559,6 +593,93 @@ namespace QuanLyTour
                 txtQuocTich.Text = khach.QuocTich.ToString();
 
             }
+        }
+
+        private void txtNgayKH_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelDoanDuLich_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtgvThamQuan_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox10_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            panelGiaTour.Show();
+            panelNhanVien.Hide();
+            panelDoanDuLich.Hide();
+            panelKhach.Hide();
+            panelTour.Hide();
+            
+        }
+
+        private void dtgvGiaTour_SelectionChanged(object sender, EventArgs e)
+        {
+            currentGiaTourIndex = dtgvGiaTour.CurrentCell.RowIndex;
+
+            // update current tour details
+            var gia = allGias[currentGiaTourIndex];
+            if (gia != null)
+            {
+                txtMaGia.Text = gia.MaGia.ToString();
+                txtMaTour_Gia.Text = gia.MaTour.ToString();
+                txtThanhTien.Text = gia.GiaTien.ToString();
+                txtThoiGianBD.Text = gia.ThoiGianBatDau.ToString();
+                txtThoiGianKT.Text = gia.ThoiGianKetThuc.ToString();
+
+            }
+        }
+
+        private void dtgvNhanVien_SelectionChanged(object sender, EventArgs e)
+        {
+            currentNhanVienIndex = dtgvNhanVien.CurrentCell.RowIndex;
+
+            // update current tour details
+            var nv = allNhanViens[currentNhanVienIndex];
+            if (nv != null)
+            {
+                txtMaNhanVien.Text = nv.MaNhanVien.ToString();
+                txtTenNhanVien.Text = nv.TenNhanVien.ToString();;
+
+            }
+
+        }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnSuaTour_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

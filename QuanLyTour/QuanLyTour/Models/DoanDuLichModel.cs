@@ -26,7 +26,7 @@ namespace QuanLyTour.Models
         public List<ChiTietDoanModel> chiTietDoans { get; set; }
       
         public ndTourModel NoiDungTour { get; set; }
-        public string HanhTrinh
+      /*  public string HanhTrinh
         {
             get { return NoiDungTour.HanhTrinh;  }
         }
@@ -37,7 +37,7 @@ namespace QuanLyTour.Models
         public string DiaDiemThamQuan
         {
             get { return NoiDungTour.DiaDiemThamQuan; }
-        }
+        }*/
 
         public static List<DoanDuLichModel> GetAll()
         {

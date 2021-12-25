@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,8 +41,6 @@ namespace DAL
 
                 // cách 2
                 var result = from u in db.TOURDULICHes
-                             from t in db.LOAIHINHDULICHes
-                             where u.MaLoaiHinh == t.MaLoaiHinh
                              select new
                              {
                                  
@@ -50,7 +49,7 @@ namespace DAL
                                  DacDiem = u.DacDiem,
                                  MaLoaiHinh = u.LOAIHINHDULICH.MaLoaiHinh,
                                  TenLoaiHinh = u.LOAIHINHDULICH.TenLoaiHinh,
-                                    
+                                
 
                              };
 
@@ -76,7 +75,7 @@ namespace DAL
 
                     dsTour.Add(tour);
                 }
-
+    
 
             }
 

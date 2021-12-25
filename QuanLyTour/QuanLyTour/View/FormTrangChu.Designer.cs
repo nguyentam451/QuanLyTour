@@ -29,13 +29,27 @@ namespace QuanLyTour
         /// </summary>
         private void InitializeComponent()
         {
+            this.lbGiaTour = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // lbGiaTour
+            // 
+            this.lbGiaTour.BackColor = System.Drawing.Color.Violet;
+            this.lbGiaTour.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGiaTour.ForeColor = System.Drawing.Color.White;
+            this.lbGiaTour.Location = new System.Drawing.Point(565, 443);
+            this.lbGiaTour.Name = "lbGiaTour";
+            this.lbGiaTour.Size = new System.Drawing.Size(239, 71);
+            this.lbGiaTour.TabIndex = 7;
+            this.lbGiaTour.Text = "Bảng giá";
+            this.lbGiaTour.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1369, 957);
+            this.Controls.Add(this.lbGiaTour);
             this.Name = "Form3";
             this.Text = "Form3";
             this.ResumeLayout(false);
@@ -43,5 +57,7 @@ namespace QuanLyTour
         }
 
         #endregion
+
+        private System.Windows.Forms.Label lbGiaTour;
     }
 }

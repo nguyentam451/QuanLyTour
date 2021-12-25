@@ -63,8 +63,11 @@
     <Compile Include="DAL\ndTourDAL.cs" />
     <Compile Include="DAL\NhanVienDAL.cs" />
     <Compile Include="DAL\PhanBoNhanVienDAL.cs" />
+    <Compile Include="DAL\ThamQuanDAL.cs" />
+    <Compile Include="Models\DiaDiemModel.cs" />
     <Compile Include="Models\NhanVienModel.cs" />
     <Compile Include="Models\PhanBoNhanVienModel.cs" />
+    <Compile Include="Models\ThamQuanModel.cs" />
     <Compile Include="QuanLyTour.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

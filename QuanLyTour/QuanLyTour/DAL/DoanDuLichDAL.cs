@@ -29,15 +29,15 @@ namespace QuanLyTour.DAL
             {
                
                 var result = from u in db.DOANDULICHes
-                             from t in db.NOIDUNGTOURs
-                             where u.MaDoan == t.MaDoan
+                           //  from t in db.NOIDUNGTOURs
+                            // where u.MaDoan == t.MaDoan
                              select new
                              {
                                  MaDoan = u.MaDoan,
                                  MaTour = u.MaTour,
-                                 HanhTrinh = t.HanhTrinh,
-                                 KhachSan = t.KhachSan,
-                                 DiaDiem = t.DiaDiemThamQuan,
+                             //    HanhTrinh = t.HanhTrinh,
+                             //   KhachSan = t.KhachSan,
+                             //    DiaDiem = t.DiaDiemThamQuan,
                                  NgayKhoiHanhh = u.NgayKhoiHanh,
                                  NgayKetThuc = u.NgayKetThuc,
 
@@ -57,7 +57,7 @@ namespace QuanLyTour.DAL
                     doan.MaTour = i.MaTour;
                     doan.NgayKhoiHanh = (DateTime)i.NgayKhoiHanhh;
                     doan.NgayKetThuc = (DateTime)i.NgayKetThuc;
-                    doan.NoiDungTour = new Model.ndTourModel(i.HanhTrinh, i.KhachSan, i.DiaDiem);
+                 //   doan.NoiDungTour = new Model.ndTourModel(i.HanhTrinh, i.KhachSan, i.DiaDiem);
 
 
 
@@ -90,18 +90,42 @@ namespace QuanLyTour.DAL
                     }
                     );
 
-                    db.NOIDUNGTOURs.InsertOnSubmit(new NOIDUNGTOUR()
+                   /* db.NOIDUNGTOURs.InsertOnSubmit(new NOIDUNGTOUR()
                     {
                         MaDoan = obj.MaDoan,
                         HanhTrinh = obj.HanhTrinh,
                         KhachSan = obj.KhachSan,
                         DiaDiemThamQuan = obj.DiaDiemThamQuan,
 
-                    });
+                    });*/
 
                     db.SubmitChanges();
                 }
 
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+        }
+
+        public static bool DeleteNoiDungTour(String id)
+        {
+            try
+            {
+               
+                using (QuanLyTourDataContext db = new QuanLyTourDataContext())
+                {
+
+                    var ndTour = db.NOIDUNGTOURs.Where(p => p.MaDoan.Equals(id)).SingleOrDefault();
+
+                    db.NOIDUNGTOURs.DeleteOnSubmit(ndTour);
+
+                    db.SubmitChanges();
+
+                }
                 return true;
             }
             catch (Exception e)
@@ -119,11 +143,29 @@ namespace QuanLyTour.DAL
                 {
 
                     var doan = db.DOANDULICHes.Where(p => p.MaDoan.Equals(id)).SingleOrDefault();
-                    var ndTour = db.NOIDUNGTOURs.Where(p => p.MaDoan.Equals(id)).SingleOrDefault();
+                    var ndtour = db.NOIDUNGTOURs.Where(p => p.MaDoan.Equals(id)).SingleOrDefault();
+                    var chitiet = db.CHITIETDOANs.Select(p => p.MaDoan.Equals(id));
+                    var chiphi = db.CHIPHIs.Where(p => p.MaDoan.Equals(id)).SingleOrDefault();
+                    var phanbo = db.PHANBONHANVIEN_DOANs.Where(p => p.MaDoan.Equals(id)).SingleOrDefault();
+
+                    foreach (CHITIETDOAN a in db.CHITIETDOANs)
+                    {
+                        
+                        db.GetTable<CHITIETDOAN>().DeleteOnSubmit(a);
+                       
+                    }
+
+                   // db.CHITIETDOANs.DeleteOnSubmit(chitiet);
+                    db.PHANBONHANVIEN_DOANs.DeleteOnSubmit(phanbo);
+                    db.CHIPHIs.DeleteOnSubmit(chiphi);
+                    db.NOIDUNGTOURs.DeleteOnSubmit(ndtour);
                     db.DOANDULICHes.DeleteOnSubmit(doan);
-                    db.NOIDUNGTOURs.DeleteOnSubmit(ndTour);
+
 
                     db.SubmitChanges();
+
+
+
 
                 }
                 return true;
@@ -149,11 +191,11 @@ namespace QuanLyTour.DAL
                     doan.NgayKhoiHanh = obj.NgayKhoiHanh;
                     doan.NgayKetThuc = obj.NgayKetThuc;
 
-                    var ndTour = db.NOIDUNGTOURs.Where(p => p.MaDoan.Equals(obj.MaDoan)).SingleOrDefault();
+                 /*   var ndTour = db.NOIDUNGTOURs.Where(p => p.MaDoan.Equals(obj.MaDoan)).SingleOrDefault();
                     ndTour.MaDoan = obj.MaDoan;
                     ndTour.HanhTrinh = obj.HanhTrinh;
                     ndTour.KhachSan = obj.KhachSan;
-                    ndTour.DiaDiemThamQuan = obj.DiaDiemThamQuan;
+                    ndTour.DiaDiemThamQuan = obj.DiaDiemThamQuan;*/
                     
                   
                     db.SubmitChanges();

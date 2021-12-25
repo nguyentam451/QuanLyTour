@@ -31,6 +31,7 @@ namespace QuanLyTour
         {
             this.lbTittle = new System.Windows.Forms.Label();
             this.panelQuanLy = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lbKhachHang = new System.Windows.Forms.Label();
             this.lbDoanDuLich = new System.Windows.Forms.Label();
@@ -38,10 +39,10 @@ namespace QuanLyTour
             this.label1 = new System.Windows.Forms.Label();
             this.panelNhanVien = new System.Windows.Forms.Panel();
             this.dtgvPhanBoNhanVien = new System.Windows.Forms.DataGridView();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtTenNhanVien = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lbTenNhanVien = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMaNhanVien = new System.Windows.Forms.TextBox();
             this.dtgvNhanVien = new System.Windows.Forms.DataGridView();
             this.panelKhach = new System.Windows.Forms.Panel();
             this.btnSuaKhach = new System.Windows.Forms.Button();
@@ -67,22 +68,55 @@ namespace QuanLyTour
             this.btnSuaDoan = new System.Windows.Forms.Button();
             this.btnXoaDoan = new System.Windows.Forms.Button();
             this.btnThemDoan = new System.Windows.Forms.Button();
-            this.txtDiaDiem = new System.Windows.Forms.TextBox();
-            this.txtKhachSan = new System.Windows.Forms.TextBox();
-            this.txtHanhTrinh = new System.Windows.Forms.TextBox();
             this.txtNgayKT = new System.Windows.Forms.TextBox();
             this.txtNgayKH = new System.Windows.Forms.TextBox();
             this.txtMaTour1 = new System.Windows.Forms.TextBox();
             this.txtMaDoan = new System.Windows.Forms.TextBox();
-            this.lbDiaDiem = new System.Windows.Forms.Label();
-            this.lbKhachSan = new System.Windows.Forms.Label();
-            this.lbHanhTrinh = new System.Windows.Forms.Label();
             this.lbNgayKT = new System.Windows.Forms.Label();
             this.lbNgayKH = new System.Windows.Forms.Label();
             this.lbMaTour1 = new System.Windows.Forms.Label();
             this.lbMaDoan = new System.Windows.Forms.Label();
             this.dtgvDoan = new System.Windows.Forms.DataGridView();
-            this.lbGiaTour = new System.Windows.Forms.Label();
+            this.panelTour = new System.Windows.Forms.Panel();
+            this.dtgvTour = new System.Windows.Forms.DataGridView();
+            this.btnSuaTour = new System.Windows.Forms.Button();
+            this.btnXoaTour = new System.Windows.Forms.Button();
+            this.btnThemTour = new System.Windows.Forms.Button();
+            this.txtTenLoaiHinh = new System.Windows.Forms.TextBox();
+            this.txtDacDiem = new System.Windows.Forms.TextBox();
+            this.txtTenGoi = new System.Windows.Forms.TextBox();
+            this.txtMaTour = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lbTenGoi = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panelGiaTour = new System.Windows.Forms.Panel();
+            this.btnSuaGia = new System.Windows.Forms.Button();
+            this.btnXoaGia = new System.Windows.Forms.Button();
+            this.btnThemGia = new System.Windows.Forms.Button();
+            this.txtThoiGianKT = new System.Windows.Forms.TextBox();
+            this.txtThoiGianBD = new System.Windows.Forms.TextBox();
+            this.txtThanhTien = new System.Windows.Forms.TextBox();
+            this.txtMaTour_Gia = new System.Windows.Forms.TextBox();
+            this.txtMaGia = new System.Windows.Forms.TextBox();
+            this.lbThoiGianKT = new System.Windows.Forms.Label();
+            this.lbThoiGianBD = new System.Windows.Forms.Label();
+            this.lbThanhTien = new System.Windows.Forms.Label();
+            this.lbMaTour_Gia = new System.Windows.Forms.Label();
+            this.dtgvGiaTour = new System.Windows.Forms.DataGridView();
+            this.lbMaGia = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dtgvThamQuan = new System.Windows.Forms.DataGridView();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             this.panelQuanLy.SuspendLayout();
             this.panelNhanVien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvPhanBoNhanVien)).BeginInit();
@@ -92,6 +126,12 @@ namespace QuanLyTour
             this.panelDoanDuLich.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvChiTietDoan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDoan)).BeginInit();
+            this.panelTour.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvTour)).BeginInit();
+            this.panelGiaTour.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvGiaTour)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvThamQuan)).BeginInit();
             this.SuspendLayout();
             // 
             // lbTittle
@@ -109,7 +149,7 @@ namespace QuanLyTour
             // panelQuanLy
             // 
             this.panelQuanLy.BackColor = System.Drawing.Color.SlateBlue;
-            this.panelQuanLy.Controls.Add(this.lbGiaTour);
+            this.panelQuanLy.Controls.Add(this.label9);
             this.panelQuanLy.Controls.Add(this.label2);
             this.panelQuanLy.Controls.Add(this.lbKhachHang);
             this.panelQuanLy.Controls.Add(this.lbDoanDuLich);
@@ -120,12 +160,25 @@ namespace QuanLyTour
             this.panelQuanLy.Size = new System.Drawing.Size(245, 706);
             this.panelQuanLy.TabIndex = 15;
             // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.Violet;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(2, 424);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(239, 71);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Giá Tour";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.CadetBlue;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(2, 533);
+            this.label2.Location = new System.Drawing.Point(2, 321);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(239, 71);
             this.label2.TabIndex = 5;
@@ -138,7 +191,7 @@ namespace QuanLyTour
             this.lbKhachHang.BackColor = System.Drawing.Color.Tomato;
             this.lbKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbKhachHang.ForeColor = System.Drawing.Color.White;
-            this.lbKhachHang.Location = new System.Drawing.Point(2, 400);
+            this.lbKhachHang.Location = new System.Drawing.Point(3, 218);
             this.lbKhachHang.Name = "lbKhachHang";
             this.lbKhachHang.Size = new System.Drawing.Size(239, 71);
             this.lbKhachHang.TabIndex = 4;
@@ -151,7 +204,7 @@ namespace QuanLyTour
             this.lbDoanDuLich.BackColor = System.Drawing.Color.SlateGray;
             this.lbDoanDuLich.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDoanDuLich.ForeColor = System.Drawing.Color.White;
-            this.lbDoanDuLich.Location = new System.Drawing.Point(2, 142);
+            this.lbDoanDuLich.Location = new System.Drawing.Point(3, 109);
             this.lbDoanDuLich.Name = "lbDoanDuLich";
             this.lbDoanDuLich.Size = new System.Drawing.Size(239, 71);
             this.lbDoanDuLich.TabIndex = 3;
@@ -185,10 +238,10 @@ namespace QuanLyTour
             // panelNhanVien
             // 
             this.panelNhanVien.Controls.Add(this.dtgvPhanBoNhanVien);
-            this.panelNhanVien.Controls.Add(this.textBox2);
+            this.panelNhanVien.Controls.Add(this.txtTenNhanVien);
             this.panelNhanVien.Controls.Add(this.label3);
             this.panelNhanVien.Controls.Add(this.lbTenNhanVien);
-            this.panelNhanVien.Controls.Add(this.textBox1);
+            this.panelNhanVien.Controls.Add(this.txtMaNhanVien);
             this.panelNhanVien.Controls.Add(this.dtgvNhanVien);
             this.panelNhanVien.Location = new System.Drawing.Point(279, 145);
             this.panelNhanVien.Name = "panelNhanVien";
@@ -206,14 +259,14 @@ namespace QuanLyTour
             this.dtgvPhanBoNhanVien.Size = new System.Drawing.Size(514, 506);
             this.dtgvPhanBoNhanVien.TabIndex = 37;
             // 
-            // textBox2
+            // txtTenNhanVien
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(89, 152);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(146, 27);
-            this.textBox2.TabIndex = 36;
+            this.txtTenNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenNhanVien.Location = new System.Drawing.Point(89, 152);
+            this.txtTenNhanVien.Multiline = true;
+            this.txtTenNhanVien.Name = "txtTenNhanVien";
+            this.txtTenNhanVien.Size = new System.Drawing.Size(146, 27);
+            this.txtTenNhanVien.TabIndex = 36;
             // 
             // label3
             // 
@@ -236,14 +289,14 @@ namespace QuanLyTour
             this.lbTenNhanVien.Text = "Tên NV";
             this.lbTenNhanVien.Click += new System.EventHandler(this.lbTenNhanVien_Click);
             // 
-            // textBox1
+            // txtMaNhanVien
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(89, 67);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(146, 27);
-            this.textBox1.TabIndex = 33;
+            this.txtMaNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaNhanVien.Location = new System.Drawing.Point(89, 67);
+            this.txtMaNhanVien.Multiline = true;
+            this.txtMaNhanVien.Name = "txtMaNhanVien";
+            this.txtMaNhanVien.Size = new System.Drawing.Size(146, 27);
+            this.txtMaNhanVien.TabIndex = 33;
             // 
             // dtgvNhanVien
             // 
@@ -255,6 +308,7 @@ namespace QuanLyTour
             this.dtgvNhanVien.Size = new System.Drawing.Size(324, 506);
             this.dtgvNhanVien.TabIndex = 0;
             this.dtgvNhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvNhanVien_CellContentClick);
+            this.dtgvNhanVien.SelectionChanged += new System.EventHandler(this.dtgvNhanVien_SelectionChanged);
             // 
             // panelKhach
             // 
@@ -465,16 +519,10 @@ namespace QuanLyTour
             this.panelDoanDuLich.Controls.Add(this.btnSuaDoan);
             this.panelDoanDuLich.Controls.Add(this.btnXoaDoan);
             this.panelDoanDuLich.Controls.Add(this.btnThemDoan);
-            this.panelDoanDuLich.Controls.Add(this.txtDiaDiem);
-            this.panelDoanDuLich.Controls.Add(this.txtKhachSan);
-            this.panelDoanDuLich.Controls.Add(this.txtHanhTrinh);
             this.panelDoanDuLich.Controls.Add(this.txtNgayKT);
             this.panelDoanDuLich.Controls.Add(this.txtNgayKH);
             this.panelDoanDuLich.Controls.Add(this.txtMaTour1);
             this.panelDoanDuLich.Controls.Add(this.txtMaDoan);
-            this.panelDoanDuLich.Controls.Add(this.lbDiaDiem);
-            this.panelDoanDuLich.Controls.Add(this.lbKhachSan);
-            this.panelDoanDuLich.Controls.Add(this.lbHanhTrinh);
             this.panelDoanDuLich.Controls.Add(this.lbNgayKT);
             this.panelDoanDuLich.Controls.Add(this.lbNgayKH);
             this.panelDoanDuLich.Controls.Add(this.lbMaTour1);
@@ -485,21 +533,22 @@ namespace QuanLyTour
             this.panelDoanDuLich.Name = "panelDoanDuLich";
             this.panelDoanDuLich.Size = new System.Drawing.Size(1217, 706);
             this.panelDoanDuLich.TabIndex = 38;
+            this.panelDoanDuLich.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDoanDuLich_Paint);
             // 
             // dtgvChiTietDoan
             // 
             this.dtgvChiTietDoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvChiTietDoan.Location = new System.Drawing.Point(753, 28);
+            this.dtgvChiTietDoan.Location = new System.Drawing.Point(34, 358);
             this.dtgvChiTietDoan.Name = "dtgvChiTietDoan";
             this.dtgvChiTietDoan.RowHeadersWidth = 51;
             this.dtgvChiTietDoan.RowTemplate.Height = 24;
-            this.dtgvChiTietDoan.Size = new System.Drawing.Size(426, 492);
+            this.dtgvChiTietDoan.Size = new System.Drawing.Size(1145, 240);
             this.dtgvChiTietDoan.TabIndex = 34;
             this.dtgvChiTietDoan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvChiTietDoan_CellContentClick);
             // 
             // btnSuaDoan
             // 
-            this.btnSuaDoan.Location = new System.Drawing.Point(625, 552);
+            this.btnSuaDoan.Location = new System.Drawing.Point(1080, 234);
             this.btnSuaDoan.Name = "btnSuaDoan";
             this.btnSuaDoan.Size = new System.Drawing.Size(99, 37);
             this.btnSuaDoan.TabIndex = 33;
@@ -509,9 +558,9 @@ namespace QuanLyTour
             // 
             // btnXoaDoan
             // 
-            this.btnXoaDoan.Location = new System.Drawing.Point(454, 552);
+            this.btnXoaDoan.Location = new System.Drawing.Point(1079, 135);
             this.btnXoaDoan.Name = "btnXoaDoan";
-            this.btnXoaDoan.Size = new System.Drawing.Size(107, 37);
+            this.btnXoaDoan.Size = new System.Drawing.Size(100, 37);
             this.btnXoaDoan.TabIndex = 32;
             this.btnXoaDoan.Text = "Xóa";
             this.btnXoaDoan.UseVisualStyleBackColor = true;
@@ -519,7 +568,7 @@ namespace QuanLyTour
             // 
             // btnThemDoan
             // 
-            this.btnThemDoan.Location = new System.Drawing.Point(287, 552);
+            this.btnThemDoan.Location = new System.Drawing.Point(1079, 28);
             this.btnThemDoan.Name = "btnThemDoan";
             this.btnThemDoan.Size = new System.Drawing.Size(100, 37);
             this.btnThemDoan.TabIndex = 31;
@@ -527,33 +576,9 @@ namespace QuanLyTour
             this.btnThemDoan.UseVisualStyleBackColor = true;
             this.btnThemDoan.Click += new System.EventHandler(this.btnThemDoan_Click_1);
             // 
-            // txtDiaDiem
-            // 
-            this.txtDiaDiem.Location = new System.Drawing.Point(119, 493);
-            this.txtDiaDiem.Multiline = true;
-            this.txtDiaDiem.Name = "txtDiaDiem";
-            this.txtDiaDiem.Size = new System.Drawing.Size(123, 27);
-            this.txtDiaDiem.TabIndex = 30;
-            // 
-            // txtKhachSan
-            // 
-            this.txtKhachSan.Location = new System.Drawing.Point(119, 416);
-            this.txtKhachSan.Multiline = true;
-            this.txtKhachSan.Name = "txtKhachSan";
-            this.txtKhachSan.Size = new System.Drawing.Size(123, 27);
-            this.txtKhachSan.TabIndex = 29;
-            // 
-            // txtHanhTrinh
-            // 
-            this.txtHanhTrinh.Location = new System.Drawing.Point(119, 333);
-            this.txtHanhTrinh.Multiline = true;
-            this.txtHanhTrinh.Name = "txtHanhTrinh";
-            this.txtHanhTrinh.Size = new System.Drawing.Size(123, 27);
-            this.txtHanhTrinh.TabIndex = 28;
-            // 
             // txtNgayKT
             // 
-            this.txtNgayKT.Location = new System.Drawing.Point(119, 253);
+            this.txtNgayKT.Location = new System.Drawing.Point(134, 241);
             this.txtNgayKT.Multiline = true;
             this.txtNgayKT.Name = "txtNgayKT";
             this.txtNgayKT.Size = new System.Drawing.Size(123, 27);
@@ -561,15 +586,16 @@ namespace QuanLyTour
             // 
             // txtNgayKH
             // 
-            this.txtNgayKH.Location = new System.Drawing.Point(119, 174);
+            this.txtNgayKH.Location = new System.Drawing.Point(134, 172);
             this.txtNgayKH.Multiline = true;
             this.txtNgayKH.Name = "txtNgayKH";
             this.txtNgayKH.Size = new System.Drawing.Size(123, 27);
             this.txtNgayKH.TabIndex = 26;
+            this.txtNgayKH.TextChanged += new System.EventHandler(this.txtNgayKH_TextChanged);
             // 
             // txtMaTour1
             // 
-            this.txtMaTour1.Location = new System.Drawing.Point(119, 94);
+            this.txtMaTour1.Location = new System.Drawing.Point(134, 99);
             this.txtMaTour1.Multiline = true;
             this.txtMaTour1.Name = "txtMaTour1";
             this.txtMaTour1.Size = new System.Drawing.Size(123, 27);
@@ -577,47 +603,17 @@ namespace QuanLyTour
             // 
             // txtMaDoan
             // 
-            this.txtMaDoan.Location = new System.Drawing.Point(119, 28);
+            this.txtMaDoan.Location = new System.Drawing.Point(134, 28);
             this.txtMaDoan.Multiline = true;
             this.txtMaDoan.Name = "txtMaDoan";
             this.txtMaDoan.Size = new System.Drawing.Size(123, 27);
             this.txtMaDoan.TabIndex = 24;
             // 
-            // lbDiaDiem
-            // 
-            this.lbDiaDiem.AutoSize = true;
-            this.lbDiaDiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDiaDiem.Location = new System.Drawing.Point(12, 500);
-            this.lbDiaDiem.Name = "lbDiaDiem";
-            this.lbDiaDiem.Size = new System.Drawing.Size(78, 20);
-            this.lbDiaDiem.TabIndex = 23;
-            this.lbDiaDiem.Text = "Địa Điểm";
-            // 
-            // lbKhachSan
-            // 
-            this.lbKhachSan.AutoSize = true;
-            this.lbKhachSan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbKhachSan.Location = new System.Drawing.Point(8, 423);
-            this.lbKhachSan.Name = "lbKhachSan";
-            this.lbKhachSan.Size = new System.Drawing.Size(90, 20);
-            this.lbKhachSan.TabIndex = 22;
-            this.lbKhachSan.Text = "Khách Sạn";
-            // 
-            // lbHanhTrinh
-            // 
-            this.lbHanhTrinh.AutoSize = true;
-            this.lbHanhTrinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHanhTrinh.Location = new System.Drawing.Point(8, 340);
-            this.lbHanhTrinh.Name = "lbHanhTrinh";
-            this.lbHanhTrinh.Size = new System.Drawing.Size(92, 20);
-            this.lbHanhTrinh.TabIndex = 21;
-            this.lbHanhTrinh.Text = "Hành Trình";
-            // 
             // lbNgayKT
             // 
             this.lbNgayKT.AutoSize = true;
             this.lbNgayKT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNgayKT.Location = new System.Drawing.Point(8, 260);
+            this.lbNgayKT.Location = new System.Drawing.Point(30, 248);
             this.lbNgayKT.Name = "lbNgayKT";
             this.lbNgayKT.Size = new System.Drawing.Size(73, 20);
             this.lbNgayKT.TabIndex = 20;
@@ -627,7 +623,7 @@ namespace QuanLyTour
             // 
             this.lbNgayKH.AutoSize = true;
             this.lbNgayKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNgayKH.Location = new System.Drawing.Point(8, 181);
+            this.lbNgayKH.Location = new System.Drawing.Point(30, 179);
             this.lbNgayKH.Name = "lbNgayKH";
             this.lbNgayKH.Size = new System.Drawing.Size(76, 20);
             this.lbNgayKH.TabIndex = 19;
@@ -637,7 +633,7 @@ namespace QuanLyTour
             // 
             this.lbMaTour1.AutoSize = true;
             this.lbMaTour1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMaTour1.Location = new System.Drawing.Point(8, 101);
+            this.lbMaTour1.Location = new System.Drawing.Point(30, 106);
             this.lbMaTour1.Name = "lbMaTour1";
             this.lbMaTour1.Size = new System.Drawing.Size(71, 20);
             this.lbMaTour1.TabIndex = 18;
@@ -647,7 +643,7 @@ namespace QuanLyTour
             // 
             this.lbMaDoan.AutoSize = true;
             this.lbMaDoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMaDoan.Location = new System.Drawing.Point(5, 35);
+            this.lbMaDoan.Location = new System.Drawing.Point(30, 35);
             this.lbMaDoan.Name = "lbMaDoan";
             this.lbMaDoan.Size = new System.Drawing.Size(76, 20);
             this.lbMaDoan.TabIndex = 17;
@@ -662,28 +658,431 @@ namespace QuanLyTour
             this.dtgvDoan.RowHeadersWidth = 51;
             this.dtgvDoan.RowTemplate.Height = 24;
             this.dtgvDoan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvDoan.Size = new System.Drawing.Size(437, 492);
+            this.dtgvDoan.Size = new System.Drawing.Size(772, 240);
             this.dtgvDoan.TabIndex = 0;
             this.dtgvDoan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             this.dtgvDoan.SelectionChanged += new System.EventHandler(this.dtgvDoan_SelectionChanged);
             // 
-            // lbGiaTour
+            // panelTour
             // 
-            this.lbGiaTour.BackColor = System.Drawing.Color.Violet;
-            this.lbGiaTour.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGiaTour.ForeColor = System.Drawing.Color.White;
-            this.lbGiaTour.Location = new System.Drawing.Point(2, 263);
-            this.lbGiaTour.Name = "lbGiaTour";
-            this.lbGiaTour.Size = new System.Drawing.Size(239, 71);
-            this.lbGiaTour.TabIndex = 6;
-            this.lbGiaTour.Text = "Bảng giá";
-            this.lbGiaTour.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panelTour.BackColor = System.Drawing.Color.GhostWhite;
+            this.panelTour.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelTour.Controls.Add(this.dtgvTour);
+            this.panelTour.Controls.Add(this.btnSuaTour);
+            this.panelTour.Controls.Add(this.btnXoaTour);
+            this.panelTour.Controls.Add(this.btnThemTour);
+            this.panelTour.Controls.Add(this.txtTenLoaiHinh);
+            this.panelTour.Controls.Add(this.txtDacDiem);
+            this.panelTour.Controls.Add(this.txtTenGoi);
+            this.panelTour.Controls.Add(this.txtMaTour);
+            this.panelTour.Controls.Add(this.label4);
+            this.panelTour.Controls.Add(this.label5);
+            this.panelTour.Controls.Add(this.lbTenGoi);
+            this.panelTour.Controls.Add(this.label7);
+            this.panelTour.Location = new System.Drawing.Point(275, 110);
+            this.panelTour.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelTour.Name = "panelTour";
+            this.panelTour.Size = new System.Drawing.Size(1217, 706);
+            this.panelTour.TabIndex = 39;
+            // 
+            // dtgvTour
+            // 
+            this.dtgvTour.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvTour.Location = new System.Drawing.Point(34, 145);
+            this.dtgvTour.Name = "dtgvTour";
+            this.dtgvTour.RowHeadersWidth = 51;
+            this.dtgvTour.RowTemplate.Height = 24;
+            this.dtgvTour.Size = new System.Drawing.Size(515, 425);
+            this.dtgvTour.TabIndex = 34;
+            // 
+            // btnSuaTour
+            // 
+            this.btnSuaTour.Location = new System.Drawing.Point(1055, 582);
+            this.btnSuaTour.Name = "btnSuaTour";
+            this.btnSuaTour.Size = new System.Drawing.Size(99, 37);
+            this.btnSuaTour.TabIndex = 33;
+            this.btnSuaTour.Text = "Sửa";
+            this.btnSuaTour.UseVisualStyleBackColor = true;
+            this.btnSuaTour.Click += new System.EventHandler(this.btnSuaTour_Click);
+            // 
+            // btnXoaTour
+            // 
+            this.btnXoaTour.Location = new System.Drawing.Point(513, 582);
+            this.btnXoaTour.Name = "btnXoaTour";
+            this.btnXoaTour.Size = new System.Drawing.Size(100, 37);
+            this.btnXoaTour.TabIndex = 32;
+            this.btnXoaTour.Text = "Xóa";
+            this.btnXoaTour.UseVisualStyleBackColor = true;
+            // 
+            // btnThemTour
+            // 
+            this.btnThemTour.Location = new System.Drawing.Point(34, 583);
+            this.btnThemTour.Name = "btnThemTour";
+            this.btnThemTour.Size = new System.Drawing.Size(100, 37);
+            this.btnThemTour.TabIndex = 31;
+            this.btnThemTour.Text = "Thêm";
+            this.btnThemTour.UseVisualStyleBackColor = true;
+            // 
+            // txtTenLoaiHinh
+            // 
+            this.txtTenLoaiHinh.Location = new System.Drawing.Point(426, 89);
+            this.txtTenLoaiHinh.Multiline = true;
+            this.txtTenLoaiHinh.Name = "txtTenLoaiHinh";
+            this.txtTenLoaiHinh.Size = new System.Drawing.Size(123, 27);
+            this.txtTenLoaiHinh.TabIndex = 27;
+            // 
+            // txtDacDiem
+            // 
+            this.txtDacDiem.Location = new System.Drawing.Point(120, 89);
+            this.txtDacDiem.Multiline = true;
+            this.txtDacDiem.Name = "txtDacDiem";
+            this.txtDacDiem.Size = new System.Drawing.Size(123, 27);
+            this.txtDacDiem.TabIndex = 26;
+            // 
+            // txtTenGoi
+            // 
+            this.txtTenGoi.Location = new System.Drawing.Point(426, 35);
+            this.txtTenGoi.Multiline = true;
+            this.txtTenGoi.Name = "txtTenGoi";
+            this.txtTenGoi.Size = new System.Drawing.Size(123, 27);
+            this.txtTenGoi.TabIndex = 25;
+            // 
+            // txtMaTour
+            // 
+            this.txtMaTour.Location = new System.Drawing.Point(120, 28);
+            this.txtMaTour.Multiline = true;
+            this.txtMaTour.Name = "txtMaTour";
+            this.txtMaTour.Size = new System.Drawing.Size(123, 27);
+            this.txtMaTour.TabIndex = 24;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(283, 96);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(114, 20);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Tên Loại Hình";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(30, 98);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(83, 20);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Đặc Điểm";
+            // 
+            // lbTenGoi
+            // 
+            this.lbTenGoi.AutoSize = true;
+            this.lbTenGoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenGoi.Location = new System.Drawing.Point(283, 35);
+            this.lbTenGoi.Name = "lbTenGoi";
+            this.lbTenGoi.Size = new System.Drawing.Size(68, 20);
+            this.lbTenGoi.TabIndex = 18;
+            this.lbTenGoi.Text = "Tên Gọi";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(30, 35);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(71, 20);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Mã Tour";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // panelGiaTour
+            // 
+            this.panelGiaTour.Controls.Add(this.btnSuaGia);
+            this.panelGiaTour.Controls.Add(this.btnXoaGia);
+            this.panelGiaTour.Controls.Add(this.btnThemGia);
+            this.panelGiaTour.Controls.Add(this.txtThoiGianKT);
+            this.panelGiaTour.Controls.Add(this.txtThoiGianBD);
+            this.panelGiaTour.Controls.Add(this.txtThanhTien);
+            this.panelGiaTour.Controls.Add(this.txtMaTour_Gia);
+            this.panelGiaTour.Controls.Add(this.txtMaGia);
+            this.panelGiaTour.Controls.Add(this.lbThoiGianKT);
+            this.panelGiaTour.Controls.Add(this.lbThoiGianBD);
+            this.panelGiaTour.Controls.Add(this.lbThanhTien);
+            this.panelGiaTour.Controls.Add(this.lbMaTour_Gia);
+            this.panelGiaTour.Controls.Add(this.dtgvGiaTour);
+            this.panelGiaTour.Controls.Add(this.lbMaGia);
+            this.panelGiaTour.Location = new System.Drawing.Point(276, 141);
+            this.panelGiaTour.Name = "panelGiaTour";
+            this.panelGiaTour.Size = new System.Drawing.Size(1216, 706);
+            this.panelGiaTour.TabIndex = 40;
+            this.panelGiaTour.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnSuaGia
+            // 
+            this.btnSuaGia.Location = new System.Drawing.Point(1031, 575);
+            this.btnSuaGia.Name = "btnSuaGia";
+            this.btnSuaGia.Size = new System.Drawing.Size(149, 41);
+            this.btnSuaGia.TabIndex = 36;
+            this.btnSuaGia.Text = "Sửa";
+            this.btnSuaGia.UseVisualStyleBackColor = true;
+            // 
+            // btnXoaGia
+            // 
+            this.btnXoaGia.Location = new System.Drawing.Point(692, 575);
+            this.btnXoaGia.Name = "btnXoaGia";
+            this.btnXoaGia.Size = new System.Drawing.Size(149, 41);
+            this.btnXoaGia.TabIndex = 35;
+            this.btnXoaGia.Text = "Xóa";
+            this.btnXoaGia.UseVisualStyleBackColor = true;
+            // 
+            // btnThemGia
+            // 
+            this.btnThemGia.Location = new System.Drawing.Point(358, 579);
+            this.btnThemGia.Name = "btnThemGia";
+            this.btnThemGia.Size = new System.Drawing.Size(149, 41);
+            this.btnThemGia.TabIndex = 34;
+            this.btnThemGia.Text = "Thêm";
+            this.btnThemGia.UseVisualStyleBackColor = true;
+            // 
+            // txtThoiGianKT
+            // 
+            this.txtThoiGianKT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtThoiGianKT.Location = new System.Drawing.Point(159, 522);
+            this.txtThoiGianKT.Multiline = true;
+            this.txtThoiGianKT.Name = "txtThoiGianKT";
+            this.txtThoiGianKT.Size = new System.Drawing.Size(159, 27);
+            this.txtThoiGianKT.TabIndex = 31;
+            // 
+            // txtThoiGianBD
+            // 
+            this.txtThoiGianBD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtThoiGianBD.Location = new System.Drawing.Point(159, 401);
+            this.txtThoiGianBD.Multiline = true;
+            this.txtThoiGianBD.Name = "txtThoiGianBD";
+            this.txtThoiGianBD.Size = new System.Drawing.Size(159, 27);
+            this.txtThoiGianBD.TabIndex = 30;
+            // 
+            // txtThanhTien
+            // 
+            this.txtThanhTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtThanhTien.Location = new System.Drawing.Point(155, 289);
+            this.txtThanhTien.Multiline = true;
+            this.txtThanhTien.Name = "txtThanhTien";
+            this.txtThanhTien.Size = new System.Drawing.Size(159, 27);
+            this.txtThanhTien.TabIndex = 29;
+            // 
+            // txtMaTour_Gia
+            // 
+            this.txtMaTour_Gia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaTour_Gia.Location = new System.Drawing.Point(155, 176);
+            this.txtMaTour_Gia.Multiline = true;
+            this.txtMaTour_Gia.Name = "txtMaTour_Gia";
+            this.txtMaTour_Gia.Size = new System.Drawing.Size(159, 27);
+            this.txtMaTour_Gia.TabIndex = 28;
+            this.txtMaTour_Gia.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
+            // 
+            // txtMaGia
+            // 
+            this.txtMaGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaGia.Location = new System.Drawing.Point(155, 60);
+            this.txtMaGia.Multiline = true;
+            this.txtMaGia.Name = "txtMaGia";
+            this.txtMaGia.Size = new System.Drawing.Size(159, 27);
+            this.txtMaGia.TabIndex = 27;
+            // 
+            // lbThoiGianKT
+            // 
+            this.lbThoiGianKT.AutoSize = true;
+            this.lbThoiGianKT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThoiGianKT.Location = new System.Drawing.Point(18, 529);
+            this.lbThoiGianKT.Name = "lbThoiGianKT";
+            this.lbThoiGianKT.Size = new System.Drawing.Size(107, 20);
+            this.lbThoiGianKT.TabIndex = 6;
+            this.lbThoiGianKT.Text = "Thời Gian KT";
+            // 
+            // lbThoiGianBD
+            // 
+            this.lbThoiGianBD.AutoSize = true;
+            this.lbThoiGianBD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThoiGianBD.Location = new System.Drawing.Point(18, 408);
+            this.lbThoiGianBD.Name = "lbThoiGianBD";
+            this.lbThoiGianBD.Size = new System.Drawing.Size(110, 20);
+            this.lbThoiGianBD.TabIndex = 4;
+            this.lbThoiGianBD.Text = "Thời Gian BĐ";
+            // 
+            // lbThanhTien
+            // 
+            this.lbThanhTien.AutoSize = true;
+            this.lbThanhTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThanhTien.Location = new System.Drawing.Point(18, 296);
+            this.lbThanhTien.Name = "lbThanhTien";
+            this.lbThanhTien.Size = new System.Drawing.Size(72, 20);
+            this.lbThanhTien.TabIndex = 3;
+            this.lbThanhTien.Text = "Giá Tiền";
+            // 
+            // lbMaTour_Gia
+            // 
+            this.lbMaTour_Gia.AutoSize = true;
+            this.lbMaTour_Gia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaTour_Gia.Location = new System.Drawing.Point(18, 183);
+            this.lbMaTour_Gia.Name = "lbMaTour_Gia";
+            this.lbMaTour_Gia.Size = new System.Drawing.Size(71, 20);
+            this.lbMaTour_Gia.TabIndex = 2;
+            this.lbMaTour_Gia.Text = "Mã Tour";
+            // 
+            // dtgvGiaTour
+            // 
+            this.dtgvGiaTour.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvGiaTour.Location = new System.Drawing.Point(354, 60);
+            this.dtgvGiaTour.Name = "dtgvGiaTour";
+            this.dtgvGiaTour.RowHeadersWidth = 51;
+            this.dtgvGiaTour.RowTemplate.Height = 24;
+            this.dtgvGiaTour.Size = new System.Drawing.Size(822, 489);
+            this.dtgvGiaTour.TabIndex = 1;
+            this.dtgvGiaTour.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dtgvGiaTour.SelectionChanged += new System.EventHandler(this.dtgvGiaTour_SelectionChanged);
+            // 
+            // lbMaGia
+            // 
+            this.lbMaGia.AutoSize = true;
+            this.lbMaGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaGia.Location = new System.Drawing.Point(18, 65);
+            this.lbMaGia.Name = "lbMaGia";
+            this.lbMaGia.Size = new System.Drawing.Size(63, 20);
+            this.lbMaGia.TabIndex = 0;
+            this.lbMaGia.Text = "Mã Giá";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.GhostWhite;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.dtgvThamQuan);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.button7);
+            this.panel1.Controls.Add(this.button8);
+            this.panel1.Controls.Add(this.button9);
+            this.panel1.Location = new System.Drawing.Point(149, 109);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(733, 706);
+            this.panel1.TabIndex = 41;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(446, 109);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(157, 27);
+            this.textBox4.TabIndex = 51;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(330, 109);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(61, 20);
+            this.label6.TabIndex = 50;
+            this.label6.Text = "Thứ Tự";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(446, 69);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(157, 27);
+            this.textBox3.TabIndex = 49;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(330, 68);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(78, 20);
+            this.label8.TabIndex = 48;
+            this.label8.Text = "Địa Điểm";
+            // 
+            // dtgvThamQuan
+            // 
+            this.dtgvThamQuan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvThamQuan.Location = new System.Drawing.Point(317, 140);
+            this.dtgvThamQuan.Name = "dtgvThamQuan";
+            this.dtgvThamQuan.RowHeadersWidth = 51;
+            this.dtgvThamQuan.RowTemplate.Height = 24;
+            this.dtgvThamQuan.Size = new System.Drawing.Size(581, 425);
+            this.dtgvThamQuan.TabIndex = 47;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(1080, 583);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(99, 37);
+            this.button4.TabIndex = 46;
+            this.button4.Text = "Sửa";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(845, 583);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(100, 37);
+            this.button5.TabIndex = 45;
+            this.button5.Text = "Xóa";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(598, 583);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(100, 37);
+            this.button6.TabIndex = 44;
+            this.button6.Text = "Thêm";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(450, 583);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(99, 37);
+            this.button7.TabIndex = 33;
+            this.button7.Text = "Sửa";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(238, 583);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(100, 37);
+            this.button8.TabIndex = 32;
+            this.button8.Text = "Xóa";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(34, 583);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(100, 37);
+            this.button9.TabIndex = 31;
+            this.button9.Text = "Thêm";
+            this.button9.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1515, 924);
+            this.Controls.Add(this.panelTour);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelGiaTour);
             this.Controls.Add(this.panelDoanDuLich);
             this.Controls.Add(this.panelNhanVien);
             this.Controls.Add(this.panelKhach);
@@ -706,6 +1105,15 @@ namespace QuanLyTour
             this.panelDoanDuLich.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvChiTietDoan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDoan)).EndInit();
+            this.panelTour.ResumeLayout(false);
+            this.panelTour.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvTour)).EndInit();
+            this.panelGiaTour.ResumeLayout(false);
+            this.panelGiaTour.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvGiaTour)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvThamQuan)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -741,30 +1149,64 @@ namespace QuanLyTour
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbTenNhanVien;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtMaNhanVien;
+        private System.Windows.Forms.TextBox txtTenNhanVien;
         private System.Windows.Forms.DataGridView dtgvPhanBoNhanVien;
         private System.Windows.Forms.Panel panelDoanDuLich;
         private System.Windows.Forms.DataGridView dtgvChiTietDoan;
         private System.Windows.Forms.Button btnSuaDoan;
         private System.Windows.Forms.Button btnXoaDoan;
         private System.Windows.Forms.Button btnThemDoan;
-        private System.Windows.Forms.TextBox txtDiaDiem;
-        private System.Windows.Forms.TextBox txtKhachSan;
-        private System.Windows.Forms.TextBox txtHanhTrinh;
         private System.Windows.Forms.TextBox txtNgayKT;
         private System.Windows.Forms.TextBox txtNgayKH;
         private System.Windows.Forms.TextBox txtMaTour1;
         private System.Windows.Forms.TextBox txtMaDoan;
-        private System.Windows.Forms.Label lbDiaDiem;
-        private System.Windows.Forms.Label lbKhachSan;
-        private System.Windows.Forms.Label lbHanhTrinh;
         private System.Windows.Forms.Label lbNgayKT;
         private System.Windows.Forms.Label lbNgayKH;
         private System.Windows.Forms.Label lbMaTour1;
         private System.Windows.Forms.Label lbMaDoan;
         private System.Windows.Forms.DataGridView dtgvDoan;
-        private System.Windows.Forms.Label lbGiaTour;
+        private System.Windows.Forms.Panel panelTour;
+        private System.Windows.Forms.DataGridView dtgvTour;
+        private System.Windows.Forms.Button btnSuaTour;
+        private System.Windows.Forms.Button btnXoaTour;
+        private System.Windows.Forms.Button btnThemTour;
+        private System.Windows.Forms.TextBox txtTenLoaiHinh;
+        private System.Windows.Forms.TextBox txtDacDiem;
+        private System.Windows.Forms.TextBox txtTenGoi;
+        private System.Windows.Forms.TextBox txtMaTour;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbTenGoi;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panelGiaTour;
+        private System.Windows.Forms.Button btnSuaGia;
+        private System.Windows.Forms.Button btnXoaGia;
+        private System.Windows.Forms.Button btnThemGia;
+        private System.Windows.Forms.TextBox txtThoiGianBD;
+        private System.Windows.Forms.TextBox txtThanhTien;
+        private System.Windows.Forms.TextBox txtMaTour_Gia;
+        private System.Windows.Forms.TextBox txtMaGia;
+        private System.Windows.Forms.Label lbThoiGianBD;
+        private System.Windows.Forms.Label lbThanhTien;
+        private System.Windows.Forms.Label lbMaTour_Gia;
+        private System.Windows.Forms.DataGridView dtgvGiaTour;
+        private System.Windows.Forms.Label lbMaGia;
+        private System.Windows.Forms.TextBox txtThoiGianKT;
+        private System.Windows.Forms.Label lbThoiGianKT;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dtgvThamQuan;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label8;
     }
 }
 
