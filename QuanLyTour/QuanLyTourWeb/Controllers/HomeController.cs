@@ -52,36 +52,21 @@ namespace QuanLyTourWeb.Controllers
 
         public ActionResult CreateTour()
         {
-            var con = new QuanLyTour.Model.LoaiHinhDuLichModel();
-            con.getAll();
-
-            var LoaiHinhSelect = new SelectList("Vung Tau", "MaLoaiHinh", "TenLoaiHinh");
-            ViewBag.MaLoaiHinh = LoaiHinhSelect;
-
-            /*
-            List<QuanLyTour.Model.LoaiHinhDuLichModel> listDiaDiem;
-            listDiaDiem = QuanLyTour.Model.LoaiHinhDuLichModel.GetAll();
-
-            Dictionary<string, string>  loaihinh = new Dictionary<string, string>();
-
-            for (int i = 0; i < QuanLyTour.Model.LoaiHinhDuLichModel.getCount() ; i++)
-            {
-                QuanLyTour.Model.LoaiHinhDuLichModel a = listDiaDiem[i];
-
-                loaihinh.Add(a.MaLoaiHinh, a.TenLoaiHinh);
-
-            }
-
-            var LoaiHinhSelect = new SelectList(loaihinh, "MaLoaiHinh", "TenLoaiHinh");
-            ViewBag.MaLoaiHinh = LoaiHinhSelect;
-
-            */
-
-            //ViewBag.MaLoaiHinh = new BindingSource(loaihinh, null);
-            //ViewBag.MaLoaiHinh = "Value";
-            //ViewBag.MaLoaiHinh = "Key";
-
+            setViewBagDiaDiem();
+            setViewBagMaLoaiHinh();
             return View();
+        }
+
+        public void setViewBagMaLoaiHinh(long? selected = null)
+        {
+            var dao = new QuanLyTour.Model.LoaiHinhDuLichModel();
+            ViewBag.MaLoaiHinh = new SelectList(dao.getAll(), "MaLoaiHinh", "TenLoaiHinh", selected);
+        }
+
+        public void setViewBagDiaDiem(long? selected = null)
+        {
+            var dao = new QuanLyTour.Model.DiaDiemModel();
+            ViewBag.DacDiem = new SelectList(dao.getAll(), "MaDiaDiem", "TenDiaDiem", selected);
         }
 
         //POST: home/create

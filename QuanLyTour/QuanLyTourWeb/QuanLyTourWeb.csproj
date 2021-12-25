@@ -124,6 +124,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\ChiTietDoanDAL.cs" />
+    <Compile Include="DAL\DiaDiemDAL.cs" />
     <Compile Include="DAL\DoanDuLichDAL.cs" />
     <Compile Include="DAL\GiaTourDAL.cs" />
     <Compile Include="DAL\KhachDAL.cs" />
@@ -136,6 +137,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ChiTietDoanModel.cs" />
+    <Compile Include="Models\DiaDiemModel.cs" />
     <Compile Include="Models\DoanDuLichModel.cs" />
     <Compile Include="Models\GiaTourModel.cs" />
     <Compile Include="Models\KhachHangModel.cs" />
