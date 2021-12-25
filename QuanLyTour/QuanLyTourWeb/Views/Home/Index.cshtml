@@ -5,33 +5,34 @@
 }
 
 
-<h1>Quan lý tour</h1>
-<br>
-<button>Thêm đoàn du lịch</button>
-<br>
-<br>
+<h1>Quản lý tour</h1>
+
+<p>
+	@Html.ActionLink("Thêm đoàn du lịch", "Create")
+</p>
+
 <table class="table">
 	<tr>
 		<th>
-			@Html.DisplayNameFor(model => model.MaDoan)
+			<p>Mã Đoàn</p>
 		</th>
 		<th>
-			@Html.DisplayNameFor(model => model.HanhTrinh)
+			<p>Mã Tour</p>
 		</th>
 		<th>
-			@Html.DisplayNameFor(model => model.KhachSan)
+			<p>Ngày khởi hành</p>
 		</th>
 		<th>
-			@Html.DisplayNameFor(model => model.DiaDiemThamQuan)
+			<p>Ngày kết thúc</p>
 		</th>
 		<th>
-			@Html.DisplayNameFor(model => model.NoiDungTour.HanhTrinh)
+			<p>Hành trình</p>
 		</th>
 		<th>
-			@Html.DisplayNameFor(model => model.NoiDungTour.KhachSan)
+			<p>Khách sạn</p>
 		</th>
 		<th>
-			@Html.DisplayNameFor(model => model.NoiDungTour.DiaDiemThamQuan)
+			<p>Địa điểm</p>
 		</th>
 
 		<th></th>
@@ -43,7 +44,15 @@
 			<td>
 				@Html.DisplayFor(modelItem => item.MaDoan)
 			</td>
-
+			<td>
+				@Html.DisplayFor(modelItem => item.MaTour)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.NgayKhoiHanh)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.NgayKetThuc)
+			</td>
 			<td>
 				@Html.DisplayFor(modelItem => item.HanhTrinh)
 			</td>
@@ -53,15 +62,7 @@
 			<td>
 				@Html.DisplayFor(modelItem => item.DiaDiemThamQuan)
 			</td>
-			<td>
-				@Html.DisplayFor(modelItem => item.NoiDungTour.HanhTrinh)
-			</td>
-			<td>
-				@Html.DisplayFor(modelItem => item.NoiDungTour.KhachSan)
-			</td>
-			<td>
-				@Html.DisplayFor(modelItem => item.NoiDungTour.DiaDiemThamQuan)
-			</td>
+
 
 			<td>
 				@Html.ActionLink("Edit", "Edit", new { id = item.MaDoan }) |

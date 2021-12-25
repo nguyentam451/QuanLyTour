@@ -1,0 +1,67 @@
+﻿@model IEnumerable<QuanLyTour.Model.TourDuLichModel>
+
+@{
+	ViewBag.Title = "QLTour";
+}
+
+<h2>QLTour</h2>
+
+<p>
+	@Html.ActionLink("Thêm tour du lịch", "CreateTour")
+</p>
+
+<table class="table">
+	<tr>
+		<th>
+			<p>Tên Tour</p>
+		</th>
+		<th>
+			<p>Tên địa điểm</p>
+		</th>
+		<th>
+			<p>Tên loại hình</p>
+		</th>
+		<th>
+			<p>Giá</p>
+		</th>
+		<th>
+			<p>Ngày bắt đầu</p>
+		</th>
+		<th>
+			<p>Ngày kết thúc</p>
+		</th>
+
+		<th></th>
+	</tr>
+
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td>
+				@Html.DisplayFor(modelItem => item.TenTour)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.TenDacDiem)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.TenLoaiTour)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.ThanhTien)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.ThoiGianBatDau, new { htmlAttributes = new { @type = "text", @class = "form-control" } })
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.ThoiGianKetThuc)
+			</td>
+
+			<td>
+				@Html.ActionLink("Edit", "EditTour", new { id = item.MaTour }) |
+				@Html.ActionLink("Details", "Details", new { id = item.MaTour }) |
+				@Html.ActionLink("Delete", "Delete", new { id = item.MaTour })
+			</td>
+		</tr>
+	}
+
+</table>
