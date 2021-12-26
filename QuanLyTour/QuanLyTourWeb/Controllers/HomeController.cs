@@ -57,6 +57,62 @@ namespace QuanLyTourWeb.Controllers
             return View();
         }
 
+        //POST: home/create
+        [HttpPost]
+        public ActionResult CreateTour(QuanLyTour.Model.TourDuLichModel model)
+        {
+            try
+            {
+                model.MaTour = "MT" + (QuanLyTour.Model.TourDuLichModel.getCount() + 1);
+
+                model.InserToDB();
+
+                return RedirectToAction("QLTour");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+
+        public ActionResult EditTour(string id)
+        {
+            var con = new QuanLyTour.Model.TourDuLichModel();
+            QuanLyTour.Model.TourDuLichModel edit = 
+                QuanLyTour.Model.TourDuLichModel.findTourDuLich_Ma(con.getAll(), id);
+
+            setViewBagDiaDiem();
+            setViewBagMaLoaiHinh();
+            return View(edit);
+        }
+
+
+        [HttpPost]
+        public ActionResult EditTour(QuanLyTour.Model.TourDuLichModel model)
+        {
+            try
+            {
+                model.UpdateDB();
+
+                return RedirectToAction("QLTour");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
         public void setViewBagMaLoaiHinh(long? selected = null)
         {
             var dao = new QuanLyTour.Model.LoaiHinhDuLichModel();
@@ -67,43 +123,6 @@ namespace QuanLyTourWeb.Controllers
         {
             var dao = new QuanLyTour.Model.DiaDiemModel();
             ViewBag.DacDiem = new SelectList(dao.getAll(), "MaDiaDiem", "TenDiaDiem", selected);
-        }
-
-        //POST: home/create
-        [HttpPost]
-        public ActionResult CreateTour(QuanLyTour.Model.TourDuLichModel model)
-        {
-            try
-            {
-                model.MaTour = "MT" + (QuanLyTour.Model.TourDuLichModel.getCount() + 1);
-
-                if (model.InserToDB())
-                {
-                    MessageBox.Show("Them thanh cong");
-                }
-                else
-                {
-                    MessageBox.Show("Them that bai:\n"
-                        + model.MaTour + "\n"
-                        + model.TenTour + "\n"
-                        + model.DacDiem + "\n"
-                        + model.MaLoaiHinh);
-                }
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-
-        public ActionResult EditTour(String id)
-        {
-            //var con = new QuanLyTour.Model.TourDuLichModel();
-            //var edit = con.MaTour.Fi
-            return View();
         }
 
     }

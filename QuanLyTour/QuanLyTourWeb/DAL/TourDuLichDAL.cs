@@ -145,8 +145,17 @@ namespace DAL
                     tour.DacDiem = obj.DacDiem;
                     tour.MaLoaiHinh = obj.MaLoaiHinh;
 
+                    db.SubmitChanges();
+
+                    var gia = db.GIATOURs.Where(p => p.MaTour.Equals(obj.MaTour)).SingleOrDefault();
+                    gia.MaTour = obj.MaTour;
+                    gia.MaGia = obj.MaTour;
+                    gia.ThanhTien = obj.ThanhTien;
+                    gia.ThoiGianBatDau = obj.ThoiGianBatDau;
+                    gia.ThoiGianKetThuc = obj.ThoiGianKetThuc;
 
                     db.SubmitChanges();
+
                 }
 
                 return true;
