@@ -117,10 +117,12 @@ namespace DAL
             {
                 using (QuanLyTourDataContext db = new QuanLyTourDataContext())
                 {
+                    var gia = db.GIATOURs.Where(p => p.MaTour.Equals(obj.MaTour)).SingleOrDefault();
+                    db.GIATOURs.DeleteOnSubmit(gia);
+                    db.SubmitChanges();
+
                     var tour = db.TOURDULICHes.Where(p => p.MaTour.Equals(obj.MaTour)).SingleOrDefault();
-
                     db.TOURDULICHes.DeleteOnSubmit(tour);
-
                     db.SubmitChanges();
                 }
 
@@ -145,8 +147,17 @@ namespace DAL
                     tour.DacDiem = obj.DacDiem;
                     tour.MaLoaiHinh = obj.MaLoaiHinh;
 
+                    db.SubmitChanges();
+
+                    var gia = db.GIATOURs.Where(p => p.MaTour.Equals(obj.MaTour)).SingleOrDefault();
+                    gia.MaTour = obj.MaTour;
+                    gia.MaGia = obj.MaTour;
+                    gia.ThanhTien = obj.ThanhTien;
+                    gia.ThoiGianBatDau = obj.ThoiGianBatDau;
+                    gia.ThoiGianKetThuc = obj.ThoiGianKetThuc;
 
                     db.SubmitChanges();
+
                 }
 
                 return true;

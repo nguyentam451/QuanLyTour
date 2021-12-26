@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Forms;
 
 namespace QuanLyTour.Model
 {
@@ -61,6 +61,11 @@ namespace QuanLyTour.Model
             return TourDuLichDAL.getAll();
         }
 
+        public List<TourDuLichModel> getAll()
+        {
+            return TourDuLichDAL.getAll();
+        }
+
         public bool InserToDB()
         {
             return TourDuLichDAL.Insert(this);
@@ -83,19 +88,40 @@ namespace QuanLyTour.Model
         public static TourDuLichModel findTourDuLich_Ma(List<TourDuLichModel> list, string maTour)
         {
             TourDuLichModel res = new TourDuLichModel();
-            for (int i = 0; i < list.Count; i++)
-            {
-                TourDuLichModel a = list[i];
-                if (a.MaTour.Equals(maTour))
+
+            list.ForEach(x => {
+                if (x.MaTour.Contains(maTour))
                 {
-                    res.MaTour = a.MaTour;
-                    res.TenTour = a.TenTour;
-                    res.DacDiem = a.DacDiem;
-                    res.MaLoaiHinh = a.MaLoaiHinh;
+                    res.MaTour = x.MaTour;
+                    res.TenTour = x.TenTour;
+                    res.DacDiem = x.DacDiem;
+                    res.MaLoaiHinh = x.MaLoaiHinh;
+
+                    res.TenDacDiem = x.TenDacDiem;
+                    res.LoaiHinhDuLich =x.LoaiHinhDuLich;
+
+                    res.ThanhTien = x.ThanhTien;
+                    res.ThoiGianBatDau = x.ThoiGianBatDau;
+                    res.ThoiGianKetThuc = x.ThoiGianKetThuc;
+
                 }
-            }
+            });
+
             return res;
+
+            /*
+              foreach (TourDuLichModel item in list)
+            {
+                if (item.MaTour.Equals(maTour))
+                    return item;
+            }
+
+            return null; 
+            */
+
         }
+
+
 
     }
 }

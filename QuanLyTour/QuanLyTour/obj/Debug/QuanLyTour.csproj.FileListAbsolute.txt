@@ -81,8 +81,6 @@ C:\Users\tangc\OneDrive\Desktop\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanL
 C:\Users\tangc\OneDrive\Desktop\QuanLyTour\QuanLyTour\QuanLyTour\bin\Debug\QuanLyTour.exe.config
 C:\Users\tangc\OneDrive\Desktop\QuanLyTour\QuanLyTour\QuanLyTour\bin\Debug\QuanLyTour.exe
 C:\Users\tangc\OneDrive\Desktop\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.exe
-C:\Users\tangc\OneDrive\Desktop\XDMHPL\QuanLyTour\QuanLyTour\QuanLyTour\bin\Debug\QuanLyTour.dll.config
-C:\Users\tangc\OneDrive\Desktop\XDMHPL\QuanLyTour\QuanLyTour\QuanLyTour\bin\Debug\QuanLyTour.dll
 C:\Users\tangc\OneDrive\Desktop\XDMHPL\QuanLyTour\QuanLyTour\QuanLyTour\bin\Debug\QuanLyTour.pdb
 C:\Users\tangc\OneDrive\Desktop\XDMHPL\QuanLyTour\QuanLyTour\QuanLyTour\bin\Debug\EntityFramework.dll
 C:\Users\tangc\OneDrive\Desktop\XDMHPL\QuanLyTour\QuanLyTour\QuanLyTour\bin\Debug\EntityFramework.SqlServer.dll
@@ -99,5 +97,7 @@ C:\Users\tangc\OneDrive\Desktop\XDMHPL\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debu
 C:\Users\tangc\OneDrive\Desktop\XDMHPL\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.csproj.GenerateResource.cache
 C:\Users\tangc\OneDrive\Desktop\XDMHPL\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.csproj.CoreCompileInputs.cache
 C:\Users\tangc\OneDrive\Desktop\XDMHPL\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.csproj.CopyComplete
-C:\Users\tangc\OneDrive\Desktop\XDMHPL\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.dll
 C:\Users\tangc\OneDrive\Desktop\XDMHPL\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.pdb
+C:\Users\tangc\OneDrive\Desktop\XDMHPL\QuanLyTour\QuanLyTour\QuanLyTour\bin\Debug\QuanLyTour.exe.config
+C:\Users\tangc\OneDrive\Desktop\XDMHPL\QuanLyTour\QuanLyTour\QuanLyTour\bin\Debug\QuanLyTour.exe
+C:\Users\tangc\OneDrive\Desktop\XDMHPL\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.exe
