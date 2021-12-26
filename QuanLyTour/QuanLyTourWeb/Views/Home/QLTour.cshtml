@@ -94,7 +94,7 @@
 
 	<td>
 		@Html.ActionLink("Edit", "EditTour", new { id = item.MaTour.Replace(" ", "") }) |
-		@Html.ActionLink("Delete", "Delete", new { id = item.MaTour })
+		@Html.ActionLink("Delete", "DeleteTour", new { id = item.MaTour.Replace(" ", "") })
 	</td>
 </tr>}
 

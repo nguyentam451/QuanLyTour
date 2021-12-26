@@ -117,10 +117,12 @@ namespace DAL
             {
                 using (QuanLyTourDataContext db = new QuanLyTourDataContext())
                 {
+                    var gia = db.GIATOURs.Where(p => p.MaTour.Equals(obj.MaTour)).SingleOrDefault();
+                    db.GIATOURs.DeleteOnSubmit(gia);
+                    db.SubmitChanges();
+
                     var tour = db.TOURDULICHes.Where(p => p.MaTour.Equals(obj.MaTour)).SingleOrDefault();
-
                     db.TOURDULICHes.DeleteOnSubmit(tour);
-
                     db.SubmitChanges();
                 }
 

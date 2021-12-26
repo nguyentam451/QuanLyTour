@@ -105,7 +105,36 @@ namespace QuanLyTourWeb.Controllers
 
 
 
+        public ActionResult DeleteTour(string id)
+        {
+            var con = new QuanLyTour.Model.TourDuLichModel();
+            QuanLyTour.Model.TourDuLichModel delete =
+                QuanLyTour.Model.TourDuLichModel.findTourDuLich_Ma(con.getAll(), id);
 
+            setViewBagDiaDiem();
+            setViewBagMaLoaiHinh();
+
+            return View(delete);
+        }
+
+        [HttpPost]
+        public ActionResult DeleteTour(string id, System.Web.Mvc.FormCollection collection)
+        {
+            try
+            {
+                var con = new QuanLyTour.Model.TourDuLichModel();
+                QuanLyTour.Model.TourDuLichModel delete =
+                    QuanLyTour.Model.TourDuLichModel.findTourDuLich_Ma(con.getAll(), id);
+
+                delete.DeleteToDB();
+
+                return RedirectToAction("QLTour");
+            }
+            catch
+            {
+                return View();
+            }
+        }
 
 
 
