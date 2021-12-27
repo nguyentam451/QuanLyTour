@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using QuanLyTour.DAL;
+using System.Collections.Generic;
 
 namespace QuanLyTour.Model
 {
@@ -26,5 +27,11 @@ namespace QuanLyTour.Model
         public string TenLoaiHinh { get; set ; }
 
         public List<TourDuLichModel> Tours { get; set; }
+
+
+        public static List<LoaiHinhDuLichModel> GetAll()
+        {
+            return LoaiHinhDuLichDAL.getAll();
+        }
     }
 }

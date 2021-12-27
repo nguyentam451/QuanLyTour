@@ -36,7 +36,6 @@ namespace QuanLyTour
             this.lbKhachHang = new System.Windows.Forms.Label();
             this.lbDoanDuLich = new System.Windows.Forms.Label();
             this.lbTourDuLich = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelNhanVien = new System.Windows.Forms.Panel();
             this.dtgvPhanBoNhanVien = new System.Windows.Forms.DataGridView();
             this.txtTenNhanVien = new System.Windows.Forms.TextBox();
@@ -64,32 +63,17 @@ namespace QuanLyTour
             this.dtgvKhach = new System.Windows.Forms.DataGridView();
             this.lbMaKhach = new System.Windows.Forms.Label();
             this.panelDoanDuLich = new System.Windows.Forms.Panel();
-            this.dtgvChiTietDoan = new System.Windows.Forms.DataGridView();
             this.btnSuaDoan = new System.Windows.Forms.Button();
             this.btnXoaDoan = new System.Windows.Forms.Button();
             this.btnThemDoan = new System.Windows.Forms.Button();
-            this.txtNgayKT = new System.Windows.Forms.TextBox();
-            this.txtNgayKH = new System.Windows.Forms.TextBox();
-            this.txtMaTour1 = new System.Windows.Forms.TextBox();
-            this.txtMaDoan = new System.Windows.Forms.TextBox();
+            this.txtDiaDiemThamQuan = new System.Windows.Forms.TextBox();
+            this.txtKhachSan = new System.Windows.Forms.TextBox();
+            this.txtHanhTrinh = new System.Windows.Forms.TextBox();
             this.lbNgayKT = new System.Windows.Forms.Label();
             this.lbNgayKH = new System.Windows.Forms.Label();
             this.lbMaTour1 = new System.Windows.Forms.Label();
             this.lbMaDoan = new System.Windows.Forms.Label();
             this.dtgvDoan = new System.Windows.Forms.DataGridView();
-            this.panelTour = new System.Windows.Forms.Panel();
-            this.dtgvTour = new System.Windows.Forms.DataGridView();
-            this.btnSuaTour = new System.Windows.Forms.Button();
-            this.btnXoaTour = new System.Windows.Forms.Button();
-            this.btnThemTour = new System.Windows.Forms.Button();
-            this.txtTenLoaiHinh = new System.Windows.Forms.TextBox();
-            this.txtDacDiem = new System.Windows.Forms.TextBox();
-            this.txtTenGoi = new System.Windows.Forms.TextBox();
-            this.txtMaTour = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lbTenGoi = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.panelGiaTour = new System.Windows.Forms.Panel();
             this.btnSuaGia = new System.Windows.Forms.Button();
             this.btnXoaGia = new System.Windows.Forms.Button();
@@ -105,18 +89,36 @@ namespace QuanLyTour
             this.lbMaTour_Gia = new System.Windows.Forms.Label();
             this.dtgvGiaTour = new System.Windows.Forms.DataGridView();
             this.lbMaGia = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.lbTenGoi = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtTenTour = new System.Windows.Forms.TextBox();
+            this.btnThemTour = new System.Windows.Forms.Button();
+            this.btnXoaTour = new System.Windows.Forms.Button();
+            this.btnSuaTour = new System.Windows.Forms.Button();
+            this.dtgvTour = new System.Windows.Forms.DataGridView();
+            this.panelTour = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.dtgvThamQuan = new System.Windows.Forms.DataGridView();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.txtNgayKetThuc = new System.Windows.Forms.TextBox();
+            this.txtNgayBatDau = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtGiaTien = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.cbbTenLoaiHinh_form1 = new System.Windows.Forms.ComboBox();
+            this.cbbTenDiaDiem_form1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtNgayKH = new System.Windows.Forms.TextBox();
+            this.txtNgayKT = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtTenKhach = new System.Windows.Forms.TextBox();
+            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.cbbChiPhi = new System.Windows.Forms.ComboBox();
+            this.cbbTenTour = new System.Windows.Forms.ComboBox();
             this.panelQuanLy.SuspendLayout();
             this.panelNhanVien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvPhanBoNhanVien)).BeginInit();
@@ -124,14 +126,11 @@ namespace QuanLyTour
             this.panelKhach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvKhach)).BeginInit();
             this.panelDoanDuLich.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvChiTietDoan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDoan)).BeginInit();
-            this.panelTour.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvTour)).BeginInit();
             this.panelGiaTour.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvGiaTour)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvThamQuan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvTour)).BeginInit();
+            this.panelTour.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbTittle
@@ -224,16 +223,6 @@ namespace QuanLyTour
             this.lbTourDuLich.Text = "Tour du lịch";
             this.lbTourDuLich.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbTourDuLich.Click += new System.EventHandler(this.lbTourDuLich_Click);
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.SystemColors.Control;
-            this.label1.Image = global::QuanLyTour.Properties.Resources.flight__1___1_;
-            this.label1.Location = new System.Drawing.Point(73, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 133);
-            this.label1.TabIndex = 17;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panelNhanVien
             // 
@@ -513,16 +502,26 @@ namespace QuanLyTour
             // 
             // panelDoanDuLich
             // 
+            this.panelDoanDuLich.AutoSize = true;
             this.panelDoanDuLich.BackColor = System.Drawing.Color.GhostWhite;
             this.panelDoanDuLich.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelDoanDuLich.Controls.Add(this.dtgvChiTietDoan);
+            this.panelDoanDuLich.Controls.Add(this.cbbTenTour);
+            this.panelDoanDuLich.Controls.Add(this.cbbChiPhi);
+            this.panelDoanDuLich.Controls.Add(this.txtSDT);
+            this.panelDoanDuLich.Controls.Add(this.txtTenKhach);
+            this.panelDoanDuLich.Controls.Add(this.label14);
+            this.panelDoanDuLich.Controls.Add(this.label13);
+            this.panelDoanDuLich.Controls.Add(this.label12);
+            this.panelDoanDuLich.Controls.Add(this.txtNgayKT);
+            this.panelDoanDuLich.Controls.Add(this.txtNgayKH);
+            this.panelDoanDuLich.Controls.Add(this.label11);
+            this.panelDoanDuLich.Controls.Add(this.label7);
             this.panelDoanDuLich.Controls.Add(this.btnSuaDoan);
             this.panelDoanDuLich.Controls.Add(this.btnXoaDoan);
             this.panelDoanDuLich.Controls.Add(this.btnThemDoan);
-            this.panelDoanDuLich.Controls.Add(this.txtNgayKT);
-            this.panelDoanDuLich.Controls.Add(this.txtNgayKH);
-            this.panelDoanDuLich.Controls.Add(this.txtMaTour1);
-            this.panelDoanDuLich.Controls.Add(this.txtMaDoan);
+            this.panelDoanDuLich.Controls.Add(this.txtDiaDiemThamQuan);
+            this.panelDoanDuLich.Controls.Add(this.txtKhachSan);
+            this.panelDoanDuLich.Controls.Add(this.txtHanhTrinh);
             this.panelDoanDuLich.Controls.Add(this.lbNgayKT);
             this.panelDoanDuLich.Controls.Add(this.lbNgayKH);
             this.panelDoanDuLich.Controls.Add(this.lbMaTour1);
@@ -535,20 +534,9 @@ namespace QuanLyTour
             this.panelDoanDuLich.TabIndex = 38;
             this.panelDoanDuLich.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDoanDuLich_Paint);
             // 
-            // dtgvChiTietDoan
-            // 
-            this.dtgvChiTietDoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvChiTietDoan.Location = new System.Drawing.Point(34, 358);
-            this.dtgvChiTietDoan.Name = "dtgvChiTietDoan";
-            this.dtgvChiTietDoan.RowHeadersWidth = 51;
-            this.dtgvChiTietDoan.RowTemplate.Height = 24;
-            this.dtgvChiTietDoan.Size = new System.Drawing.Size(1145, 240);
-            this.dtgvChiTietDoan.TabIndex = 34;
-            this.dtgvChiTietDoan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvChiTietDoan_CellContentClick);
-            // 
             // btnSuaDoan
             // 
-            this.btnSuaDoan.Location = new System.Drawing.Point(1080, 234);
+            this.btnSuaDoan.Location = new System.Drawing.Point(1079, 564);
             this.btnSuaDoan.Name = "btnSuaDoan";
             this.btnSuaDoan.Size = new System.Drawing.Size(99, 37);
             this.btnSuaDoan.TabIndex = 33;
@@ -558,7 +546,7 @@ namespace QuanLyTour
             // 
             // btnXoaDoan
             // 
-            this.btnXoaDoan.Location = new System.Drawing.Point(1079, 135);
+            this.btnXoaDoan.Location = new System.Drawing.Point(1079, 278);
             this.btnXoaDoan.Name = "btnXoaDoan";
             this.btnXoaDoan.Size = new System.Drawing.Size(100, 37);
             this.btnXoaDoan.TabIndex = 32;
@@ -576,78 +564,73 @@ namespace QuanLyTour
             this.btnThemDoan.UseVisualStyleBackColor = true;
             this.btnThemDoan.Click += new System.EventHandler(this.btnThemDoan_Click_1);
             // 
-            // txtNgayKT
+            // txtDiaDiemThamQuan
             // 
-            this.txtNgayKT.Location = new System.Drawing.Point(134, 241);
-            this.txtNgayKT.Multiline = true;
-            this.txtNgayKT.Name = "txtNgayKT";
-            this.txtNgayKT.Size = new System.Drawing.Size(123, 27);
-            this.txtNgayKT.TabIndex = 27;
+            this.txtDiaDiemThamQuan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiaDiemThamQuan.Location = new System.Drawing.Point(134, 241);
+            this.txtDiaDiemThamQuan.Multiline = true;
+            this.txtDiaDiemThamQuan.Name = "txtDiaDiemThamQuan";
+            this.txtDiaDiemThamQuan.Size = new System.Drawing.Size(123, 27);
+            this.txtDiaDiemThamQuan.TabIndex = 27;
             // 
-            // txtNgayKH
+            // txtKhachSan
             // 
-            this.txtNgayKH.Location = new System.Drawing.Point(134, 172);
-            this.txtNgayKH.Multiline = true;
-            this.txtNgayKH.Name = "txtNgayKH";
-            this.txtNgayKH.Size = new System.Drawing.Size(123, 27);
-            this.txtNgayKH.TabIndex = 26;
-            this.txtNgayKH.TextChanged += new System.EventHandler(this.txtNgayKH_TextChanged);
+            this.txtKhachSan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKhachSan.Location = new System.Drawing.Point(134, 172);
+            this.txtKhachSan.Multiline = true;
+            this.txtKhachSan.Name = "txtKhachSan";
+            this.txtKhachSan.Size = new System.Drawing.Size(123, 27);
+            this.txtKhachSan.TabIndex = 26;
+            this.txtKhachSan.TextChanged += new System.EventHandler(this.txtNgayKH_TextChanged);
             // 
-            // txtMaTour1
+            // txtHanhTrinh
             // 
-            this.txtMaTour1.Location = new System.Drawing.Point(134, 99);
-            this.txtMaTour1.Multiline = true;
-            this.txtMaTour1.Name = "txtMaTour1";
-            this.txtMaTour1.Size = new System.Drawing.Size(123, 27);
-            this.txtMaTour1.TabIndex = 25;
-            // 
-            // txtMaDoan
-            // 
-            this.txtMaDoan.Location = new System.Drawing.Point(134, 28);
-            this.txtMaDoan.Multiline = true;
-            this.txtMaDoan.Name = "txtMaDoan";
-            this.txtMaDoan.Size = new System.Drawing.Size(123, 27);
-            this.txtMaDoan.TabIndex = 24;
+            this.txtHanhTrinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHanhTrinh.Location = new System.Drawing.Point(134, 99);
+            this.txtHanhTrinh.Multiline = true;
+            this.txtHanhTrinh.Name = "txtHanhTrinh";
+            this.txtHanhTrinh.Size = new System.Drawing.Size(123, 27);
+            this.txtHanhTrinh.TabIndex = 25;
             // 
             // lbNgayKT
             // 
             this.lbNgayKT.AutoSize = true;
             this.lbNgayKT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNgayKT.Location = new System.Drawing.Point(30, 248);
+            this.lbNgayKT.Location = new System.Drawing.Point(15, 248);
             this.lbNgayKT.Name = "lbNgayKT";
-            this.lbNgayKT.Size = new System.Drawing.Size(73, 20);
+            this.lbNgayKT.Size = new System.Drawing.Size(83, 20);
             this.lbNgayKT.TabIndex = 20;
-            this.lbNgayKT.Text = "Ngày KT";
+            this.lbNgayKT.Text = "Địa Điểm ";
             // 
             // lbNgayKH
             // 
             this.lbNgayKH.AutoSize = true;
             this.lbNgayKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNgayKH.Location = new System.Drawing.Point(30, 179);
+            this.lbNgayKH.Location = new System.Drawing.Point(8, 176);
             this.lbNgayKH.Name = "lbNgayKH";
-            this.lbNgayKH.Size = new System.Drawing.Size(76, 20);
+            this.lbNgayKH.Size = new System.Drawing.Size(90, 20);
             this.lbNgayKH.TabIndex = 19;
-            this.lbNgayKH.Text = "Ngày KH";
+            this.lbNgayKH.Text = "Khách Sạn";
             // 
             // lbMaTour1
             // 
             this.lbMaTour1.AutoSize = true;
             this.lbMaTour1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMaTour1.Location = new System.Drawing.Point(30, 106);
+            this.lbMaTour1.Location = new System.Drawing.Point(6, 106);
             this.lbMaTour1.Name = "lbMaTour1";
-            this.lbMaTour1.Size = new System.Drawing.Size(71, 20);
+            this.lbMaTour1.Size = new System.Drawing.Size(92, 20);
             this.lbMaTour1.TabIndex = 18;
-            this.lbMaTour1.Text = "Mã Tour";
+            this.lbMaTour1.Text = "Hành Trình";
             // 
             // lbMaDoan
             // 
             this.lbMaDoan.AutoSize = true;
             this.lbMaDoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMaDoan.Location = new System.Drawing.Point(30, 35);
+            this.lbMaDoan.Location = new System.Drawing.Point(18, 35);
             this.lbMaDoan.Name = "lbMaDoan";
             this.lbMaDoan.Size = new System.Drawing.Size(76, 20);
             this.lbMaDoan.TabIndex = 17;
-            this.lbMaDoan.Text = "Mã Đoàn";
+            this.lbMaDoan.Text = "Tên Tour";
             // 
             // dtgvDoan
             // 
@@ -658,143 +641,9 @@ namespace QuanLyTour
             this.dtgvDoan.RowHeadersWidth = 51;
             this.dtgvDoan.RowTemplate.Height = 24;
             this.dtgvDoan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvDoan.Size = new System.Drawing.Size(772, 240);
+            this.dtgvDoan.Size = new System.Drawing.Size(772, 573);
             this.dtgvDoan.TabIndex = 0;
-            this.dtgvDoan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             this.dtgvDoan.SelectionChanged += new System.EventHandler(this.dtgvDoan_SelectionChanged);
-            // 
-            // panelTour
-            // 
-            this.panelTour.BackColor = System.Drawing.Color.GhostWhite;
-            this.panelTour.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelTour.Controls.Add(this.dtgvTour);
-            this.panelTour.Controls.Add(this.btnSuaTour);
-            this.panelTour.Controls.Add(this.btnXoaTour);
-            this.panelTour.Controls.Add(this.btnThemTour);
-            this.panelTour.Controls.Add(this.txtTenLoaiHinh);
-            this.panelTour.Controls.Add(this.txtDacDiem);
-            this.panelTour.Controls.Add(this.txtTenGoi);
-            this.panelTour.Controls.Add(this.txtMaTour);
-            this.panelTour.Controls.Add(this.label4);
-            this.panelTour.Controls.Add(this.label5);
-            this.panelTour.Controls.Add(this.lbTenGoi);
-            this.panelTour.Controls.Add(this.label7);
-            this.panelTour.Location = new System.Drawing.Point(275, 110);
-            this.panelTour.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelTour.Name = "panelTour";
-            this.panelTour.Size = new System.Drawing.Size(1217, 706);
-            this.panelTour.TabIndex = 39;
-            // 
-            // dtgvTour
-            // 
-            this.dtgvTour.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvTour.Location = new System.Drawing.Point(34, 145);
-            this.dtgvTour.Name = "dtgvTour";
-            this.dtgvTour.RowHeadersWidth = 51;
-            this.dtgvTour.RowTemplate.Height = 24;
-            this.dtgvTour.Size = new System.Drawing.Size(515, 425);
-            this.dtgvTour.TabIndex = 34;
-            // 
-            // btnSuaTour
-            // 
-            this.btnSuaTour.Location = new System.Drawing.Point(1055, 582);
-            this.btnSuaTour.Name = "btnSuaTour";
-            this.btnSuaTour.Size = new System.Drawing.Size(99, 37);
-            this.btnSuaTour.TabIndex = 33;
-            this.btnSuaTour.Text = "Sửa";
-            this.btnSuaTour.UseVisualStyleBackColor = true;
-            this.btnSuaTour.Click += new System.EventHandler(this.btnSuaTour_Click);
-            // 
-            // btnXoaTour
-            // 
-            this.btnXoaTour.Location = new System.Drawing.Point(513, 582);
-            this.btnXoaTour.Name = "btnXoaTour";
-            this.btnXoaTour.Size = new System.Drawing.Size(100, 37);
-            this.btnXoaTour.TabIndex = 32;
-            this.btnXoaTour.Text = "Xóa";
-            this.btnXoaTour.UseVisualStyleBackColor = true;
-            // 
-            // btnThemTour
-            // 
-            this.btnThemTour.Location = new System.Drawing.Point(34, 583);
-            this.btnThemTour.Name = "btnThemTour";
-            this.btnThemTour.Size = new System.Drawing.Size(100, 37);
-            this.btnThemTour.TabIndex = 31;
-            this.btnThemTour.Text = "Thêm";
-            this.btnThemTour.UseVisualStyleBackColor = true;
-            // 
-            // txtTenLoaiHinh
-            // 
-            this.txtTenLoaiHinh.Location = new System.Drawing.Point(426, 89);
-            this.txtTenLoaiHinh.Multiline = true;
-            this.txtTenLoaiHinh.Name = "txtTenLoaiHinh";
-            this.txtTenLoaiHinh.Size = new System.Drawing.Size(123, 27);
-            this.txtTenLoaiHinh.TabIndex = 27;
-            // 
-            // txtDacDiem
-            // 
-            this.txtDacDiem.Location = new System.Drawing.Point(120, 89);
-            this.txtDacDiem.Multiline = true;
-            this.txtDacDiem.Name = "txtDacDiem";
-            this.txtDacDiem.Size = new System.Drawing.Size(123, 27);
-            this.txtDacDiem.TabIndex = 26;
-            // 
-            // txtTenGoi
-            // 
-            this.txtTenGoi.Location = new System.Drawing.Point(426, 35);
-            this.txtTenGoi.Multiline = true;
-            this.txtTenGoi.Name = "txtTenGoi";
-            this.txtTenGoi.Size = new System.Drawing.Size(123, 27);
-            this.txtTenGoi.TabIndex = 25;
-            // 
-            // txtMaTour
-            // 
-            this.txtMaTour.Location = new System.Drawing.Point(120, 28);
-            this.txtMaTour.Multiline = true;
-            this.txtMaTour.Name = "txtMaTour";
-            this.txtMaTour.Size = new System.Drawing.Size(123, 27);
-            this.txtMaTour.TabIndex = 24;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(283, 96);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(114, 20);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Tên Loại Hình";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(30, 98);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 20);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Đặc Điểm";
-            // 
-            // lbTenGoi
-            // 
-            this.lbTenGoi.AutoSize = true;
-            this.lbTenGoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTenGoi.Location = new System.Drawing.Point(283, 35);
-            this.lbTenGoi.Name = "lbTenGoi";
-            this.lbTenGoi.Size = new System.Drawing.Size(68, 20);
-            this.lbTenGoi.TabIndex = 18;
-            this.lbTenGoi.Text = "Tên Gọi";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(30, 35);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 20);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Mã Tour";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // panelGiaTour
             // 
@@ -953,137 +802,318 @@ namespace QuanLyTour
             this.lbMaGia.TabIndex = 0;
             this.lbMaGia.Text = "Mã Giá";
             // 
-            // panel1
+            // lbTenGoi
             // 
-            this.panel1.BackColor = System.Drawing.Color.GhostWhite;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.dtgvThamQuan);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.button9);
-            this.panel1.Location = new System.Drawing.Point(149, 109);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(733, 706);
-            this.panel1.TabIndex = 41;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
+            this.lbTenGoi.AutoSize = true;
+            this.lbTenGoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenGoi.Location = new System.Drawing.Point(18, 105);
+            this.lbTenGoi.Name = "lbTenGoi";
+            this.lbTenGoi.Size = new System.Drawing.Size(76, 20);
+            this.lbTenGoi.TabIndex = 18;
+            this.lbTenGoi.Text = "Tên Tour";
             // 
-            // textBox4
+            // label5
             // 
-            this.textBox4.Location = new System.Drawing.Point(446, 109);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(157, 27);
-            this.textBox4.TabIndex = 51;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(19, 288);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 20);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Địa Điểm";
             // 
-            // label6
+            // label4
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(330, 109);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 20);
-            this.label6.TabIndex = 50;
-            this.label6.Text = "Thứ Tự";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(18, 200);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(81, 20);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Loại Hình";
             // 
-            // textBox3
+            // txtTenTour
             // 
-            this.textBox3.Location = new System.Drawing.Point(446, 69);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(157, 27);
-            this.textBox3.TabIndex = 49;
+            this.txtTenTour.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenTour.Location = new System.Drawing.Point(115, 98);
+            this.txtTenTour.Multiline = true;
+            this.txtTenTour.Name = "txtTenTour";
+            this.txtTenTour.Size = new System.Drawing.Size(123, 27);
+            this.txtTenTour.TabIndex = 25;
+            // 
+            // btnThemTour
+            // 
+            this.btnThemTour.Location = new System.Drawing.Point(1113, 98);
+            this.btnThemTour.Name = "btnThemTour";
+            this.btnThemTour.Size = new System.Drawing.Size(100, 37);
+            this.btnThemTour.TabIndex = 31;
+            this.btnThemTour.Text = "Thêm";
+            this.btnThemTour.UseVisualStyleBackColor = true;
+            this.btnThemTour.Click += new System.EventHandler(this.btnThemTour_Click);
+            // 
+            // btnXoaTour
+            // 
+            this.btnXoaTour.Location = new System.Drawing.Point(1113, 309);
+            this.btnXoaTour.Name = "btnXoaTour";
+            this.btnXoaTour.Size = new System.Drawing.Size(100, 37);
+            this.btnXoaTour.TabIndex = 32;
+            this.btnXoaTour.Text = "Xóa";
+            this.btnXoaTour.UseVisualStyleBackColor = true;
+            this.btnXoaTour.Click += new System.EventHandler(this.btnXoaTour_Click);
+            // 
+            // btnSuaTour
+            // 
+            this.btnSuaTour.Location = new System.Drawing.Point(1113, 558);
+            this.btnSuaTour.Name = "btnSuaTour";
+            this.btnSuaTour.Size = new System.Drawing.Size(99, 37);
+            this.btnSuaTour.TabIndex = 33;
+            this.btnSuaTour.Text = "Sửa";
+            this.btnSuaTour.UseVisualStyleBackColor = true;
+            this.btnSuaTour.Click += new System.EventHandler(this.btnSuaTour_Click);
+            // 
+            // dtgvTour
+            // 
+            this.dtgvTour.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvTour.Location = new System.Drawing.Point(264, 98);
+            this.dtgvTour.Name = "dtgvTour";
+            this.dtgvTour.RowHeadersWidth = 51;
+            this.dtgvTour.RowTemplate.Height = 24;
+            this.dtgvTour.Size = new System.Drawing.Size(823, 497);
+            this.dtgvTour.TabIndex = 34;
+            this.dtgvTour.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvTour_CellContentClick);
+            this.dtgvTour.SelectionChanged += new System.EventHandler(this.dtgvTour_SelectionChanged);
+            // 
+            // panelTour
+            // 
+            this.panelTour.BackColor = System.Drawing.Color.GhostWhite;
+            this.panelTour.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelTour.Controls.Add(this.cbbTenDiaDiem_form1);
+            this.panelTour.Controls.Add(this.cbbTenLoaiHinh_form1);
+            this.panelTour.Controls.Add(this.button1);
+            this.panelTour.Controls.Add(this.label10);
+            this.panelTour.Controls.Add(this.label8);
+            this.panelTour.Controls.Add(this.txtNgayKetThuc);
+            this.panelTour.Controls.Add(this.txtNgayBatDau);
+            this.panelTour.Controls.Add(this.label6);
+            this.panelTour.Controls.Add(this.txtGiaTien);
+            this.panelTour.Controls.Add(this.dtgvTour);
+            this.panelTour.Controls.Add(this.btnSuaTour);
+            this.panelTour.Controls.Add(this.btnXoaTour);
+            this.panelTour.Controls.Add(this.btnThemTour);
+            this.panelTour.Controls.Add(this.txtTenTour);
+            this.panelTour.Controls.Add(this.label4);
+            this.panelTour.Controls.Add(this.label5);
+            this.panelTour.Controls.Add(this.lbTenGoi);
+            this.panelTour.Location = new System.Drawing.Point(275, 110);
+            this.panelTour.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelTour.Name = "panelTour";
+            this.panelTour.Size = new System.Drawing.Size(1240, 743);
+            this.panelTour.TabIndex = 39;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(19, 575);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(73, 20);
+            this.label10.TabIndex = 41;
+            this.label10.Text = "Ngày KT";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(330, 68);
+            this.label8.Location = new System.Drawing.Point(18, 471);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(78, 20);
-            this.label8.TabIndex = 48;
-            this.label8.Text = "Địa Điểm";
+            this.label8.Size = new System.Drawing.Size(77, 20);
+            this.label8.TabIndex = 40;
+            this.label8.Text = "Ngày BD";
             // 
-            // dtgvThamQuan
+            // txtNgayKetThuc
             // 
-            this.dtgvThamQuan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvThamQuan.Location = new System.Drawing.Point(317, 140);
-            this.dtgvThamQuan.Name = "dtgvThamQuan";
-            this.dtgvThamQuan.RowHeadersWidth = 51;
-            this.dtgvThamQuan.RowTemplate.Height = 24;
-            this.dtgvThamQuan.Size = new System.Drawing.Size(581, 425);
-            this.dtgvThamQuan.TabIndex = 47;
+            this.txtNgayKetThuc.Location = new System.Drawing.Point(115, 555);
+            this.txtNgayKetThuc.Multiline = true;
+            this.txtNgayKetThuc.Name = "txtNgayKetThuc";
+            this.txtNgayKetThuc.Size = new System.Drawing.Size(123, 40);
+            this.txtNgayKetThuc.TabIndex = 39;
             // 
-            // button4
+            // txtNgayBatDau
             // 
-            this.button4.Location = new System.Drawing.Point(1080, 583);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(99, 37);
-            this.button4.TabIndex = 46;
-            this.button4.Text = "Sửa";
-            this.button4.UseVisualStyleBackColor = true;
+            this.txtNgayBatDau.Location = new System.Drawing.Point(115, 464);
+            this.txtNgayBatDau.Multiline = true;
+            this.txtNgayBatDau.Name = "txtNgayBatDau";
+            this.txtNgayBatDau.Size = new System.Drawing.Size(123, 40);
+            this.txtNgayBatDau.TabIndex = 38;
             // 
-            // button5
+            // label6
             // 
-            this.button5.Location = new System.Drawing.Point(845, 583);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 37);
-            this.button5.TabIndex = 45;
-            this.button5.Text = "Xóa";
-            this.button5.UseVisualStyleBackColor = true;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(19, 379);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(74, 20);
+            this.label6.TabIndex = 37;
+            this.label6.Text = "Giá Tour";
             // 
-            // button6
+            // txtGiaTien
             // 
-            this.button6.Location = new System.Drawing.Point(598, 583);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(100, 37);
-            this.button6.TabIndex = 44;
-            this.button6.Text = "Thêm";
-            this.button6.UseVisualStyleBackColor = true;
+            this.txtGiaTien.Location = new System.Drawing.Point(115, 372);
+            this.txtGiaTien.Multiline = true;
+            this.txtGiaTien.Name = "txtGiaTien";
+            this.txtGiaTien.Size = new System.Drawing.Size(123, 27);
+            this.txtGiaTien.TabIndex = 36;
             // 
-            // button7
+            // button1
             // 
-            this.button7.Location = new System.Drawing.Point(450, 583);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(99, 37);
-            this.button7.TabIndex = 33;
-            this.button7.Text = "Sửa";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(1014, 29);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(73, 59);
+            this.button1.TabIndex = 42;
+            this.button1.Text = "Làm mới";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button8
+            // cbbTenLoaiHinh_form1
             // 
-            this.button8.Location = new System.Drawing.Point(238, 583);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(100, 37);
-            this.button8.TabIndex = 32;
-            this.button8.Text = "Xóa";
-            this.button8.UseVisualStyleBackColor = true;
+            this.cbbTenLoaiHinh_form1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbTenLoaiHinh_form1.FormattingEnabled = true;
+            this.cbbTenLoaiHinh_form1.Location = new System.Drawing.Point(113, 190);
+            this.cbbTenLoaiHinh_form1.Name = "cbbTenLoaiHinh_form1";
+            this.cbbTenLoaiHinh_form1.Size = new System.Drawing.Size(121, 30);
+            this.cbbTenLoaiHinh_form1.TabIndex = 43;
             // 
-            // button9
+            // cbbTenDiaDiem_form1
             // 
-            this.button9.Location = new System.Drawing.Point(34, 583);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(100, 37);
-            this.button9.TabIndex = 31;
-            this.button9.Text = "Thêm";
-            this.button9.UseVisualStyleBackColor = true;
+            this.cbbTenDiaDiem_form1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbTenDiaDiem_form1.FormattingEnabled = true;
+            this.cbbTenDiaDiem_form1.Location = new System.Drawing.Point(113, 278);
+            this.cbbTenDiaDiem_form1.Name = "cbbTenDiaDiem_form1";
+            this.cbbTenDiaDiem_form1.Size = new System.Drawing.Size(121, 30);
+            this.cbbTenDiaDiem_form1.TabIndex = 44;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.Image = global::QuanLyTour.Properties.Resources.flight__1___1_;
+            this.label1.Location = new System.Drawing.Point(73, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(167, 133);
+            this.label1.TabIndex = 17;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(17, 315);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(76, 20);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "Ngày KH";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(21, 376);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(73, 20);
+            this.label11.TabIndex = 35;
+            this.label11.Text = "Ngày KT";
+            // 
+            // txtNgayKH
+            // 
+            this.txtNgayKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgayKH.Location = new System.Drawing.Point(134, 310);
+            this.txtNgayKH.Multiline = true;
+            this.txtNgayKH.Name = "txtNgayKH";
+            this.txtNgayKH.Size = new System.Drawing.Size(123, 27);
+            this.txtNgayKH.TabIndex = 36;
+            // 
+            // txtNgayKT
+            // 
+            this.txtNgayKT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgayKT.Location = new System.Drawing.Point(134, 369);
+            this.txtNgayKT.Multiline = true;
+            this.txtNgayKT.Name = "txtNgayKT";
+            this.txtNgayKT.Size = new System.Drawing.Size(123, 27);
+            this.txtNgayKT.TabIndex = 37;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(26, 447);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(63, 20);
+            this.label12.TabIndex = 39;
+            this.label12.Text = "Chi Phí";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(9, 515);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(89, 20);
+            this.label13.TabIndex = 40;
+            this.label13.Text = "Tên Khách";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(50, 581);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(43, 20);
+            this.label14.TabIndex = 41;
+            this.label14.Text = "SDT";
+            // 
+            // txtTenKhach
+            // 
+            this.txtTenKhach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenKhach.Location = new System.Drawing.Point(134, 508);
+            this.txtTenKhach.Multiline = true;
+            this.txtTenKhach.Name = "txtTenKhach";
+            this.txtTenKhach.Size = new System.Drawing.Size(123, 27);
+            this.txtTenKhach.TabIndex = 42;
+            // 
+            // txtSDT
+            // 
+            this.txtSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSDT.Location = new System.Drawing.Point(134, 572);
+            this.txtSDT.Multiline = true;
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(123, 27);
+            this.txtSDT.TabIndex = 43;
+            // 
+            // cbbChiPhi
+            // 
+            this.cbbChiPhi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbChiPhi.FormattingEnabled = true;
+            this.cbbChiPhi.Location = new System.Drawing.Point(134, 442);
+            this.cbbChiPhi.Name = "cbbChiPhi";
+            this.cbbChiPhi.Size = new System.Drawing.Size(121, 30);
+            this.cbbChiPhi.TabIndex = 44;
+            // 
+            // cbbTenTour
+            // 
+            this.cbbTenTour.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbTenTour.FormattingEnabled = true;
+            this.cbbTenTour.Location = new System.Drawing.Point(136, 28);
+            this.cbbTenTour.Name = "cbbTenTour";
+            this.cbbTenTour.Size = new System.Drawing.Size(121, 28);
+            this.cbbTenTour.TabIndex = 45;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1515, 924);
-            this.Controls.Add(this.panelTour);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panelGiaTour);
             this.Controls.Add(this.panelDoanDuLich);
+            this.Controls.Add(this.panelTour);
+            this.Controls.Add(this.panelGiaTour);
             this.Controls.Add(this.panelNhanVien);
             this.Controls.Add(this.panelKhach);
             this.Controls.Add(this.label1);
@@ -1103,18 +1133,15 @@ namespace QuanLyTour
             ((System.ComponentModel.ISupportInitialize)(this.dtgvKhach)).EndInit();
             this.panelDoanDuLich.ResumeLayout(false);
             this.panelDoanDuLich.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvChiTietDoan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDoan)).EndInit();
-            this.panelTour.ResumeLayout(false);
-            this.panelTour.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvTour)).EndInit();
             this.panelGiaTour.ResumeLayout(false);
             this.panelGiaTour.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvGiaTour)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvThamQuan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvTour)).EndInit();
+            this.panelTour.ResumeLayout(false);
+            this.panelTour.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1153,32 +1180,17 @@ namespace QuanLyTour
         private System.Windows.Forms.TextBox txtTenNhanVien;
         private System.Windows.Forms.DataGridView dtgvPhanBoNhanVien;
         private System.Windows.Forms.Panel panelDoanDuLich;
-        private System.Windows.Forms.DataGridView dtgvChiTietDoan;
         private System.Windows.Forms.Button btnSuaDoan;
         private System.Windows.Forms.Button btnXoaDoan;
         private System.Windows.Forms.Button btnThemDoan;
-        private System.Windows.Forms.TextBox txtNgayKT;
-        private System.Windows.Forms.TextBox txtNgayKH;
-        private System.Windows.Forms.TextBox txtMaTour1;
-        private System.Windows.Forms.TextBox txtMaDoan;
+        private System.Windows.Forms.TextBox txtDiaDiemThamQuan;
+        private System.Windows.Forms.TextBox txtKhachSan;
+        private System.Windows.Forms.TextBox txtHanhTrinh;
         private System.Windows.Forms.Label lbNgayKT;
         private System.Windows.Forms.Label lbNgayKH;
         private System.Windows.Forms.Label lbMaTour1;
         private System.Windows.Forms.Label lbMaDoan;
         private System.Windows.Forms.DataGridView dtgvDoan;
-        private System.Windows.Forms.Panel panelTour;
-        private System.Windows.Forms.DataGridView dtgvTour;
-        private System.Windows.Forms.Button btnSuaTour;
-        private System.Windows.Forms.Button btnXoaTour;
-        private System.Windows.Forms.Button btnThemTour;
-        private System.Windows.Forms.TextBox txtTenLoaiHinh;
-        private System.Windows.Forms.TextBox txtDacDiem;
-        private System.Windows.Forms.TextBox txtTenGoi;
-        private System.Windows.Forms.TextBox txtMaTour;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lbTenGoi;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panelGiaTour;
         private System.Windows.Forms.Button btnSuaGia;
@@ -1195,18 +1207,35 @@ namespace QuanLyTour
         private System.Windows.Forms.Label lbMaGia;
         private System.Windows.Forms.TextBox txtThoiGianKT;
         private System.Windows.Forms.Label lbThoiGianKT;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dtgvThamQuan;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label lbTenGoi;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtTenTour;
+        private System.Windows.Forms.Button btnThemTour;
+        private System.Windows.Forms.Button btnXoaTour;
+        private System.Windows.Forms.Button btnSuaTour;
+        private System.Windows.Forms.Panel panelTour;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtGiaTien;
+        private System.Windows.Forms.TextBox txtNgayKetThuc;
+        private System.Windows.Forms.TextBox txtNgayBatDau;
+        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
+        public System.Windows.Forms.DataGridView dtgvTour;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cbbTenDiaDiem_form1;
+        private System.Windows.Forms.ComboBox cbbTenLoaiHinh_form1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtNgayKH;
+        private System.Windows.Forms.TextBox txtNgayKT;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txtTenKhach;
+        private System.Windows.Forms.TextBox txtSDT;
+        private System.Windows.Forms.ComboBox cbbChiPhi;
+        private System.Windows.Forms.ComboBox cbbTenTour;
     }
 }
 

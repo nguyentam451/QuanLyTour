@@ -1,4 +1,5 @@
-﻿using QuanLyTour.Models;
+﻿using QuanLyTour.Model;
+using QuanLyTour.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,19 +28,32 @@ namespace QuanLyTour.DAL
 
             using (QuanLyTourDataContext db = new QuanLyTourDataContext())
             {
-               
-                var result = from u in db.DOANDULICHes
-                           //  from t in db.NOIDUNGTOURs
-                            // where u.MaDoan == t.MaDoan
+
+                var result = from d in db.DOANDULICHes
+                             from ct in db.CHITIETDOANs
+                             from k in db.KHACHes
+                             from cp in db.CHIPHIs
+                             from lcp in db.LOAICHIPHIs
+                             from tour in db.TOURDULICHes
+                             where d.MaDoan == ct.MaDoan & 
+                             ct.MaKhachHang == k.MaKhachHang &
+                             d.MaDoan == cp.MaDoan &
+                             cp.MaLoaiChiPhi == lcp.MaLoaiChiPhi &
+                             d.MaTour == tour.MaTour
                              select new
                              {
-                                 MaDoan = u.MaDoan,
-                                 MaTour = u.MaTour,
-                             //    HanhTrinh = t.HanhTrinh,
-                             //   KhachSan = t.KhachSan,
-                             //    DiaDiem = t.DiaDiemThamQuan,
-                                 NgayKhoiHanhh = u.NgayKhoiHanh,
-                                 NgayKetThuc = u.NgayKetThuc,
+                                 MaDoan = d.MaDoan,
+                                 MaTour = d.MaTour,
+                                 TenTour = tour.TenGoi,
+                                 HanhTrinh = d.NOIDUNGTOUR.HanhTrinh,
+                                 KhachSan = d.NOIDUNGTOUR.KhachSan,
+                                 DiaDiem = d.NOIDUNGTOUR.DiaDiemThamQuan,
+                                 NgayKhoiHanhh = d.NgayKhoiHanh,
+                                 NgayKetThuc = d.NgayKetThuc,
+                                 TenChiPhi = lcp.TenLoaiChiPhi,
+                                 SoTien = cp.SoTien,
+                                 TenKhachHang = k.HoTen,
+                                 SDT = k.SDT,
 
 
                              };
@@ -55,8 +69,15 @@ namespace QuanLyTour.DAL
 
                     doan.MaDoan = i.MaDoan;
                     doan.MaTour = i.MaTour;
+                    doan.TourDuLich = new TourDuLichModel(i.TenTour);
+                    doan.NoiDungTour = new ndTourModel(i.HanhTrinh, i.KhachSan, i.DiaDiem);
                     doan.NgayKhoiHanh = (DateTime)i.NgayKhoiHanhh;
                     doan.NgayKetThuc = (DateTime)i.NgayKetThuc;
+                    doan.TenChiPhi = i.TenChiPhi;
+                    doan.SoTien = (int)i.SoTien;
+                    doan.TenKhachHang = i.TenKhachHang;
+                    doan.SoDienThoai = i.SDT;
+
                  //   doan.NoiDungTour = new Model.ndTourModel(i.HanhTrinh, i.KhachSan, i.DiaDiem);
 
 

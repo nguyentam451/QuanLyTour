@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyTour.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace QuanLyTour.Models
 {
     public class DiaDiemModel
     {
+        public DiaDiemModel() { }
         public DiaDiemModel(string tenDiaDiem)
         {
 
@@ -16,5 +18,10 @@ namespace QuanLyTour.Models
         }
         public string MaDiaDiem { get; set; }
         public string TenDiaDiem { get; set; }
+
+        public static List<DiaDiemModel> GetAll()
+        {
+            return DiaDiemDAL.getAll();
+        }
     }
 }

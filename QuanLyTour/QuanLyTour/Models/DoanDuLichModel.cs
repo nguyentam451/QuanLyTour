@@ -18,17 +18,18 @@ namespace QuanLyTour.Models
             this.NgayKetThuc = ngaykt;
         }
         public string MaDoan { get; set; }
-        public string MaTour { get; set; }
-        public DateTime NgayKhoiHanh { get; set; }
-        public DateTime NgayKetThuc { get; set; }
-        
+        public string MaTour { get; set; }      
         public TourDuLichModel TourDuLich { get; set; }
+        public string TenTour
+        {
+            get { return TourDuLich.TenTour; }
+        }
         public List<ChiTietDoanModel> chiTietDoans { get; set; }
       
         public ndTourModel NoiDungTour { get; set; }
-      /*  public string HanhTrinh
+        public string HanhTrinh
         {
-            get { return NoiDungTour.HanhTrinh;  }
+            get { return NoiDungTour.HanhTrinh; }
         }
         public string KhachSan
         {
@@ -37,7 +38,14 @@ namespace QuanLyTour.Models
         public string DiaDiemThamQuan
         {
             get { return NoiDungTour.DiaDiemThamQuan; }
-        }*/
+        }
+        public DateTime NgayKhoiHanh { get; set; }
+        public DateTime NgayKetThuc { get; set; }
+
+        public string TenChiPhi { get; set; }
+        public int SoTien { get; set; }
+        public string TenKhachHang { get; set; }
+        public string SoDienThoai { get; set; }
 
         public static List<DoanDuLichModel> GetAll()
         {
