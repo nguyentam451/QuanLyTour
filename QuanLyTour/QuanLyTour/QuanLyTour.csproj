@@ -60,13 +60,16 @@
     <Compile Include="DAL\DoanDuLichDAL.cs" />
     <Compile Include="DAL\GiaTourDAL.cs" />
     <Compile Include="DAL\KhachDAL.cs" />
+    <Compile Include="DAL\LoaiChiPhiDAL.cs" />
     <Compile Include="DAL\LoaiHinhDuLichDAL.cs" />
     <Compile Include="DAL\ndTourDAL.cs" />
     <Compile Include="DAL\NhanVienDAL.cs" />
     <Compile Include="DAL\PhanBoNhanVienDAL.cs" />
     <Compile Include="DAL\ThamQuanDAL.cs" />
+    <Compile Include="Models\ChiPhiModel.cs" />
     <Compile Include="Models\DiaDiemDAL.cs" />
     <Compile Include="Models\DiaDiemModel.cs" />
+    <Compile Include="Models\LoaiChiPhiModel.cs" />
     <Compile Include="Models\NhanVienModel.cs" />
     <Compile Include="Models\PhanBoNhanVienModel.cs" />
     <Compile Include="Models\ThamQuanModel.cs" />

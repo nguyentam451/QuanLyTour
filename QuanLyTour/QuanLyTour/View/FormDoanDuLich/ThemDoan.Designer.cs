@@ -38,16 +38,14 @@ namespace QuanLyTour.View.FormDoanDuLich
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.cbbLoaiChiPhi = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtHanhTrinh = new System.Windows.Forms.TextBox();
+            this.txtKhachSan = new System.Windows.Forms.TextBox();
+            this.txtDiaDiem = new System.Windows.Forms.TextBox();
+            this.txtNgayKH = new System.Windows.Forms.TextBox();
+            this.txtNgayKT = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtSoTien = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -66,7 +64,7 @@ namespace QuanLyTour.View.FormDoanDuLich
             this.cbbTenTour.FormattingEnabled = true;
             this.cbbTenTour.Location = new System.Drawing.Point(323, 21);
             this.cbbTenTour.Name = "cbbTenTour";
-            this.cbbTenTour.Size = new System.Drawing.Size(142, 28);
+            this.cbbTenTour.Size = new System.Drawing.Size(178, 28);
             this.cbbTenTour.TabIndex = 1;
             // 
             // label2
@@ -135,116 +133,96 @@ namespace QuanLyTour.View.FormDoanDuLich
             this.cbbLoaiChiPhi.FormattingEnabled = true;
             this.cbbLoaiChiPhi.Location = new System.Drawing.Point(323, 333);
             this.cbbLoaiChiPhi.Name = "cbbLoaiChiPhi";
-            this.cbbLoaiChiPhi.Size = new System.Drawing.Size(142, 28);
+            this.cbbLoaiChiPhi.Size = new System.Drawing.Size(178, 28);
             this.cbbLoaiChiPhi.TabIndex = 8;
             // 
-            // label8
+            // txtHanhTrinh
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(207, 398);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 20);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "Tên Khách";
+            this.txtHanhTrinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHanhTrinh.Location = new System.Drawing.Point(323, 73);
+            this.txtHanhTrinh.Multiline = true;
+            this.txtHanhTrinh.Name = "txtHanhTrinh";
+            this.txtHanhTrinh.Size = new System.Drawing.Size(178, 30);
+            this.txtHanhTrinh.TabIndex = 12;
             // 
-            // label9
+            // txtKhachSan
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(182, 452);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(114, 20);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Số Điện Thoại";
+            this.txtKhachSan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKhachSan.Location = new System.Drawing.Point(323, 125);
+            this.txtKhachSan.Multiline = true;
+            this.txtKhachSan.Name = "txtKhachSan";
+            this.txtKhachSan.Size = new System.Drawing.Size(178, 30);
+            this.txtKhachSan.TabIndex = 13;
             // 
-            // comboBox1
+            // txtDiaDiem
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(323, 390);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(142, 28);
-            this.comboBox1.TabIndex = 11;
+            this.txtDiaDiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiaDiem.Location = new System.Drawing.Point(323, 173);
+            this.txtDiaDiem.Multiline = true;
+            this.txtDiaDiem.Name = "txtDiaDiem";
+            this.txtDiaDiem.Size = new System.Drawing.Size(178, 30);
+            this.txtDiaDiem.TabIndex = 14;
             // 
-            // textBox1
+            // txtNgayKH
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(323, 73);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(142, 30);
-            this.textBox1.TabIndex = 12;
+            this.txtNgayKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgayKH.Location = new System.Drawing.Point(323, 222);
+            this.txtNgayKH.Multiline = true;
+            this.txtNgayKH.Name = "txtNgayKH";
+            this.txtNgayKH.Size = new System.Drawing.Size(178, 30);
+            this.txtNgayKH.TabIndex = 15;
             // 
-            // textBox2
+            // txtNgayKT
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(323, 125);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(142, 30);
-            this.textBox2.TabIndex = 13;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(323, 173);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(142, 30);
-            this.textBox3.TabIndex = 14;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(323, 222);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(142, 30);
-            this.textBox4.TabIndex = 15;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(323, 274);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(142, 30);
-            this.textBox5.TabIndex = 16;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(323, 449);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(142, 30);
-            this.textBox6.TabIndex = 17;
+            this.txtNgayKT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgayKT.Location = new System.Drawing.Point(323, 274);
+            this.txtNgayKT.Multiline = true;
+            this.txtNgayKT.Name = "txtNgayKT";
+            this.txtNgayKT.Size = new System.Drawing.Size(178, 30);
+            this.txtNgayKT.TabIndex = 16;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(348, 509);
+            this.button1.Location = new System.Drawing.Point(338, 446);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 30);
             this.button1.TabIndex = 18;
             this.button1.Text = "Lưu";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(230, 394);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(66, 20);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Số Tiền";
+            // 
+            // txtSoTien
+            // 
+            this.txtSoTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoTien.Location = new System.Drawing.Point(323, 384);
+            this.txtSoTien.Multiline = true;
+            this.txtSoTien.Name = "txtSoTien";
+            this.txtSoTien.Size = new System.Drawing.Size(178, 30);
+            this.txtSoTien.TabIndex = 20;
             // 
             // ThemDoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 562);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label9);
+            this.ClientSize = new System.Drawing.Size(800, 500);
+            this.Controls.Add(this.txtSoTien);
             this.Controls.Add(this.label8);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtNgayKT);
+            this.Controls.Add(this.txtNgayKH);
+            this.Controls.Add(this.txtDiaDiem);
+            this.Controls.Add(this.txtKhachSan);
+            this.Controls.Add(this.txtHanhTrinh);
             this.Controls.Add(this.cbbLoaiChiPhi);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -256,6 +234,7 @@ namespace QuanLyTour.View.FormDoanDuLich
             this.Controls.Add(this.label1);
             this.Name = "ThemDoan";
             this.Text = "ThemDoan";
+            this.Load += new System.EventHandler(this.ThemDoan_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,15 +251,13 @@ namespace QuanLyTour.View.FormDoanDuLich
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbbLoaiChiPhi;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtHanhTrinh;
+        private System.Windows.Forms.TextBox txtKhachSan;
+        private System.Windows.Forms.TextBox txtDiaDiem;
+        private System.Windows.Forms.TextBox txtNgayKH;
+        private System.Windows.Forms.TextBox txtNgayKT;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtSoTien;
     }
 }

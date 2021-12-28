@@ -27,25 +27,17 @@ namespace QuanLyTour.Models
         public List<ChiTietDoanModel> chiTietDoans { get; set; }
       
         public ndTourModel NoiDungTour { get; set; }
-        public string HanhTrinh
-        {
-            get { return NoiDungTour.HanhTrinh; }
-        }
-        public string KhachSan
-        {
-            get { return NoiDungTour.KhachSan; }
-        }
-        public string DiaDiemThamQuan
-        {
-            get { return NoiDungTour.DiaDiemThamQuan; }
-        }
+
+        public string HanhTrinh { get; set; }
+        public string KhachSan { get; set; }
+        public string DiaDiemThamQuan { get; set; }
         public DateTime NgayKhoiHanh { get; set; }
         public DateTime NgayKetThuc { get; set; }
 
         public string TenChiPhi { get; set; }
         public int SoTien { get; set; }
-        public string TenKhachHang { get; set; }
-        public string SoDienThoai { get; set; }
+/*        public string TenKhachHang { get; set; }
+        public string SoDienThoai { get; set; }*/
 
         public static List<DoanDuLichModel> GetAll()
         {
@@ -57,13 +49,18 @@ namespace QuanLyTour.Models
             return DoanDuLichDAL.Insert(this);
         }
 
-        public static bool DeleteToDB(string id)
+        public  bool DeleteToDB()
         {
-            return DoanDuLichDAL.Delete(id);
+            return DoanDuLichDAL.Delete(this);
         }
         public bool UpdateToDB()
         {
             return DoanDuLichDAL.Update(this);
+        }
+
+        public static int getCount()
+        {
+            return DoanDuLichDAL.getCount();
         }
     }
 }
