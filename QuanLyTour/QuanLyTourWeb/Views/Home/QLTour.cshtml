@@ -1,0 +1,101 @@
+﻿@model IEnumerable<QuanLyTour.Model.TourDuLichModel>
+
+@{ ViewBag.Title = "QLTour"; }
+
+<style>
+	.button {
+		border: none;
+		color: white;
+		padding: 16px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		transition-duration: 0.4s;
+		cursor: pointer;
+	}
+
+	.button1 {
+		background-color: white;
+		color: black;
+		border: 2px solid #4CAF50;
+	}
+
+		.button1:hover {
+			background-color: #4CAF50;
+			color: white;
+		}
+	.button2 {
+		background-color: white;
+		color: black;
+		border: 2px solid #008CBA;
+	}
+
+		.button2:hover {
+			background-color: yellow;
+			color: yellow;
+		}
+
+</style>
+
+<h2>Quản Lý Tour</h2>
+
+<button type="button" class="button button2">
+	@Html.ActionLink("Thêm tour du lịch", "CreateTour")
+</button>
+<br><br><br>
+
+<table class="table">
+	<tr>
+		<th>
+			<p>Tên Tour</p>
+		</th>
+		<th>
+			<p>Tên địa điểm</p>
+		</th>
+		<th>
+			<p>Tên loại hình</p>
+		</th>
+		<th>
+			<p>Giá</p>
+		</th>
+		<th>
+			<p>Ngày bắt đầu</p>
+		</th>
+		<th>
+			<p>Ngày kết thúc</p>
+		</th>
+
+		<th></th>
+	</tr>
+
+	@foreach (var item in Model)
+	{
+<tr>
+	<td>
+		@Html.DisplayFor(modelItem => item.TenTour)
+	</td>
+	<td>
+		@Html.DisplayFor(modelItem => item.TenDiaDiem)
+	</td>
+	<td>
+		@Html.DisplayFor(modelItem => item.TenLoaiTour)
+	</td>
+	<td>
+		@Html.DisplayFor(modelItem => item.ThanhTien)
+	</td>
+	<td>
+		@Html.DisplayFor(modelItem => item.ThoiGianBatDau, new { htmlAttributes = new { @type = "text", @class = "form-control" } })
+	</td>
+	<td>
+		@Html.DisplayFor(modelItem => item.ThoiGianKetThuc)
+	</td>
+
+	<td>
+		@Html.ActionLink("Edit", "EditTour", new { id = item.MaTour.Replace(" ", "") }) |
+		@Html.ActionLink("Delete", "DeleteTour", new { id = item.MaTour.Replace(" ", "") })
+	</td>
+</tr>}
+
+</table>

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyTour", "QuanLyTour\Qu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyTourWeb", "QuanLyTourWeb\QuanLyTourWeb.csproj", "{B8A402C4-590B-4C23-8322-34C8035091CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend", "Backend\Backend.csproj", "{FD037813-362A-47A0-AF08-AF5A7D834BDE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B8A402C4-590B-4C23-8322-34C8035091CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8A402C4-590B-4C23-8322-34C8035091CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8A402C4-590B-4C23-8322-34C8035091CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD037813-362A-47A0-AF08-AF5A7D834BDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD037813-362A-47A0-AF08-AF5A7D834BDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD037813-362A-47A0-AF08-AF5A7D834BDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD037813-362A-47A0-AF08-AF5A7D834BDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
