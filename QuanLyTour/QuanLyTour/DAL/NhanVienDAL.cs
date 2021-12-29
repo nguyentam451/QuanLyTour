@@ -28,13 +28,21 @@ namespace QuanLyTour.DAL
 
             using (QuanLyTourDataContext db = new QuanLyTourDataContext())
             {
-                var result = from u in db.NHANVIENs
+                var result = from d in db.DOANDULICHes
+                             from nv in db.NHANVIENs
+                             from pb in db.PHANBONHANVIEN_DOANs
+                           
+                             where d.MaDoan == pb.MaDoan & 
+                                    pb.MaNhanVien == nv.MaNhanVien
                              select new
                              {
-
-                               MaNhanVien = u.MaNhanVien,
-                               TenNhanVien = u.TenNhanVien,
-
+                                 MaNhanVien = nv.MaNhanVien,
+                                 MaDoan = d.MaDoan,
+                                 NgayBatDau = d.NgayKhoiHanh,
+                                 NgayKetThuc = d.NgayKetThuc,
+                                 TenNhanVien = nv.TenNhanVien,
+                                 NhiemVu = pb.NhiemVu,
+                                
                              };
 
 
@@ -42,10 +50,12 @@ namespace QuanLyTour.DAL
                 {
 
                     NhanVienModel nhanvien = new NhanVienModel();
+
                     nhanvien.MaNhanVien = i.MaNhanVien;
                     nhanvien.TenNhanVien = i.TenNhanVien;
-                    
-
+                    nhanvien.NhiemVu = i.NhiemVu;
+                    nhanvien.NgayBatDau = (DateTime)i.NgayBatDau;
+                    nhanvien.NgayKetThuc = (DateTime)i.NgayKetThuc;
 
                     dsNhanVien.Add(nhanvien);
                 }

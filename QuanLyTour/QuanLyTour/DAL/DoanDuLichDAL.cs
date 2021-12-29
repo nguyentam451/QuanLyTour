@@ -99,7 +99,6 @@ namespace QuanLyTour.DAL
         }
 
 
-
         public static bool Insert(DoanDuLichModel obj)
         {
             try
@@ -136,7 +135,7 @@ namespace QuanLyTour.DAL
                         MaDoan = obj.MaDoan,
                         SoTien = obj.SoTien,
                         MaLoaiChiPhi = obj.TenChiPhi,
-           
+            
 
                     });
                     db.SubmitChanges();

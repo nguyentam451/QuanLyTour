@@ -61,6 +61,10 @@ namespace QuanLyTour.View.FormDoanDuLich
 
         private void ThemDoan_Load(object sender, EventArgs e)
         {
+            DateTime date = DateTime.Now;
+            txtNgayKH.Text = date.ToString();
+            txtNgayKT.Text = date.ToString();
+
             listTour = TourDuLichModel.GetAll();
             listChiPhi = LoaiChiPhiModel.GetAll();
             listKhach = KhachHangModel.GetAll();

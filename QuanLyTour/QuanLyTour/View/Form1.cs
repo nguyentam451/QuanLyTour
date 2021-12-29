@@ -14,6 +14,7 @@ using QuanLyTour.Models;
 using QuanLyTour.View;
 using System.IO;
 using QuanLyTour.View.FormDoanDuLich;
+using QuanLyTour.View.FormKhachHang;
 
 namespace QuanLyTour
 {
@@ -26,7 +27,7 @@ namespace QuanLyTour
         List<NhanVienModel> allNhanViens;
         List<PhanBoNhanVienModel> allPhanBos;
         List<ChiTietDoanModel> allChiTietDoans;
-        public static List<TourDuLichModel> allTours;
+        public List<TourDuLichModel> allTours;
         List<ThamQuanModel> allThamQuans;
         List<GiaTourModel> allGias;
         int currentTourIndex;
@@ -40,7 +41,7 @@ namespace QuanLyTour
         List<LoaiHinhDuLichModel> listLoaiHinh;
         List<DiaDiemModel> listDiaDiem;
         Dictionary<string, string> loaiHinh, diaDiem;
-
+        
         // DOAN
         List<TourDuLichModel> listTour;
         List<LoaiChiPhiModel> listChiPhi;
@@ -126,6 +127,7 @@ namespace QuanLyTour
         private void Form1_Load(object sender, EventArgs e)
         {
             // đoàn
+            
             allDoanDuLichs = DoanDuLichModel.GetAll();
             dtgvDoan.DataSource = allDoanDuLichs;
             dtgvDoan.Columns["TourDuLich"].Visible = false;
@@ -133,18 +135,23 @@ namespace QuanLyTour
             dtgvDoan.Columns["MaTour"].Visible = false;
             dtgvDoan.Columns["MaDoan"].Visible = false;
 
+            // khách
             allKhachHangs = KhachHangModel.GetAll();
             dtgvKhach.DataSource = allKhachHangs;
+            dtgvKhach.Columns["MaKhachHang"].Visible = false;
 
+            // nhân viên
             allNhanViens = NhanVienModel.GetAll();
             dtgvNhanVien.DataSource = allNhanViens;
+            dtgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtgvNhanVien.Columns["MaNhanVien"].Visible = false;
 
-            allPhanBos = PhanBoNhanVienModel.GetAll();
-            dtgvPhanBoNhanVien.DataSource = allPhanBos;
-            dtgvPhanBoNhanVien.Columns["MaNhanVien"].Visible = false;
-            dtgvPhanBoNhanVien.Columns["NhanVien"].Visible = false;
-            dtgvPhanBoNhanVien.Columns["DoanDuLich"].Visible = false;
-            dtgvPhanBoNhanVien.Columns["MaTour"].Visible = false;
+            /*   allPhanBos = PhanBoNhanVienModel.GetAll();
+               dtgvPhanBoNhanVien.DataSource = allPhanBos;
+               dtgvPhanBoNhanVien.Columns["MaNhanVien"].Visible = false;
+               dtgvPhanBoNhanVien.Columns["NhanVien"].Visible = false;
+               dtgvPhanBoNhanVien.Columns["DoanDuLich"].Visible = false;
+               dtgvPhanBoNhanVien.Columns["MaTour"].Visible = false;*/
 
 
 
@@ -167,11 +174,12 @@ namespace QuanLyTour
             dtgvGiaTour.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             // load combobox
-            loadComBoBoxTour();
-            loadComboboxDoan();
+               loadComBoBoxTour();
+               loadComboboxDoan();
+               loadComboboxKhach();
 
         }
-     
+
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -294,21 +302,7 @@ namespace QuanLyTour
 
         private void dtgvChiTietTour_SelectionChanged(object sender, EventArgs e)
         {
-            currentDoanIndex = dtgvDoan.CurrentCell.RowIndex;
-
-            // update current tour details
-            var doan = allDoanDuLichs[currentDoanIndex];
-            if (doan != null)
-            {
-                cbbTenTour.Text = doan.MaDoan;
-                //cbLoaiTour.SelectedValue = tour.MaLoai;
-                txtHanhTrinh.Text = doan.MaTour;
-                txtKhachSan.Text = doan.NgayKhoiHanh.ToString();
-                txtDiaDiemThamQuan.Text = doan.NgayKetThuc.ToString();
-/*                txtHanhTrinh.Text = doan.HanhTrinh;
-                txtKhachSan.Text = doan.KhachSan;
-                txtDiaDiem.Text = doan.DiaDiemThamQuan;*/
-            }
+           
 
         }
 
@@ -364,7 +358,21 @@ namespace QuanLyTour
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            currentKhachIndex = dtgvKhach.CurrentCell.RowIndex;
 
+            // update current tour details
+            var khach = allKhachHangs[currentKhachIndex];
+            if (khach != null)
+            {
+              //  txtMaKhach.Text = khach.MaKhachHang.ToString();
+                txtHoTen.Text = khach.HoTen.ToString();
+                txtCMND.Text = khach.SoCMND.ToString();
+                txtDiaChi.Text = khach.DiaChi.ToString();
+                cbbGioiTinh.Text = khach.GioiTinh.ToString();
+                txtSoDT.Text = khach.SDT.ToString();
+                txtQuocTich.Text = khach.QuocTich.ToString();
+
+            }
         }
 
         private void label3_Click_1(object sender, EventArgs e)
@@ -374,44 +382,27 @@ namespace QuanLyTour
 
         private void btnThemKhach_Click(object sender, EventArgs e)
         {
-            KhachHangModel kh = new KhachHangModel();
-            kh.MaKhachHang = txtMaKhach.Text;
-            kh.HoTen = txtHoTen.Text;
-            kh.SoCMND = txtCMND.Text;
-            kh.DiaChi = txtDiaChi.Text;
-            kh.GioiTinh = txtGioiTinh.Text;
-            kh.SDT = txtSoDT.Text;
-            kh.QuocTich = txtQuocTich.Text;
+           
 
+            ThemKhach khach = new ThemKhach();
+            khach.ShowDialog();
 
-
-
-            if (kh.InserToDB() == true)
+            if (khach.DialogResult == DialogResult.OK)
             {
-                MessageBox.Show("Thêm thành công");
-                allKhachHangs.Add(kh);
-                dtgvKhach.DataSource = null;
-                dtgvKhach.DataSource = allKhachHangs;
-
-                
-
+                reloadData();
             }
-            else
-            {
-                MessageBox.Show("Thêm thất bại");
-            }
+            khach.Dispose();
         }
 
         private void btnXoaKhach_Click(object sender, EventArgs e)
         {
-            string id = txtMaKhach.Text;
+            var khach = allKhachHangs[currentKhachIndex];
 
-            if (KhachHangModel.DeleteToDB(id))
+            if (khach.DeleteToDB())
             {
                 MessageBox.Show("Xóa thành công");
-                allKhachHangs.RemoveAt(currentKhachIndex);
-                dtgvKhach.DataSource = null;
-                dtgvKhach.DataSource = allKhachHangs;
+
+                reloadData();
 
             }
             else
@@ -423,20 +414,18 @@ namespace QuanLyTour
         private void btnSuaKhach_Click(object sender, EventArgs e)
         {
             var kh = allKhachHangs[currentKhachIndex];
-            kh.MaKhachHang = txtMaKhach.Text;
+  //          kh.MaKhachHang = txtMaKhach.Text;
             kh.HoTen = txtHoTen.Text;
             kh.SoCMND = txtCMND.Text;
             kh.DiaChi = txtDiaChi.Text;
-            kh.GioiTinh = txtGioiTinh.Text;
+            kh.GioiTinh = cbbGioiTinh.Text;
             kh.SDT = txtSoDT.Text;
             kh.QuocTich = txtQuocTich.Text;
 
             if (kh.UpdateToDB())
             {
                 MessageBox.Show("Sửa thành công");
-                dtgvKhach.DataSource = null;
-                dtgvKhach.DataSource = allKhachHangs;
-              
+                reloadData();
             }
             else
             {
@@ -489,8 +478,7 @@ namespace QuanLyTour
 
         private void dtgvDoan_SelectionChanged(object sender, EventArgs e)
         {
-            currentDoanIndex = dtgvDoan.CurrentCell.RowIndex;
-
+            /*currentDoanIndex = dtgvDoan.CurrentCell.RowIndex;
             // update current tour details
             var doan = allDoanDuLichs[currentDoanIndex];
             if (doan != null)
@@ -503,9 +491,9 @@ namespace QuanLyTour
                 txtNgayKT.Text = doan.NgayKetThuc.ToString();
                 cbbChiPhi.Text = doan.TenChiPhi.ToString();
                 txtSoTien.Text = doan.SoTien.ToString();
-/*              txtTenKhach.Text = doan.TenKhachHang.ToString();
-                txtSDT.Text = doan.SoDienThoai.ToString();*/
-            }
+*//*              txtTenKhach.Text = doan.TenKhachHang.ToString();
+                txtSDT.Text = doan.SoDienThoai.ToString();*//*
+            }*/
         }
 
         private void btnThemChiTietTour_Click_1(object sender, EventArgs e)
@@ -515,34 +503,15 @@ namespace QuanLyTour
 
         private void btnThemDoan_Click_1(object sender, EventArgs e)
         {
-            /* DoanDuLichModel doan = new DoanDuLichModel();
-             doan.MaDoan = cbbTenTour.Text;
-             doan.MaTour = txtHanhTrinh.Text;
-             doan.NgayKhoiHanh = DateTime.Parse(txtKhachSan.Text);
-             doan.NgayKetThuc = DateTime.Parse(txtDiaDiemThamQuan.Text);
-     //        doan.NoiDungTour = new ndTourModel(txtHanhTrinh.Text, txtKhachSan.Text, txtDiaDiem.Text);
-
-
-             if (doan.InsertToDB() == true)
-             {
-                 MessageBox.Show("Thêm thành công");
-                 allDoanDuLichs.Add(doan);
-                 dtgvDoan.DataSource = null;
-                 dtgvDoan.DataSource = allDoanDuLichs;
-
-                 dtgvDoan.Columns["TourDuLich"].Visible = false;
-                 dtgvDoan.Columns["NoiDungTour"].Visible = false;
-
-             }
-             else
-             {
-                 MessageBox.Show("Thêm thất bại");
-             }*/
-
+          
             ThemDoan doan = new ThemDoan();
-            DateTime a = DateTime.Now;
-            MessageBox.Show(a.ToString());
             doan.ShowDialog();
+
+            if (doan.DialogResult == DialogResult.OK)
+            {
+                reloadData();
+            }
+            doan.Dispose();
 
         }
 
@@ -600,8 +569,8 @@ namespace QuanLyTour
 
         private void dtgvKhach_SelectionChanged(object sender, EventArgs e)
         {
-            currentKhachIndex = dtgvKhach.CurrentCell.RowIndex;
-
+           /* currentKhachIndex = dtgvKhach.CurrentCell.RowIndex;
+           
             // update current tour details
             var khach = allKhachHangs[currentKhachIndex];
             if (khach != null)
@@ -614,7 +583,7 @@ namespace QuanLyTour
                 txtSoDT.Text = khach.SDT.ToString();
                 txtQuocTich.Text = khach.QuocTich.ToString();
 
-            }
+            }*/
         }
 
         private void txtNgayKH_TextChanged(object sender, EventArgs e)
@@ -682,7 +651,7 @@ namespace QuanLyTour
             var nv = allNhanViens[currentNhanVienIndex];
             if (nv != null)
             {
-                txtMaNhanVien.Text = nv.MaNhanVien.ToString();
+                txtNhiemVu.Text = nv.MaNhanVien.ToString();
                 txtTenNhanVien.Text = nv.TenNhanVien.ToString();;
 
             }
@@ -732,6 +701,13 @@ namespace QuanLyTour
             cbbTenLoaiHinh_form1.SelectedIndex = 0;
         }
 
+        private void loadComboboxKhach()
+        {
+            cbbGioiTinh.Text = "Nam";
+            cbbGioiTinh.Items.Add("Nam");
+            cbbGioiTinh.Items.Add("Nữ");
+            txtQuocTich.Text = "Việt Nam";
+        }
         private void loadComboboxDoan()
         {
             listTour = TourDuLichModel.GetAll();
@@ -804,13 +780,27 @@ namespace QuanLyTour
 
         private void dtgvTour_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            currentTourIndex = dtgvTour.CurrentCell.RowIndex;
+
+            // update current tour details
+            var tour = allTours[currentTourIndex];
+            if (tour != null)
+            {
+                txtTenTour.Text = tour.TenTour.ToString();
+                cbbTenLoaiHinh_form1.Text = tour.TenLoaiTour.ToString();
+                cbbTenDiaDiem_form1.Text = tour.TenDiaDiem.ToString();
+                txtGiaTien.Text = tour.ThanhTien.ToString();
+                txtNgayBatDau.Text = tour.ThoiGianBatDau.ToString();
+                txtNgayKetThuc.Text = tour.ThoiGianKetThuc.ToString();
+
+            }
 
         }
 
         private void dtgvTour_SelectionChanged(object sender, EventArgs e)
         {
            
-                currentTourIndex = dtgvTour.CurrentCell.RowIndex;
+             /*   currentTourIndex = dtgvTour.CurrentCell.RowIndex;
 
                 // update current tour details
                 var tour = allTours[currentTourIndex];
@@ -823,18 +813,82 @@ namespace QuanLyTour
                     txtNgayBatDau.Text = tour.ThoiGianBatDau.ToString();
                     txtNgayKetThuc.Text = tour.ThoiGianKetThuc.ToString();
 
-                }
+                }*/
             
             
           
         }
+        public void readData()
+        {
+            // tour
+            allTours = TourDuLichModel.GetAll();
+            dtgvTour.DataSource = allTours;
+            dtgvTour.Columns["MaLoaiHinh"].Visible = false;
+            dtgvTour.Columns["LoaiHinhDuLich"].Visible = false;
+            dtgvTour.Columns["MaTour"].Visible = false;
+            dtgvTour.Columns["DacDiem"].Visible = false;
+
+            // đoàn
+            allDoanDuLichs = DoanDuLichModel.GetAll();
+            dtgvDoan.DataSource = allDoanDuLichs;
+            dtgvDoan.Columns["TourDuLich"].Visible = false;
+            dtgvDoan.Columns["NoiDungTour"].Visible = false;
+            dtgvDoan.Columns["MaTour"].Visible = false;
+            dtgvDoan.Columns["MaDoan"].Visible = false;
+
+            // khách
+            allKhachHangs = KhachHangModel.GetAll();
+            dtgvKhach.DataSource = allKhachHangs;
+            dtgvKhach.Columns["MaKhachHang"].Visible = false;
+        }
+
+        public void reloadData()
+        {
+            allTours = null;
+            allDoanDuLichs = null;
+            allKhachHangs = null;
+            readData();
+        }
 
         private void btnThemTour_Click(object sender, EventArgs e)
         {
-            ThemTour t = new ThemTour();
-            t.ShowDialog();
+            ThemTour c = new ThemTour();
+            c.ShowDialog();
+
+            if(c.DialogResult == DialogResult.OK)
+            {
+                reloadData();
+            }
+            c.Dispose();
 
         }
+
+        private void label3_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtgvDoan_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            currentDoanIndex = dtgvDoan.CurrentCell.RowIndex;
+            // update current tour details
+            var doan = allDoanDuLichs[currentDoanIndex];
+            if (doan != null)
+            {
+                cbbTenTour.Text = doan.TourDuLich.TenTour.ToString();
+                txtHanhTrinh.Text = doan.HanhTrinh.ToString();
+                txtKhachSan.Text = doan.KhachSan.ToString();
+                txtDiaDiemThamQuan.Text = doan.DiaDiemThamQuan.ToString();
+                txtNgayKH.Text = doan.NgayKhoiHanh.ToString();
+                txtNgayKT.Text = doan.NgayKetThuc.ToString();
+                cbbChiPhi.Text = doan.TenChiPhi.ToString();
+                txtSoTien.Text = doan.SoTien.ToString();
+                /*              txtTenKhach.Text = doan.TenKhachHang.ToString();
+                                txtSDT.Text = doan.SoDienThoai.ToString();*/
+            }
+        }
+
+       
 
         private void btnXoaTour_Click(object sender, EventArgs e)
         {
@@ -859,10 +913,6 @@ namespace QuanLyTour
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form1_Load(sender,e);
-            currentTourIndex = 0;
-        }
+      
     }
 }

@@ -16,7 +16,9 @@ namespace QuanLyTour.Models
         }
         public string MaNhanVien { get; set; }
         public string TenNhanVien { get; set; }
-
+        public string NhiemVu { get; set; }
+        public DateTime NgayBatDau { get; set; }
+        public DateTime NgayKetThuc { get; set; }
         public static List<NhanVienModel> GetAll()
         {
             return NhanVienDAL.getAll();
