@@ -52,8 +52,8 @@ namespace QuanLyTourWeb.Controllers
 
         public ActionResult CreateTour()
         {
-            setViewBagDiaDiem();
             setViewBagMaLoaiHinh();
+            setViewBagDiaDiem();
             return View();
         }
 
@@ -150,7 +150,7 @@ namespace QuanLyTourWeb.Controllers
 
         public void setViewBagDiaDiem(long? selected = null)
         {
-            var dao = new QuanLyTour.Model.DiaDiemModel();
+            var dao = new QuanLyTour.Models.DiaDiemModel();
             ViewBag.DacDiem = new SelectList(dao.getAll(), "MaDiaDiem", "TenDiaDiem", selected);
         }
 
