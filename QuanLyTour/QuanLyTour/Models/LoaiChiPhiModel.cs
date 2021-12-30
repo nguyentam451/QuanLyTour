@@ -15,5 +15,23 @@ namespace QuanLyTour.Models
         {
             return LoaiChiPhiDAL.getAll();
         }
+        public bool InserToDB()
+        {
+            return LoaiChiPhiDAL.Insert(this);
+        }
+
+        public bool DeleteToDB()
+        {
+            return LoaiChiPhiDAL.Delete(this);
+        }
+        public bool UpdateDB()
+        {
+            return LoaiChiPhiDAL.Update(this);
+        }
+
+        public static int getCount()
+        {
+            return LoaiChiPhiDAL.getCount();
+        }
     }
 }

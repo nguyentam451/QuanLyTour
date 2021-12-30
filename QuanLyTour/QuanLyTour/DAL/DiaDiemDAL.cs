@@ -4,31 +4,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using QuanLyTour.Model;
+using QuanLyTour.Models;
 
 namespace QuanLyTour.DAL
 {
-    class LoaiHinhDuLichDAL
+    class DiaDiemDAL
     {
-        public static List<LoaiHinhDuLichModel> getAll()
+        public static List<DiaDiemModel> getAll()
         {
-            List<LoaiHinhDuLichModel> list = new List<LoaiHinhDuLichModel>();
+            List<DiaDiemModel> list = new List<DiaDiemModel>();
 
             using (QuanLyTourDataContext db = new QuanLyTourDataContext())
             {
-                var result = from u in db.LOAIHINHDULICHes
+                var result = from u in db.DIADIEMs
                              select new
                              {
-                                 a = u.MaLoaiHinh,
-                                 b = u.TenLoaiHinh
+                                 a = u.MaDiaDiem,
+                                 b = u.TenDiaDiem
                              };
 
                 foreach (var i in result)
                 {
-                    LoaiHinhDuLichModel tour = new LoaiHinhDuLichModel();
+                    DiaDiemModel tour = new DiaDiemModel();
 
-                    tour.MaLoaiHinh = i.a;
-                    tour.TenLoaiHinh = i.b;
+                    tour.MaDiaDiem = i.a;
+                    tour.TenDiaDiem = i.b;
 
                     list.Add(tour);
                 }
@@ -42,21 +42,21 @@ namespace QuanLyTour.DAL
         {
             using (QuanLyTourDataContext db = new QuanLyTourDataContext())
             {
-                int count = (from u in db.LOAIHINHDULICHes select u).Count();
+                int count = (from u in db.DIADIEMs select u).Count();
                 return count;
             }
         }
 
-        public static bool Insert(LoaiHinhDuLichModel obj)
+        public static bool Insert(DiaDiemModel obj)
         {
             try
             {
                 using (QuanLyTourDataContext db = new QuanLyTourDataContext())
                 {
-                    db.LOAIHINHDULICHes.InsertOnSubmit(new LOAIHINHDULICH()
+                    db.DIADIEMs.InsertOnSubmit(new DIADIEM()
                     {
-                        MaLoaiHinh = obj.MaLoaiHinh,
-                        TenLoaiHinh = obj.TenLoaiHinh,              
+                        MaDiaDiem = obj.MaDiaDiem,
+                        TenDiaDiem = obj.TenDiaDiem,
                     }
                     );
 
@@ -72,15 +72,15 @@ namespace QuanLyTour.DAL
             }
         }
 
-        public static bool Delete(LoaiHinhDuLichModel obj)
+        public static bool Delete(DiaDiemModel obj)
         {
             try
             {
 
                 using (QuanLyTourDataContext db = new QuanLyTourDataContext())
                 {
-                    var kh = db.LOAIHINHDULICHes.Where(p => p.MaLoaiHinh.Equals(obj.MaLoaiHinh)).SingleOrDefault();
-                    db.LOAIHINHDULICHes.DeleteOnSubmit(kh);
+                    var kh = db.DIADIEMs.Where(p => p.MaDiaDiem.Equals(obj.MaDiaDiem)).SingleOrDefault();
+                    db.DIADIEMs.DeleteOnSubmit(kh);
                     db.SubmitChanges();
 
                 }
@@ -93,17 +93,17 @@ namespace QuanLyTour.DAL
             }
 
         }
-        public static bool Update(LoaiHinhDuLichModel obj)
+        public static bool Update(DiaDiemModel obj)
         {
             try
             {
                 using (QuanLyTourDataContext db = new QuanLyTourDataContext())
                 {
 
-                    var kh = db.LOAIHINHDULICHes.Where(p => p.MaLoaiHinh.Equals(obj.MaLoaiHinh)).SingleOrDefault();
-                    kh.MaLoaiHinh = obj.MaLoaiHinh;
-                    kh.TenLoaiHinh = obj.TenLoaiHinh;
-                   
+                    var kh = db.DIADIEMs.Where(p => p.MaDiaDiem.Equals(obj.MaDiaDiem)).SingleOrDefault();
+                    kh.MaDiaDiem = obj.MaDiaDiem;
+                    kh.TenDiaDiem = obj.TenDiaDiem;
+
                     db.SubmitChanges();
                 }
 
@@ -115,6 +115,7 @@ namespace QuanLyTour.DAL
                 return false;
             }
         }
-
     }
+
+
 }

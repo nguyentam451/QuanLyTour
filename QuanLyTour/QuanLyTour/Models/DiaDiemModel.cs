@@ -23,5 +23,23 @@ namespace QuanLyTour.Models
         {
             return DiaDiemDAL.getAll();
         }
+        public bool InserToDB()
+        {
+            return DiaDiemDAL.Insert(this);
+        }
+
+        public bool DeleteToDB()
+        {
+            return DiaDiemDAL.Delete(this);
+        }
+        public bool UpdateDB()
+        {
+            return DiaDiemDAL.Update(this);
+        }
+
+        public static int getCount()
+        {
+            return DiaDiemDAL.getCount();
+        }
     }
 }

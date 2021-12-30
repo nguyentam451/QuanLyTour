@@ -31,11 +31,18 @@ namespace QuanLyTour
         public List<TourDuLichModel> allTours;
         List<ThamQuanModel> allThamQuans;
         List<GiaTourModel> allGias;
+        List<DiaDiemModel> allDiaDiems;
+        List<LoaiChiPhiModel> allLoaiChiPhis;
+        List<LoaiHinhDuLichModel> allLoaiHinhs;
+
         int currentTourIndex;
         int currentDoanIndex;
         int currentKhachIndex;
         int currentGiaTourIndex;
         int currentNhanVienIndex;
+        int currentDiaDiemIndex;
+        int currentLoaiHinhIndex;
+        int currentLoaiChiPhiIndex;
 
         // load data từ combobox
         // TOUR
@@ -170,15 +177,28 @@ namespace QuanLyTour
              dtgvThamQuan.DataSource = allThamQuans;
              dtgvThamQuan.Columns["DiaDiem"].Visible = false;*/
 
-            // giá tour
-            allGias = GiaTourModel.GetAll();
-            dtgvGiaTour.DataSource = allGias;
-            dtgvGiaTour.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            // loại hình
+            allLoaiHinhs = LoaiHinhDuLichModel.GetAll();
+            dtgvLoaiHinh.DataSource = allLoaiHinhs;
+            dtgvLoaiHinh.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtgvLoaiHinh.Columns["MaLoaiHinh"].Visible = false;
+
+            // địa điểm
+            allDiaDiems = DiaDiemModel.GetAll();
+            dtgvDiaDiem.DataSource = allDiaDiems;
+            dtgvDiaDiem.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtgvDiaDiem.Columns["MaDiaDiem"].Visible = false;
+
+            // chi phí
+            allLoaiChiPhis = LoaiChiPhiModel.GetAll();
+            dtgvLoaiChiPhi.DataSource = allLoaiChiPhis;
+            dtgvLoaiChiPhi.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtgvLoaiChiPhi.Columns["MaLoaiChiPhi"].Visible = false;
 
             // load combobox
-               loadComBoBoxTour();
-               loadComboboxDoan();
-               loadComboboxKhach();
+            loadComBoBoxTour();
+            loadComboboxDoan();
+            loadComboboxKhach();
 
         }
 
@@ -617,7 +637,14 @@ namespace QuanLyTour
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            currentLoaiHinhIndex = dtgvLoaiHinh.CurrentCell.RowIndex;
 
+            // update current tour details
+            var loaihinh = allLoaiHinhs[currentLoaiHinhIndex];
+            if (loaihinh != null)
+            {
+                txtTenLoaiHinh.Text = loaihinh.TenLoaiHinh.ToString();
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -642,19 +669,7 @@ namespace QuanLyTour
 
         private void dtgvGiaTour_SelectionChanged(object sender, EventArgs e)
         {
-            currentGiaTourIndex = dtgvGiaTour.CurrentCell.RowIndex;
-
-            // update current tour details
-            var gia = allGias[currentGiaTourIndex];
-            if (gia != null)
-            {
-                txtMaGia.Text = gia.MaGia.ToString();
-                txtMaTour_Gia.Text = gia.MaTour.ToString();
-                txtThanhTien.Text = gia.GiaTien.ToString();
-                txtThoiGianBD.Text = gia.ThoiGianBatDau.ToString();
-                txtThoiGianKT.Text = gia.ThoiGianKetThuc.ToString();
-
-            }
+          
         }
 
         private void dtgvNhanVien_SelectionChanged(object sender, EventArgs e)
@@ -861,6 +876,24 @@ namespace QuanLyTour
             dtgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dtgvNhanVien.Columns["MaNhanVien"].Visible = false;
             dtgvNhanVien.Columns["id_doan"].Visible = false;
+
+            // loại hình
+            allLoaiHinhs = LoaiHinhDuLichModel.GetAll();
+            dtgvLoaiHinh.DataSource = allLoaiHinhs;
+            dtgvLoaiHinh.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtgvLoaiHinh.Columns["MaLoaiHinh"].Visible = false;
+
+            // địa điểm
+            allDiaDiems = DiaDiemModel.GetAll();
+            dtgvDiaDiem.DataSource = allDiaDiems;
+            dtgvDiaDiem.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtgvDiaDiem.Columns["MaDiaDiem"].Visible = false;
+
+            // chi phí
+            allLoaiChiPhis = LoaiChiPhiModel.GetAll();
+            dtgvLoaiChiPhi.DataSource = allLoaiChiPhis;
+            dtgvLoaiChiPhi.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtgvLoaiChiPhi.Columns["MaLoaiChiPhi"].Visible = false;
         }
 
         public void reloadData()
@@ -869,6 +902,7 @@ namespace QuanLyTour
             allDoanDuLichs = null;
             allKhachHangs = null;
             allNhanViens = null;
+            allLoaiHinhs = null;
             readData();
         }
 
@@ -925,6 +959,193 @@ namespace QuanLyTour
             nhanvien.NhiemVu = txtNhiemVu.Text;
 
             if (nhanvien.UpdateDB())
+            {
+                MessageBox.Show("Sửa thành công");
+                reloadData();
+            }
+            else
+            {
+                MessageBox.Show("Sửa thất bại");
+            }
+        }
+
+        private void btnThemGia_Click(object sender, EventArgs e)
+        {
+            int i = (LoaiHinhDuLichModel.getCount() + 1);
+            LoaiHinhDuLichModel nv = new LoaiHinhDuLichModel();
+            nv.MaLoaiHinh = "MLH" + i;
+            nv.TenLoaiHinh = txtTenLoaiHinh.Text;
+        
+  
+            if (nv.InserToDB())
+            {
+                MessageBox.Show("Them thanh cong");
+                DialogResult = DialogResult.OK;
+                reloadData();
+                
+            }
+            else
+            {
+                DialogResult = DialogResult.Cancel;
+            }
+          
+        }
+
+        private void dtgvDiaDiem_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            currentDiaDiemIndex = dtgvDiaDiem.CurrentCell.RowIndex;
+
+            // update current tour details
+            var loaihinh = allDiaDiems[currentDiaDiemIndex];
+            if (loaihinh != null)
+            {
+                txtTenDiaDiem.Text = loaihinh.TenDiaDiem.ToString();
+            }
+        }
+
+        private void dtgvLoaiChiPhi_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            currentLoaiChiPhiIndex = dtgvLoaiChiPhi.CurrentCell.RowIndex;
+
+            // update current tour details
+            var loaihinh = allLoaiChiPhis[currentLoaiChiPhiIndex];
+            if (loaihinh != null)
+            {
+                txtTenLoaiChiPhi.Text = loaihinh.TenLoaiChiPhi.ToString();
+            }
+        }
+
+        private void btnXoaLoaiHinh_Click(object sender, EventArgs e)
+        {
+            var a  = allLoaiHinhs[currentLoaiHinhIndex];
+
+            if (a.DeleteToDB())
+            {
+                MessageBox.Show("Xóa thành công");
+                reloadData();
+            }
+            else
+            {
+                MessageBox.Show("Xóa thất bại");
+            }
+        }
+
+        private void btnSuaLoaiHinh_Click(object sender, EventArgs e)
+        {
+            var a = allLoaiHinhs[currentLoaiHinhIndex];
+            a.TenLoaiHinh = txtTenLoaiHinh.Text;
+           
+         
+
+            if (a.UpdateDB())
+            {
+                MessageBox.Show("Sửa thành công");
+                reloadData();
+            }
+            else
+            {
+                MessageBox.Show("Sửa thất bại");
+            }
+        }
+
+        private void btnThemDiaDiem_Click(object sender, EventArgs e)
+        {
+            int i = (DiaDiemModel.getCount() + 1);
+            DiaDiemModel nv = new DiaDiemModel();
+            nv.MaDiaDiem = "MDD" + i;
+            nv.TenDiaDiem = txtTenDiaDiem.Text;
+
+
+            if (nv.InserToDB())
+            {
+                MessageBox.Show("Them thanh cong");
+                DialogResult = DialogResult.OK;
+                reloadData();
+
+            }
+            else
+            {
+                DialogResult = DialogResult.Cancel;
+            }
+        }
+
+        private void btnXoaDiaDiem_Click(object sender, EventArgs e)
+        {
+            var a = allDiaDiems[currentDiaDiemIndex];
+
+            if (a.DeleteToDB())
+            {
+                MessageBox.Show("Xóa thành công");
+                reloadData();
+            }
+            else
+            {
+                MessageBox.Show("Xóa thất bại");
+            }
+        }
+
+        private void btnSuaDiaDiem_Click(object sender, EventArgs e)
+        {
+            var a = allDiaDiems[currentDiaDiemIndex];
+            a.TenDiaDiem = txtTenDiaDiem.Text;
+
+
+
+            if (a.UpdateDB())
+            {
+                MessageBox.Show("Sửa thành công");
+                reloadData();
+            }
+            else
+            {
+                MessageBox.Show("Sửa thất bại");
+            }
+        }
+
+        private void btnThemChiPhi_Click(object sender, EventArgs e)
+        {
+            int i = (LoaiChiPhiModel.getCount() + 1);
+            LoaiChiPhiModel nv = new LoaiChiPhiModel();
+            nv.MaLoaiChiPhi = "MLCP" + i;
+            nv.TenLoaiChiPhi = txtTenLoaiChiPhi.Text;
+
+
+            if (nv.InserToDB())
+            {
+                MessageBox.Show("Them thanh cong");
+                DialogResult = DialogResult.OK;
+                reloadData();
+
+            }
+            else
+            {
+                DialogResult = DialogResult.Cancel;
+            }
+        }
+
+        private void btnXoaChiPhi_Click(object sender, EventArgs e)
+        {
+            var a = allLoaiChiPhis[currentLoaiChiPhiIndex];
+
+            if (a.DeleteToDB())
+            {
+                MessageBox.Show("Xóa thành công");
+                reloadData();
+            }
+            else
+            {
+                MessageBox.Show("Xóa thất bại");
+            }
+        }
+
+        private void btnSuaChiPhi_Click(object sender, EventArgs e)
+        {
+            var a = allLoaiChiPhis[currentLoaiChiPhiIndex];
+            a.TenLoaiChiPhi = txtTenLoaiChiPhi.Text;
+
+
+
+            if (a.UpdateDB())
             {
                 MessageBox.Show("Sửa thành công");
                 reloadData();

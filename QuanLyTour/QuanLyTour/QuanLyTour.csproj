@@ -67,7 +67,7 @@
     <Compile Include="DAL\PhanBoNhanVienDAL.cs" />
     <Compile Include="DAL\ThamQuanDAL.cs" />
     <Compile Include="Models\ChiPhiModel.cs" />
-    <Compile Include="Models\DiaDiemDAL.cs" />
+    <Compile Include="DAL\DiaDiemDAL.cs" />
     <Compile Include="Models\DiaDiemModel.cs" />
     <Compile Include="Models\LoaiChiPhiModel.cs" />
     <Compile Include="Models\NhanVienModel.cs" />

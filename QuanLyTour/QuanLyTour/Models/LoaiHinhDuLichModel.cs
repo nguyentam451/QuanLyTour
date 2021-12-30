@@ -33,5 +33,24 @@ namespace QuanLyTour.Model
         {
             return LoaiHinhDuLichDAL.getAll();
         }
+
+        public bool InserToDB()
+        {
+            return LoaiHinhDuLichDAL.Insert(this);
+        }
+
+        public bool DeleteToDB()
+        {
+            return LoaiHinhDuLichDAL.Delete(this);
+        }
+        public bool UpdateDB()
+        {
+            return LoaiHinhDuLichDAL.Update(this);
+        }
+
+        public static int getCount()
+        {
+            return LoaiHinhDuLichDAL.getCount();
+        }
     }
 }
