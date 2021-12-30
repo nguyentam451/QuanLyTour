@@ -21,6 +21,15 @@ namespace QuanLyTour.DAL
         }
 
         private KhachDAL() { }
+        
+            public static int getCount()
+        {
+            using (QuanLyTourDataContext db = new QuanLyTourDataContext())
+            {
+                int count = (from u in db.KHACHes select u).Count();
+                return count;
+            }
+        }
 
         public static List<KhachHangModel> getAll()
         {
@@ -98,14 +107,14 @@ namespace QuanLyTour.DAL
             }
         }
 
-        public static bool Delete(String maKH)
+        public static bool Delete(KhachHangModel obj)
         {
             try
             {
-                String id = maKH;
+
                 using (QuanLyTourDataContext db = new QuanLyTourDataContext())
                 {
-                    var kh = db.KHACHes.Where(p => p.MaKhachHang.Equals(id)).SingleOrDefault();
+                    var kh = db.KHACHes.Where(p => p.MaKhachHang.Equals(obj.MaKhachHang)).SingleOrDefault();
                     db.KHACHes.DeleteOnSubmit(kh);
   
 
