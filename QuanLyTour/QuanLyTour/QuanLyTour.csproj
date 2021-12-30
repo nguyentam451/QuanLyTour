@@ -102,6 +102,12 @@
     <Compile Include="View\FormKhachHang\ThemKhach.Designer.cs">
       <DependentUpon>ThemKhach.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormNhanVien\ThemNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormNhanVien\ThemNhanVien.Designer.cs">
+      <DependentUpon>ThemNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormTour\FormTour.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormKhachHang\ThemKhach.resx">
       <DependentUpon>ThemKhach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormNhanVien\ThemNhanVien.resx">
+      <DependentUpon>ThemNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormTour\FormTour.resx">
       <DependentUpon>FormTour.cs</DependentUpon>

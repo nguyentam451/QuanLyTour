@@ -72,3 +72,4 @@ C:\Users\Admin\source\repos\Git\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanL
 C:\Users\Admin\source\repos\Git\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.Form3.resources
 C:\Users\Admin\source\repos\Git\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.View.FormDoanDuLich.ThemDoan.resources
 C:\Users\Admin\source\repos\Git\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.View.FormKhachHang.ThemKhach.resources
+C:\Users\Admin\source\repos\Git\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.View.FormNhanVien.ThemNhanVien.resources

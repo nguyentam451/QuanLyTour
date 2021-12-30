@@ -15,6 +15,7 @@ using QuanLyTour.View;
 using System.IO;
 using QuanLyTour.View.FormDoanDuLich;
 using QuanLyTour.View.FormKhachHang;
+using QuanLyTour.View.FormNhanVien;
 
 namespace QuanLyTour
 {
@@ -145,6 +146,7 @@ namespace QuanLyTour
             dtgvNhanVien.DataSource = allNhanViens;
             dtgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dtgvNhanVien.Columns["MaNhanVien"].Visible = false;
+            dtgvNhanVien.Columns["id_doan"].Visible = false;
 
             /*   allPhanBos = PhanBoNhanVienModel.GetAll();
                dtgvPhanBoNhanVien.DataSource = allPhanBos;
@@ -450,6 +452,18 @@ namespace QuanLyTour
 
         private void dtgvNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            currentNhanVienIndex = dtgvNhanVien.CurrentCell.RowIndex;
+
+            // update current tour details
+            var nv = allNhanViens[currentNhanVienIndex];
+            if (nv != null)
+            {
+                txtNhiemVu.Text = nv.NhiemVu.ToString();
+                txtTenNhanVien.Text = nv.TenNhanVien.ToString();
+                txtNgayBD_NhanVien.Text = nv.NgayBatDau.ToString();
+                txtNgayKT_NhanVien.Text = nv.NgayKetThuc.ToString();
+
+            }
 
         }
 
@@ -645,7 +659,7 @@ namespace QuanLyTour
 
         private void dtgvNhanVien_SelectionChanged(object sender, EventArgs e)
         {
-            currentNhanVienIndex = dtgvNhanVien.CurrentCell.RowIndex;
+         /*   currentNhanVienIndex = dtgvNhanVien.CurrentCell.RowIndex;
 
             // update current tour details
             var nv = allNhanViens[currentNhanVienIndex];
@@ -655,7 +669,7 @@ namespace QuanLyTour
                 txtTenNhanVien.Text = nv.TenNhanVien.ToString();;
 
             }
-
+*/
         }
 
         private void panel1_Paint_1(object sender, PaintEventArgs e)
@@ -840,6 +854,13 @@ namespace QuanLyTour
             allKhachHangs = KhachHangModel.GetAll();
             dtgvKhach.DataSource = allKhachHangs;
             dtgvKhach.Columns["MaKhachHang"].Visible = false;
+
+            // nhân viên
+            allNhanViens = NhanVienModel.GetAll();
+            dtgvNhanVien.DataSource = allNhanViens;
+            dtgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtgvNhanVien.Columns["MaNhanVien"].Visible = false;
+            dtgvNhanVien.Columns["id_doan"].Visible = false;
         }
 
         public void reloadData()
@@ -847,6 +868,7 @@ namespace QuanLyTour
             allTours = null;
             allDoanDuLichs = null;
             allKhachHangs = null;
+            allNhanViens = null;
             readData();
         }
 
@@ -866,6 +888,51 @@ namespace QuanLyTour
         private void label3_Click_2(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnThemNhanVien_Click(object sender, EventArgs e)
+        {
+            ThemNhanVien nv = new ThemNhanVien();
+            nv.ShowDialog();
+
+            if (nv.DialogResult == DialogResult.OK)
+            {
+                reloadData();
+            }
+            nv.Dispose();
+        }
+
+        private void btnXoaNhanVien_Click(object sender, EventArgs e)
+        {
+            var nhanvien = allNhanViens[currentNhanVienIndex];
+
+            if (nhanvien.DeleteToDB())
+            {
+                MessageBox.Show("Xóa thành công");
+                reloadData();   
+            }
+            else
+            {
+                MessageBox.Show("Xóa thất bại");
+            }
+        }
+
+        private void btnSuaNhanVien_Click(object sender, EventArgs e)
+        {
+            var nhanvien = allNhanViens[currentNhanVienIndex];
+            //          kh.MaKhachHang = txtMaKhach.Text;
+            nhanvien.TenNhanVien = txtTenNhanVien.Text;
+            nhanvien.NhiemVu = txtNhiemVu.Text;
+
+            if (nhanvien.UpdateDB())
+            {
+                MessageBox.Show("Sửa thành công");
+                reloadData();
+            }
+            else
+            {
+                MessageBox.Show("Sửa thất bại");
+            }
         }
 
         private void dtgvDoan_CellContentClick(object sender, DataGridViewCellEventArgs e)

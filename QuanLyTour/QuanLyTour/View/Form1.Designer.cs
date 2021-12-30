@@ -37,12 +37,20 @@ namespace QuanLyTour
             this.lbDoanDuLich = new System.Windows.Forms.Label();
             this.lbTourDuLich = new System.Windows.Forms.Label();
             this.panelNhanVien = new System.Windows.Forms.Panel();
+            this.btnSuaNhanVien = new System.Windows.Forms.Button();
+            this.btnXoaNhanVien = new System.Windows.Forms.Button();
+            this.btnThemNhanVien = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtNgayKT_NhanVien = new System.Windows.Forms.TextBox();
+            this.txtNgayBD_NhanVien = new System.Windows.Forms.TextBox();
             this.txtTenNhanVien = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lbTenNhanVien = new System.Windows.Forms.Label();
             this.txtNhiemVu = new System.Windows.Forms.TextBox();
             this.dtgvNhanVien = new System.Windows.Forms.DataGridView();
             this.panelKhach = new System.Windows.Forms.Panel();
+            this.cbbGioiTinh = new System.Windows.Forms.ComboBox();
             this.btnSuaKhach = new System.Windows.Forms.Button();
             this.btnXoaKhach = new System.Windows.Forms.Button();
             this.btnThemKhach = new System.Windows.Forms.Button();
@@ -112,14 +120,6 @@ namespace QuanLyTour
             this.label6 = new System.Windows.Forms.Label();
             this.txtGiaTien = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbbGioiTinh = new System.Windows.Forms.ComboBox();
-            this.txtNgayBD_NhanVien = new System.Windows.Forms.TextBox();
-            this.txtNgayKT_NhanVien = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.btnThemNhanVien = new System.Windows.Forms.Button();
-            this.btnXoaNhanVien = new System.Windows.Forms.Button();
-            this.btnSuaNhanVien = new System.Windows.Forms.Button();
             this.panelQuanLy.SuspendLayout();
             this.panelNhanVien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvNhanVien)).BeginInit();
@@ -244,6 +244,76 @@ namespace QuanLyTour
             this.panelNhanVien.TabIndex = 34;
             this.panelNhanVien.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTour_Paint);
             // 
+            // btnSuaNhanVien
+            // 
+            this.btnSuaNhanVien.Location = new System.Drawing.Point(1024, 588);
+            this.btnSuaNhanVien.Name = "btnSuaNhanVien";
+            this.btnSuaNhanVien.Size = new System.Drawing.Size(118, 36);
+            this.btnSuaNhanVien.TabIndex = 43;
+            this.btnSuaNhanVien.Text = "Sửa";
+            this.btnSuaNhanVien.UseVisualStyleBackColor = true;
+            this.btnSuaNhanVien.Click += new System.EventHandler(this.btnSuaNhanVien_Click);
+            // 
+            // btnXoaNhanVien
+            // 
+            this.btnXoaNhanVien.Location = new System.Drawing.Point(667, 588);
+            this.btnXoaNhanVien.Name = "btnXoaNhanVien";
+            this.btnXoaNhanVien.Size = new System.Drawing.Size(118, 36);
+            this.btnXoaNhanVien.TabIndex = 42;
+            this.btnXoaNhanVien.Text = "Xóa";
+            this.btnXoaNhanVien.UseVisualStyleBackColor = true;
+            this.btnXoaNhanVien.Click += new System.EventHandler(this.btnXoaNhanVien_Click);
+            // 
+            // btnThemNhanVien
+            // 
+            this.btnThemNhanVien.Location = new System.Drawing.Point(306, 588);
+            this.btnThemNhanVien.Name = "btnThemNhanVien";
+            this.btnThemNhanVien.Size = new System.Drawing.Size(118, 36);
+            this.btnThemNhanVien.TabIndex = 41;
+            this.btnThemNhanVien.Text = "Thêm";
+            this.btnThemNhanVien.UseVisualStyleBackColor = true;
+            this.btnThemNhanVien.Click += new System.EventHandler(this.btnThemNhanVien_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(15, 525);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(73, 20);
+            this.label15.TabIndex = 40;
+            this.label15.Text = "Ngày KT";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(18, 361);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(76, 20);
+            this.label14.TabIndex = 39;
+            this.label14.Text = "Ngày BĐ";
+            // 
+            // txtNgayKT_NhanVien
+            // 
+            this.txtNgayKT_NhanVien.Enabled = false;
+            this.txtNgayKT_NhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgayKT_NhanVien.Location = new System.Drawing.Point(120, 518);
+            this.txtNgayKT_NhanVien.Multiline = true;
+            this.txtNgayKT_NhanVien.Name = "txtNgayKT_NhanVien";
+            this.txtNgayKT_NhanVien.Size = new System.Drawing.Size(146, 27);
+            this.txtNgayKT_NhanVien.TabIndex = 38;
+            // 
+            // txtNgayBD_NhanVien
+            // 
+            this.txtNgayBD_NhanVien.Enabled = false;
+            this.txtNgayBD_NhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgayBD_NhanVien.Location = new System.Drawing.Point(120, 354);
+            this.txtNgayBD_NhanVien.Multiline = true;
+            this.txtNgayBD_NhanVien.Name = "txtNgayBD_NhanVien";
+            this.txtNgayBD_NhanVien.Size = new System.Drawing.Size(146, 27);
+            this.txtNgayBD_NhanVien.TabIndex = 37;
+            // 
             // txtTenNhanVien
             // 
             this.txtTenNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -319,6 +389,15 @@ namespace QuanLyTour
             this.panelKhach.Name = "panelKhach";
             this.panelKhach.Size = new System.Drawing.Size(1216, 706);
             this.panelKhach.TabIndex = 1;
+            // 
+            // cbbGioiTinh
+            // 
+            this.cbbGioiTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbGioiTinh.FormattingEnabled = true;
+            this.cbbGioiTinh.Location = new System.Drawing.Point(155, 367);
+            this.cbbGioiTinh.Name = "cbbGioiTinh";
+            this.cbbGioiTinh.Size = new System.Drawing.Size(155, 28);
+            this.cbbGioiTinh.TabIndex = 37;
             // 
             // btnSuaKhach
             // 
@@ -1044,80 +1123,6 @@ namespace QuanLyTour
             this.label1.Size = new System.Drawing.Size(167, 133);
             this.label1.TabIndex = 17;
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // cbbGioiTinh
-            // 
-            this.cbbGioiTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbGioiTinh.FormattingEnabled = true;
-            this.cbbGioiTinh.Location = new System.Drawing.Point(155, 367);
-            this.cbbGioiTinh.Name = "cbbGioiTinh";
-            this.cbbGioiTinh.Size = new System.Drawing.Size(155, 28);
-            this.cbbGioiTinh.TabIndex = 37;
-            // 
-            // txtNgayBD_NhanVien
-            // 
-            this.txtNgayBD_NhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNgayBD_NhanVien.Location = new System.Drawing.Point(120, 354);
-            this.txtNgayBD_NhanVien.Multiline = true;
-            this.txtNgayBD_NhanVien.Name = "txtNgayBD_NhanVien";
-            this.txtNgayBD_NhanVien.Size = new System.Drawing.Size(146, 27);
-            this.txtNgayBD_NhanVien.TabIndex = 37;
-            // 
-            // txtNgayKT_NhanVien
-            // 
-            this.txtNgayKT_NhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNgayKT_NhanVien.Location = new System.Drawing.Point(120, 518);
-            this.txtNgayKT_NhanVien.Multiline = true;
-            this.txtNgayKT_NhanVien.Name = "txtNgayKT_NhanVien";
-            this.txtNgayKT_NhanVien.Size = new System.Drawing.Size(146, 27);
-            this.txtNgayKT_NhanVien.TabIndex = 38;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(18, 361);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(76, 20);
-            this.label14.TabIndex = 39;
-            this.label14.Text = "Ngày BĐ";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(15, 525);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(73, 20);
-            this.label15.TabIndex = 40;
-            this.label15.Text = "Ngày KT";
-            // 
-            // btnThemNhanVien
-            // 
-            this.btnThemNhanVien.Location = new System.Drawing.Point(306, 588);
-            this.btnThemNhanVien.Name = "btnThemNhanVien";
-            this.btnThemNhanVien.Size = new System.Drawing.Size(118, 36);
-            this.btnThemNhanVien.TabIndex = 41;
-            this.btnThemNhanVien.Text = "Thêm";
-            this.btnThemNhanVien.UseVisualStyleBackColor = true;
-            // 
-            // btnXoaNhanVien
-            // 
-            this.btnXoaNhanVien.Location = new System.Drawing.Point(667, 588);
-            this.btnXoaNhanVien.Name = "btnXoaNhanVien";
-            this.btnXoaNhanVien.Size = new System.Drawing.Size(118, 36);
-            this.btnXoaNhanVien.TabIndex = 42;
-            this.btnXoaNhanVien.Text = "Xóa";
-            this.btnXoaNhanVien.UseVisualStyleBackColor = true;
-            // 
-            // btnSuaNhanVien
-            // 
-            this.btnSuaNhanVien.Location = new System.Drawing.Point(1024, 588);
-            this.btnSuaNhanVien.Name = "btnSuaNhanVien";
-            this.btnSuaNhanVien.Size = new System.Drawing.Size(118, 36);
-            this.btnSuaNhanVien.TabIndex = 43;
-            this.btnSuaNhanVien.Text = "Sửa";
-            this.btnSuaNhanVien.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
