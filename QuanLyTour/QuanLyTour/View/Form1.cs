@@ -195,9 +195,7 @@ namespace QuanLyTour
             dtgvLoaiChiPhi.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dtgvLoaiChiPhi.Columns["MaLoaiChiPhi"].Visible = false;
 
-            // load combobox
-            loadComBoBoxTour();
-            loadComboboxDoan();
+            // loadcombobox
             loadComboboxKhach();
 
         }
@@ -894,6 +892,11 @@ namespace QuanLyTour
             dtgvLoaiChiPhi.DataSource = allLoaiChiPhis;
             dtgvLoaiChiPhi.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dtgvLoaiChiPhi.Columns["MaLoaiChiPhi"].Visible = false;
+
+            // load combobox
+            loadComBoBoxTour();
+            loadComboboxDoan();
+           
         }
 
         public void reloadData()
