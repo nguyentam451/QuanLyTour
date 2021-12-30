@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Windows.Forms;
+using Backend;
 
 namespace QuanLyTourWeb.Controllers
 {
@@ -17,6 +18,9 @@ namespace QuanLyTourWeb.Controllers
 
         public ActionResult Create()
         {
+            setViewBagMaTour();
+            setViewBagTenChiPhi();
+
             return View();
         }
 
@@ -26,15 +30,75 @@ namespace QuanLyTourWeb.Controllers
         {
             try
             {
+                model.MaDoan = "MD" + (QuanLyTour.Models.DoanDuLichModel.getCount() + 1);
 
-                if (model.InsertToDB())
-                {
-                    MessageBox.Show("Them thanh cong");
-                }
-                else
-                {
-                    MessageBox.Show("Them that bai:\n");
-                }
+                model.InsertToDB();
+      
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        public ActionResult DetailsDoan(string id)
+        {
+            var con = new QuanLyTour.Models.DoanDuLichModel();
+            var edit = QuanLyTour.DAL.ChiTietDoanDAL.getAllbyID(id);
+
+            return View(edit);
+        }
+
+        public ActionResult EditsDoan(string id)
+        {
+            var con = new QuanLyTour.Models.DoanDuLichModel();
+            var edit = QuanLyTour.Models.DoanDuLichModel.findDoanDuLichByMaDoan(con.getAll(), id);
+
+            setViewBagMaTour();
+            setViewBagTenChiPhi();
+
+            return View(edit);
+        }
+
+        [HttpPost]
+        public ActionResult EditsDoan(QuanLyTour.Models.DoanDuLichModel model)
+        {
+            try
+            {
+                model.UpdateToDB();
+
+                var txt = model.MaDoan + model.MaTour + model.HanhTrinh + model.NgayKhoiHanh + model.NgayKetThuc + model.KhachSan + model.DiaDiemThamQuan + model.TenChiPhi + model.SoTien;
+
+                MessageBox.Show(txt);
+
+                return RedirectToAction("Index");
+            }
+            catch
+            { 
+                return View();
+            }
+        }
+
+        public ActionResult DeleteDoan(string id)
+        {
+            var con = new QuanLyTour.Models.DoanDuLichModel();
+            var delete = QuanLyTour.Models.DoanDuLichModel.findDoanDuLichByMaDoan(con.getAll(), id);
+           
+          
+
+            return View(delete);
+        }
+
+        [HttpPost]
+        public ActionResult DeleteDoan(string id, System.Web.Mvc.FormCollection collection)
+        {
+            try
+            {
+                var con = new QuanLyTour.Models.DoanDuLichModel();
+                var delete = QuanLyTour.Models.DoanDuLichModel.findDoanDuLichByMaDoan(con.getAll(), id);
+
+                delete.DeleteToDB();
 
                 return RedirectToAction("Index");
             }
@@ -43,6 +107,8 @@ namespace QuanLyTourWeb.Controllers
                 return View();
             }
         }
+
+
         public ActionResult QLTour()
         {
             var list = QuanLyTour.Model.TourDuLichModel.GetAll();
@@ -154,5 +220,18 @@ namespace QuanLyTourWeb.Controllers
             ViewBag.DacDiem = new SelectList(dao.getAll(), "MaDiaDiem", "TenDiaDiem", selected);
         }
 
+         public void setViewBagTenChiPhi(long? selected = null)
+        {
+            var dao = new QuanLyTour.Models.LoaiChiPhiModel();
+            ViewBag.TenChiPhi = new SelectList(dao.getAll(), "MaLoaiChiPhi", "TenLoaiChiPhi", selected);
+        }
+
+        public void setViewBagMaTour(long? selected = null)
+        {
+            var dao = new QuanLyTour.Model.TourDuLichModel();
+            ViewBag.MaTour = new SelectList(dao.getAllTourDL(), "MaTour", "TenTour", selected);
+        }
+    
     }
+       
 }

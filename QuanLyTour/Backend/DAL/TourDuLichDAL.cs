@@ -134,6 +134,38 @@ namespace DAL
             return dsTour;
         }
 
+        public static List<TourDuLichModel> getAllTourDL()
+        {
+            List<TourDuLichModel> dsTour = new List<TourDuLichModel>();
+
+            using (QuanLyTourDataContext db = new QuanLyTourDataContext())
+            {
+                var result = from u in db.TOURDULICHes
+                            
+                             select new
+                             {
+                                 MaTour = u.MaTour,
+                                 TenTour = u.TenGoi,
+                                 DacDiem = u.DacDiem,
+                                 MaLoaiHinh = u.MaLoaiHinh
+                             };
+
+
+                foreach (var i in result)
+                {
+                    TourDuLichModel tour = new TourDuLichModel();
+
+                    tour.MaTour = i.MaTour;
+                    tour.TenTour = i.TenTour;
+                    tour.DacDiem = i.DacDiem;
+                    tour.MaLoaiHinh = i.MaLoaiHinh;
+
+                    dsTour.Add(tour);
+                }
+            }
+
+            return dsTour;
+        }
 
 
         public static int getCount()
