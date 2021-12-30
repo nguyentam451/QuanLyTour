@@ -18,7 +18,7 @@ namespace QuanLyTour.View.FormKhachHang
             InitializeComponent();
         }
 
-        int i = KhachHangModel.getCount() + 1;
+        int i = KhachHangModel.getCount() + 2;
         private void ThemKhach_Load(object sender, EventArgs e)
         {
             //Thêm dữ liệu

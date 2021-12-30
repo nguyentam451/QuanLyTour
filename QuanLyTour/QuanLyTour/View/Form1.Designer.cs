@@ -1221,11 +1221,11 @@ namespace QuanLyTour
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1515, 924);
+            this.Controls.Add(this.panelTour);
             this.Controls.Add(this.panelGiaTour);
             this.Controls.Add(this.panelDoanDuLich);
             this.Controls.Add(this.panelNhanVien);
             this.Controls.Add(this.panelKhach);
-            this.Controls.Add(this.panelTour);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelQuanLy);
             this.Controls.Add(this.lbTittle);

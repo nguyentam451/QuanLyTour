@@ -971,7 +971,7 @@ namespace QuanLyTour
 
         private void btnThemGia_Click(object sender, EventArgs e)
         {
-            int i = (LoaiHinhDuLichModel.getCount() + 1);
+            int i = (LoaiHinhDuLichModel.getCount() + 2);
             LoaiHinhDuLichModel nv = new LoaiHinhDuLichModel();
             nv.MaLoaiHinh = "MLH" + i;
             nv.TenLoaiHinh = txtTenLoaiHinh.Text;
@@ -1050,7 +1050,7 @@ namespace QuanLyTour
 
         private void btnThemDiaDiem_Click(object sender, EventArgs e)
         {
-            int i = (DiaDiemModel.getCount() + 1);
+            int i = (DiaDiemModel.getCount() + 2);
             DiaDiemModel nv = new DiaDiemModel();
             nv.MaDiaDiem = "MDD" + i;
             nv.TenDiaDiem = txtTenDiaDiem.Text;
@@ -1104,7 +1104,7 @@ namespace QuanLyTour
 
         private void btnThemChiPhi_Click(object sender, EventArgs e)
         {
-            int i = (LoaiChiPhiModel.getCount() + 1);
+            int i = (LoaiChiPhiModel.getCount() + 2);
             LoaiChiPhiModel nv = new LoaiChiPhiModel();
             nv.MaLoaiChiPhi = "MLCP" + i;
             nv.TenLoaiChiPhi = txtTenLoaiChiPhi.Text;

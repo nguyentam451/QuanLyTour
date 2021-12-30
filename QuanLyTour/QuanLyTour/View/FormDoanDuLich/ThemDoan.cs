@@ -19,7 +19,7 @@ namespace QuanLyTour.View.FormDoanDuLich
         List<KhachHangModel> listKhach;
         Dictionary<string, string> tour, chiphi, khach;
 
-        int i = (DoanDuLichModel.getCount() + 1);
+        int i = (DoanDuLichModel.getCount() + 2);
         private void button1_Click(object sender, EventArgs e)
         {
             DoanDuLichModel doan = new DoanDuLichModel();

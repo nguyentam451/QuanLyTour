@@ -26,7 +26,7 @@ namespace QuanLyTour.View.FormNhanVien
         private void btnLuu_Click(object sender, EventArgs e)
         {
             NhanVienModel nv = new NhanVienModel();
-            nv.MaNhanVien = "MNV" + i;
+            nv.MaNhanVien = "MNV" + 2;
             nv.TenNhanVien = txtTenNhanVien.Text;
             nv.NhiemVu = txtNhiemVu.Text;
          //   nv.NgayBatDau = DateTime.Parse(cbbNgayBD.SelectedValue.ToString());

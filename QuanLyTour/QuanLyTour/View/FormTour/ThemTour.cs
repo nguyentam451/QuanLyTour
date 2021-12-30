@@ -23,7 +23,7 @@ namespace QuanLyTour.View
             InitializeComponent();
        //     c = new Form1();
         }
-        int i = (TourDuLichModel.getCount() + 1);
+        int i = (TourDuLichModel.getCount() + 2);
         private void btnLuu_Click(object sender, EventArgs e)
         {   
             TourDuLichModel tour = new TourDuLichModel();
