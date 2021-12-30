@@ -170,6 +170,9 @@
     <Content Include="Views\Home\CreateTour.cshtml" />
     <Content Include="Views\Home\EditTour.cshtml" />
     <Content Include="Views\Home\DeleteTour.cshtml" />
+    <Content Include="Views\Home\DetailsDoan.cshtml" />
+    <Content Include="Views\Home\EditsDoan.cshtml" />
+    <Content Include="Views\Home\DeleteDoan.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

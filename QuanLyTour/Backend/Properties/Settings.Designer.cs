@@ -33,5 +33,16 @@ namespace Backend.Properties {
                 return ((string)(this["QuanLyTourConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-B5Q6F7K\\SQLEXPRESS;Initial Catalog=QuanLyTour;Integrated Secu" +
+            "rity=True")]
+        public string QuanLyTourConnectionString1 {
+            get {
+                return ((string)(this["QuanLyTourConnectionString1"]));
+            }
+        }
     }
 }

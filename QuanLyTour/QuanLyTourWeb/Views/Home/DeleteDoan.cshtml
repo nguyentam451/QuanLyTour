@@ -1,0 +1,115 @@
+﻿@model QuanLyTour.Models.DoanDuLichModel
+@{
+    ViewBag.Title = "DeleteDoan";
+}
+
+<h2>DeleteDoan</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            <div class="col-md-2 control-label ">
+                <strong>Mã Đoàn</strong>
+            </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MaDoan, new { htmlAttributes = new { @class = "form-control", @readonly = "true" } })
+                @Html.ValidationMessageFor(model => model.MaDoan, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-2 control-label ">
+                <strong>Mã Tour</strong>
+            </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MaTour, new { htmlAttributes = new { @class = "form-control", @readonly = "true" } })
+                @Html.ValidationMessageFor(model => model.MaTour, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-2 control-label ">
+                <strong>Ngày khởi hành</strong>
+            </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NgayKhoiHanh, new { htmlAttributes = new { @class = "form-control", @readonly = "true" } })
+                @Html.ValidationMessageFor(model => model.NgayKhoiHanh, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-2 control-label ">
+                <strong>Ngày kết thúc</strong>
+            </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NgayKetThuc, new { htmlAttributes = new { @class = "form-control", @readonly = "true" } })
+                @Html.ValidationMessageFor(model => model.NgayKetThuc, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-2 control-label ">
+                <strong>Hành trình</strong>
+            </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.HanhTrinh, new { htmlAttributes = new { @class = "form-control", @readonly = "true" } })
+                @Html.ValidationMessageFor(model => model.HanhTrinh, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-2 control-label ">
+                <strong>Khách sạn</strong>
+            </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.KhachSan, new { htmlAttributes = new { @class = "form-control", @readonly = "true" } })
+                @Html.ValidationMessageFor(model => model.KhachSan, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-2 control-label ">
+                <strong>Địa điểm</strong>
+            </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DiaDiemThamQuan, new { htmlAttributes = new { @class = "form-control", @readonly = "true" } })
+                @Html.ValidationMessageFor(model => model.DiaDiemThamQuan, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-2 control-label ">
+                <strong>Tên Chi Phí</strong>
+            </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TenChiPhi, new { htmlAttributes = new { @class = "form-control", @readonly = "true" } })
+                @Html.ValidationMessageFor(model => model.TenChiPhi, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-2 control-label ">
+                <strong>Số tiền</strong>
+            </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SoTien, new { htmlAttributes = new { @class = "form-control", @readonly = "true" } })
+                @Html.ValidationMessageFor(model => model.SoTien, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group " >
+            <strong class="col-md-offset-2 col-md-10 text-danger">*Suy nghĩ kĩ trước khi xóa, đoàn đã xóa không thể restore!!!</strong>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Delete" class="btn btn-danger" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
