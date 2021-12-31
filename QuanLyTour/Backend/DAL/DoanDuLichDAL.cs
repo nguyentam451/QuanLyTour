@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Backend;
+using System.Windows.Forms;
 
 namespace QuanLyTour.DAL
 {
@@ -53,6 +54,7 @@ namespace QuanLyTour.DAL
                                  NgayKhoiHanhh = d.NgayKhoiHanh,
                                  NgayKetThuc = d.NgayKetThuc,
                                  TenChiPhi = lcp.TenLoaiChiPhi,
+                                 MaLoaiChiPhi = lcp.MaLoaiChiPhi,
                                  SoTien = cp.SoTien,
                                /*  TenKhachHang = k.HoTen,
                                  SDT = k.SDT,*/
@@ -79,6 +81,7 @@ namespace QuanLyTour.DAL
                     doan.NgayKhoiHanh = (DateTime)i.NgayKhoiHanhh;
                     doan.NgayKetThuc = (DateTime)i.NgayKetThuc;
                     doan.TenChiPhi = i.TenChiPhi;
+                    doan.MaLoaiChiPhi = i.MaLoaiChiPhi;
                     doan.SoTien = (int)i.SoTien;
                  /*   doan.TenKhachHang = i.TenKhachHang;
                     doan.SoDienThoai = i.SDT;*/
@@ -127,17 +130,17 @@ namespace QuanLyTour.DAL
                     });
 
                     db.SubmitChanges();
-
+                    i++;
                     db.CHIPHIs.InsertOnSubmit(new CHIPHI()
                     {
                         
-                        MaChiPhi = "MCP" + i,
+                        MaChiPhi = "MLCP" + i,
                         MaDoan = obj.MaDoan,
                         SoTien = obj.SoTien,
                         MaLoaiChiPhi = obj.TenChiPhi,
-           
 
-                    });
+
+                    }) ;
                     db.SubmitChanges();
                     i=i+1;
                 }
@@ -189,11 +192,25 @@ namespace QuanLyTour.DAL
                     db.CHIPHIs.DeleteOnSubmit(chiphi);
                     db.SubmitChanges();
 
+                    var ctDoan = db.CHITIETDOANs.Where(p => p.MaDoan.Equals(obj.MaDoan)).SingleOrDefault();
+                    if (ctDoan != null)
+                    {
+                        db.CHITIETDOANs.DeleteOnSubmit(ctDoan);
+                        db.SubmitChanges();
+                    }
+
+                    var pbNVDoan = db.PHANBONHANVIEN_DOANs.Where(p => p.MaDoan.Equals(obj.MaDoan)).SingleOrDefault();
+                    if(pbNVDoan != null) {
+                        db.PHANBONHANVIEN_DOANs.DeleteOnSubmit(pbNVDoan);
+                        db.SubmitChanges();
+                    }
+                  
+
                     var doan = db.DOANDULICHes.Where(p => p.MaDoan.Equals(obj.MaDoan)).SingleOrDefault();
                     db.DOANDULICHes.DeleteOnSubmit(doan);
                     db.SubmitChanges();
 
-
+                   
 
                 }
                 return true;
@@ -209,10 +226,9 @@ namespace QuanLyTour.DAL
         public static bool Update(DoanDuLichModel obj)
         {
               try
-            {
+              {
                 using (QuanLyTourDataContext db = new QuanLyTourDataContext())
                 {
-
 
                     var doan = db.DOANDULICHes.Where(p => p.MaDoan.Equals(obj.MaDoan)).SingleOrDefault();
                     doan.MaDoan = obj.MaDoan;
@@ -220,21 +236,22 @@ namespace QuanLyTour.DAL
                     doan.NgayKhoiHanh = obj.NgayKhoiHanh;
                     doan.NgayKetThuc = obj.NgayKetThuc;
                     db.SubmitChanges();
-
+                  
                     var ndTour = db.NOIDUNGTOURs.Where(p => p.MaDoan.Equals(obj.MaDoan)).SingleOrDefault();
                     ndTour.MaDoan = obj.MaDoan;
                     ndTour.HanhTrinh = obj.HanhTrinh;
                     ndTour.KhachSan = obj.KhachSan;
                     ndTour.DiaDiemThamQuan = obj.DiaDiemThamQuan;
                     db.SubmitChanges();
-
+ 
                     var chiphi = db.CHIPHIs.Where(p => p.MaDoan.Equals(obj.MaDoan)).SingleOrDefault();
                     chiphi.MaDoan = obj.MaDoan;
                     chiphi.SoTien = obj.SoTien;
+                    chiphi.MaLoaiChiPhi = obj.TenChiPhi;
                     db.SubmitChanges();
 
                 }
-
+               
                 return true;
             }
             catch (Exception e)

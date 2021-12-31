@@ -95,3 +95,13 @@ C:\Users\tangc\OneDrive\Desktop\XDMHPL\QuanLyTour\QuanLyTour\QuanLyTour\bin\Debu
 C:\Users\tangc\OneDrive\Desktop\XDMHPL\QuanLyTour\QuanLyTour\QuanLyTour\bin\Debug\EntityFramework.xml
 C:\Users\tangc\OneDrive\Desktop\XDMHPL\QuanLyTour\QuanLyTour\QuanLyTour\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\tangc\OneDrive\Desktop\XDMHPL\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.csproj.CopyComplete
+E:\DATA\phanlop\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.View.FormBangGia.FormBangGia.resources
+E:\DATA\phanlop\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.View.FormDoanDuLich.ThemDoan.resources
+E:\DATA\phanlop\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.View.FormKhachHang.FormKhachHang.resources
+E:\DATA\phanlop\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.View.FormTour.FormTour.resources
+E:\DATA\phanlop\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.Form3.resources
+E:\DATA\phanlop\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.View.ThemTour.resources
+E:\DATA\phanlop\QuanLyTour\QuanLyTour\QuanLyTour\bin\Debug\Backend.dll
+E:\DATA\phanlop\QuanLyTour\QuanLyTour\QuanLyTour\bin\Debug\Backend.pdb
+E:\DATA\phanlop\QuanLyTour\QuanLyTour\QuanLyTour\bin\Debug\Backend.dll.config
+E:\DATA\phanlop\QuanLyTour\QuanLyTour\QuanLyTour\obj\Debug\QuanLyTour.csproj.CopyComplete

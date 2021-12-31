@@ -67,6 +67,10 @@ namespace QuanLyTour.Model
         {
             return TourDuLichDAL.getAll();
         }
+        public List<TourDuLichModel> getAllTourDL()
+        {
+            return TourDuLichDAL.getAllTourDL();
+        }
 
         public bool InserToDB()
         {

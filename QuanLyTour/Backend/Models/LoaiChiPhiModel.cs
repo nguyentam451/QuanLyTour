@@ -15,5 +15,10 @@ namespace QuanLyTour.Models
         {
             return LoaiChiPhiDAL.getAll();
         }
+
+        public List<LoaiChiPhiModel> getAll()
+        {
+            return LoaiChiPhiDAL.getAll();
+        }
     }
 }

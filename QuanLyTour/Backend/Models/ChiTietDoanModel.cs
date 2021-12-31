@@ -15,9 +15,11 @@ namespace QuanLyTour.Models
         public DoanDuLichModel DoanDuLich { get; set; }
         public KhachHangModel KhachHang { get; set; }
 
+
         public string HoTen
         {
-            get { return KhachHang.HoTen;  }
+            get { return KhachHang.HoTen; }
+          
         }
         public string SoCMND
         {
@@ -46,5 +48,11 @@ namespace QuanLyTour.Models
             return ChiTietDoanDAL.getAll();
         }
 
+        public List<ChiTietDoanModel> getAll()
+        {
+            return ChiTietDoanDAL.getAll();
+        }
+
+       
     }
 }
