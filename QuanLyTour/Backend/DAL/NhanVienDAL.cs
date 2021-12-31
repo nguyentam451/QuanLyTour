@@ -22,6 +22,14 @@ namespace QuanLyTour.DAL
         }
 
         private NhanVienDAL() { }
+        public static int getCount()
+        {
+            using (QuanLyTourDataContext db = new QuanLyTourDataContext())
+            {
+                int count = (from u in db.NHANVIENs select u).Count();
+                return count;
+            }
+        }
 
         public static List<NhanVienModel> getAll()
         {
@@ -29,12 +37,20 @@ namespace QuanLyTour.DAL
 
             using (QuanLyTourDataContext db = new QuanLyTourDataContext())
             {
-                var result = from u in db.NHANVIENs
+                var result = from d in db.DOANDULICHes
+                             from nv in db.NHANVIENs
+                             from pb in db.PHANBONHANVIEN_DOANs
+
+                             where d.MaDoan == pb.MaDoan &
+                                    pb.MaNhanVien == nv.MaNhanVien
                              select new
                              {
-
-                               MaNhanVien = u.MaNhanVien,
-                               TenNhanVien = u.TenNhanVien,
+                                 MaNhanVien = nv.MaNhanVien,
+                                 MaDoan = d.MaDoan,
+                                 NgayBatDau = d.NgayKhoiHanh,
+                                 NgayKetThuc = d.NgayKetThuc,
+                                 TenNhanVien = nv.TenNhanVien,
+                                 NhiemVu = pb.NhiemVu,
 
                              };
 
@@ -43,10 +59,12 @@ namespace QuanLyTour.DAL
                 {
 
                     NhanVienModel nhanvien = new NhanVienModel();
+
                     nhanvien.MaNhanVien = i.MaNhanVien;
                     nhanvien.TenNhanVien = i.TenNhanVien;
-                    
-
+                    nhanvien.NhiemVu = i.NhiemVu;
+                    nhanvien.NgayBatDau = (DateTime)i.NgayBatDau;
+                    nhanvien.NgayKetThuc = (DateTime)i.NgayKetThuc;
 
                     dsNhanVien.Add(nhanvien);
                 }
@@ -54,6 +72,90 @@ namespace QuanLyTour.DAL
             }
 
             return dsNhanVien;
+        }
+
+        public static bool Insert(NhanVienModel obj)
+        {
+            try
+            {
+                using (QuanLyTourDataContext db = new QuanLyTourDataContext())
+                {
+                    db.NHANVIENs.InsertOnSubmit(new NHANVIEN()
+                    {
+                        MaNhanVien = obj.MaNhanVien,
+                        TenNhanVien = obj.TenNhanVien,
+                    }
+                    );
+
+                    db.SubmitChanges();
+
+                    db.PHANBONHANVIEN_DOANs.InsertOnSubmit(new PHANBONHANVIEN_DOAN()
+                    {
+                        MaNhanVien = obj.MaNhanVien,
+                        NhiemVu = obj.NhiemVu,
+                        MaDoan = obj.id_doan,
+                    });
+                    db.SubmitChanges();
+                }
+
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+        }
+
+        public static bool Delete(NhanVienModel obj)
+        {
+            try
+            {
+                using (QuanLyTourDataContext db = new QuanLyTourDataContext())
+                {
+                    var phanbo = db.PHANBONHANVIEN_DOANs.Where(p => p.MaNhanVien.Equals(obj.MaNhanVien)).SingleOrDefault();
+                    db.PHANBONHANVIEN_DOANs.DeleteOnSubmit(phanbo);
+                    db.SubmitChanges();
+
+                    var nv = db.NHANVIENs.Where(p => p.MaNhanVien.Equals(obj.MaNhanVien)).SingleOrDefault();
+                    db.NHANVIENs.DeleteOnSubmit(nv);
+                    db.SubmitChanges();
+                }
+
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+        }
+
+        public static bool Update(NhanVienModel obj)
+        {
+            try
+            {
+                using (QuanLyTourDataContext db = new QuanLyTourDataContext())
+                {
+                    var nhanvien = db.NHANVIENs.Where(p => p.MaNhanVien.Equals(obj.MaNhanVien)).SingleOrDefault();
+                    nhanvien.MaNhanVien = obj.MaNhanVien;
+                    nhanvien.TenNhanVien = obj.TenNhanVien;
+
+                    db.SubmitChanges();
+
+                    var phanbo = db.PHANBONHANVIEN_DOANs.Where(p => p.MaNhanVien.Equals(obj.MaNhanVien)).SingleOrDefault();
+                    phanbo.NhiemVu = obj.NhiemVu;
+                    db.SubmitChanges();
+
+                }
+
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
         }
     }
 }
