@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Backend;
+using System.Text;
+using System.Threading.Tasks;
 
+using QuanLyTour;
 using QuanLyTour.Models;
 
 namespace QuanLyTour.DAL
@@ -106,17 +108,15 @@ namespace QuanLyTour.DAL
             }
         }
 
-        public static bool Delete(String maKH)
+        public static bool Delete(KhachHangModel obj)
         {
             try
             {
-                String id = maKH;
+        
                 using (QuanLyTourDataContext db = new QuanLyTourDataContext())
                 {
-                    var kh = db.KHACHes.Where(p => p.MaKhachHang.Equals(id)).SingleOrDefault();
+                    var kh = db.KHACHes.Where(p => p.MaKhachHang.Equals(obj.MaKhachHang)).SingleOrDefault();
                     db.KHACHes.DeleteOnSubmit(kh);
-  
-
                     db.SubmitChanges();
 
                 }

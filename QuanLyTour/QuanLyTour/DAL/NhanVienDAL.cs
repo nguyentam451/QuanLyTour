@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Backend;
 
 namespace QuanLyTour.DAL
 {
@@ -31,7 +30,6 @@ namespace QuanLyTour.DAL
             }
         }
 
-
         public static List<NhanVienModel> getAll()
         {
             List<NhanVienModel> dsNhanVien = new List<NhanVienModel>();
@@ -41,8 +39,8 @@ namespace QuanLyTour.DAL
                 var result = from d in db.DOANDULICHes
                              from nv in db.NHANVIENs
                              from pb in db.PHANBONHANVIEN_DOANs
-
-                             where d.MaDoan == pb.MaDoan &
+                           
+                             where d.MaDoan == pb.MaDoan & 
                                     pb.MaNhanVien == nv.MaNhanVien
                              select new
                              {
@@ -52,7 +50,7 @@ namespace QuanLyTour.DAL
                                  NgayKetThuc = d.NgayKetThuc,
                                  TenNhanVien = nv.TenNhanVien,
                                  NhiemVu = pb.NhiemVu,
-
+                                
                              };
 
 
@@ -60,13 +58,12 @@ namespace QuanLyTour.DAL
                 {
 
                     NhanVienModel nhanvien = new NhanVienModel();
+
                     nhanvien.MaNhanVien = i.MaNhanVien;
                     nhanvien.TenNhanVien = i.TenNhanVien;
                     nhanvien.NhiemVu = i.NhiemVu;
                     nhanvien.NgayBatDau = (DateTime)i.NgayBatDau;
                     nhanvien.NgayKetThuc = (DateTime)i.NgayKetThuc;
-
-
 
                     dsNhanVien.Add(nhanvien);
                 }
@@ -75,9 +72,6 @@ namespace QuanLyTour.DAL
 
             return dsNhanVien;
         }
-
-
-
 
         public static bool Insert(NhanVienModel obj)
         {
@@ -162,6 +156,5 @@ namespace QuanLyTour.DAL
                 return false;
             }
         }
-
     }
 }

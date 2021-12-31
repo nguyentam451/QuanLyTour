@@ -37,9 +37,9 @@ namespace QuanLyTour.Models
             return KhachDAL.Insert(this);
         }
 
-        public static bool DeleteToDB(string id)
+        public bool DeleteToDB()
         {
-            return KhachDAL.Delete(id);
+            return KhachDAL.Delete(this);
         }
         public bool UpdateToDB()
         {
