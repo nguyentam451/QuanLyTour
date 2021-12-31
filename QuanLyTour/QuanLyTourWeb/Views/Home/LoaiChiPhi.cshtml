@@ -1,0 +1,41 @@
+﻿@model IEnumerable<QuanLyTour.Models.LoaiChiPhiModel>
+@{
+    ViewBag.Title = "LoaiChiPhi";
+}
+
+<style>
+    .table {
+        display: flex;
+    }
+    
+</style>
+<h2>Loại Chi Phí</h2>
+
+<div style="margin: 20px 0px; ">
+    @Html.ActionLink("Thêm mới loại chi phí", "createLCP")
+</div>
+
+<table class="table" id="table">
+
+    <tr>
+        <th>
+            <p class="text-capitalize">Tên loại chi phí</p>
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenLoaiChiPhi)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "EditLoaiChiPhi", new { id = item.MaLoaiChiPhi.Replace(" ", "") }) |
+                @Html.ActionLink("Delete", "DeleteLoaiChiPhi", new { id = item.MaLoaiChiPhi.Replace(" ", "") })
+            </td>
+        </tr>
+    }
+</table>
+
+

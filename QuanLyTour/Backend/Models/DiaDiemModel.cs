@@ -44,5 +44,35 @@ namespace QuanLyTour.Models
         {
             return DAL.DiaDiemDAL.getAll();
         }
+
+        public bool InserToDB()
+        {
+            return DiaDiemDAL.Insert(this);
+        }
+
+        public bool DeleteToDB()
+        {
+            return DiaDiemDAL.Delete(this);
+        }
+        public bool UpdateDB()
+        {
+            return DiaDiemDAL.Update(this);
+        }
+
+        public static DiaDiemModel findDDByID(List<DiaDiemModel> list, string maDD)
+        {
+            DiaDiemModel res = new DiaDiemModel();
+
+            list.ForEach(x =>
+            {
+                if (x.MaDiaDiem.Contains(maDD))
+                {
+                    res.MaDiaDiem = x.MaDiaDiem;
+                    res.TenDiaDiem = x.TenDiaDiem;
+                }
+            });
+
+            return res;
+        }
     }
 }

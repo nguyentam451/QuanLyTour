@@ -23,7 +23,7 @@ namespace QuanLyTour.Model
 
         public static int getCount()
         {
-            return QuanLyTour.DAL.LoaiHinhDuLichDAL.getCount();
+            return LoaiHinhDuLichDAL.getCount();
         }
 
         public string MaLoaiHinh { get; set; }
@@ -40,6 +40,36 @@ namespace QuanLyTour.Model
         public List<LoaiHinhDuLichModel> getAll()
         {
             return DAL.LoaiHinhDuLichDAL.getAll();
+        }
+
+        public bool InserToDB()
+        {
+            return LoaiHinhDuLichDAL.Insert(this);
+        }
+
+        public bool DeleteToDB()
+        {
+            return LoaiHinhDuLichDAL.Delete(this);
+        }
+        public bool UpdateDB()
+        {
+            return LoaiHinhDuLichDAL.Update(this);
+        }
+
+        public static LoaiHinhDuLichModel findLHDLByID(List<LoaiHinhDuLichModel> list, string maloai)
+        {
+            LoaiHinhDuLichModel res = new LoaiHinhDuLichModel();
+
+            list.ForEach(x =>
+            {
+                if (x.MaLoaiHinh.Contains(maloai))
+                {
+                    res.MaLoaiHinh = x.MaLoaiHinh;
+                    res.TenLoaiHinh = x.TenLoaiHinh;
+                }
+            });
+
+            return res;
         }
     }
 }
