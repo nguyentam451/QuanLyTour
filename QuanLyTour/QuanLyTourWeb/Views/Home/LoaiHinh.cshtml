@@ -1,0 +1,40 @@
+﻿@model IEnumerable<QuanLyTour.Model.LoaiHinhDuLichModel>
+@{
+    ViewBag.Title = "LoaiHinh";
+}
+<style>
+    .table {
+        display: flex;
+    }
+</style>
+
+<h2>Loại Hình Du Lịch</h2>
+
+
+<div style="margin: 20px 0px;" >
+    @Html.ActionLink("Thêm mới loại hình du lịch", "createLHDL")
+</div>
+
+<table class="table" id="table">
+    
+    <tr>
+        <th>
+            <p class=" text-capitalize">Tên loại hình</p>
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenLoaiHinh)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "EditLoaiHinh", new { id = item.MaLoaiHinh.Replace(" ", "") }) |
+                @Html.ActionLink("Delete", "DeleteLoaiHinh", new { id = item.MaLoaiHinh.Replace(" ", "") })
+            </td>
+        </tr>
+    }
+</table>
+

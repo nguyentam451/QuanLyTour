@@ -46,5 +46,19 @@ namespace QuanLyTour.DAL
 
             return dsTour;
         }
+
+        public static int ThongKeTongDoanhThu()
+        {
+
+            int sum = 0;
+            using (QuanLyTourDataContext db = new QuanLyTourDataContext())
+            {
+                var result = from x in db.GIATOURs select x.ThanhTien;
+                sum = (int)result.Sum();
+
+            }
+            return sum;
+
+        }
     }
 }

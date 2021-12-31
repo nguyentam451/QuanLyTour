@@ -96,6 +96,7 @@ namespace DAL
                              where u.MaLoaiHinh == t.MaLoaiHinh &
                              u.DacDiem == v.MaDiaDiem &
                              u.MaTour == x.MaTour
+                             orderby u.MaTour
                              select new
                              {
                                  MaTour = u.MaTour,
@@ -273,6 +274,7 @@ namespace DAL
             }
         }
 
+      
 
     }
 

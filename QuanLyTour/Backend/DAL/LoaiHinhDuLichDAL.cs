@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Backend;
 
@@ -43,6 +44,75 @@ namespace QuanLyTour.DAL
 
             }
             return list;
+        }
+
+        public static bool Insert(LoaiHinhDuLichModel obj)
+        {
+            try
+            {
+                using (QuanLyTourDataContext db = new QuanLyTourDataContext())
+                {
+                    db.LOAIHINHDULICHes.InsertOnSubmit(new LOAIHINHDULICH()
+                    {
+                        MaLoaiHinh = obj.MaLoaiHinh,
+                        TenLoaiHinh = obj.TenLoaiHinh,
+                    }
+                    );
+
+                    db.SubmitChanges();
+                }
+
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+        }
+
+        public static bool Delete(LoaiHinhDuLichModel obj)
+        {
+            try
+            {
+
+                using (QuanLyTourDataContext db = new QuanLyTourDataContext())
+                {
+                    var kh = db.LOAIHINHDULICHes.Where(p => p.MaLoaiHinh.Equals(obj.MaLoaiHinh)).SingleOrDefault();
+                    db.LOAIHINHDULICHes.DeleteOnSubmit(kh);
+                    db.SubmitChanges();
+
+                }
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+
+        }
+        public static bool Update(LoaiHinhDuLichModel obj)
+        {
+            try
+            {
+                using (QuanLyTourDataContext db = new QuanLyTourDataContext())
+                {
+
+                    var kh = db.LOAIHINHDULICHes.Where(p => p.MaLoaiHinh.Equals(obj.MaLoaiHinh)).SingleOrDefault();
+                    kh.MaLoaiHinh = obj.MaLoaiHinh;
+                    kh.TenLoaiHinh = obj.TenLoaiHinh;
+
+                    db.SubmitChanges();
+                }
+
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
         }
 
     }

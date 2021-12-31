@@ -173,6 +173,19 @@
     <Content Include="Views\Home\DetailsDoan.cshtml" />
     <Content Include="Views\Home\EditsDoan.cshtml" />
     <Content Include="Views\Home\DeleteDoan.cshtml" />
+    <Content Include="Views\Home\LoaiHinh.cshtml" />
+    <Content Include="Views\Home\createLHDL.cshtml" />
+    <Content Include="Views\Home\EditLoaiHinh.cshtml" />
+    <Content Include="Views\Home\DeleteLoaiHinh.cshtml" />
+    <Content Include="Views\Home\LoaiChiPhi.cshtml" />
+    <Content Include="Views\Home\createLCP.cshtml" />
+    <Content Include="Views\Home\EditLoaiChiPhi.cshtml" />
+    <Content Include="Views\Home\DeleteLoaiChiPhi.cshtml" />
+    <Content Include="Views\Home\DiaDiem.cshtml" />
+    <Content Include="Views\Home\createDD.cshtml" />
+    <Content Include="Views\Home\EditDiaDiem.cshtml" />
+    <Content Include="Views\Home\DeleteDiaDiem.cshtml" />
+    <Content Include="Views\Home\ThongKe.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,53 @@
+﻿@model QuanLyTour.Models.DiaDiemModel
+@{
+    ViewBag.Title = "DeleteDiaDiem";
+}
+
+<h2>Xóa Địa Điểm</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            <div class="col-md-2 control-label ">
+                <strong>Mã Địa Điểm</strong>
+            </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MaDiaDiem, new { htmlAttributes = new { @class = "form-control", @readOnly = "true" } })
+                @Html.ValidationMessageFor(model => model.MaDiaDiem, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-md-2 control-label ">
+                <strong>Tên Địa Điểm</strong>
+            </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TenDiaDiem, new { htmlAttributes = new { @class = "form-control", @readOnly = "true" } })
+                @Html.ValidationMessageFor(model => model.TenDiaDiem, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group ">
+            <strong class="col-md-offset-2 col-md-10 text-danger">*Suy nghĩ kĩ trước khi xóa, địa điểm đã xóa không thể restore!!!</strong>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Delete" class="btn btn-danger" />
+            </div>
+        </div>
+
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "DiaDiem")
+</div>
