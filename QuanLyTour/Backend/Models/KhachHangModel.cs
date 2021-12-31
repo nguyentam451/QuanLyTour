@@ -45,11 +45,5 @@ namespace QuanLyTour.Models
         {
             return KhachDAL.Update(this);
         }
-
-        public static int getCount()
-        {
-            return KhachDAL.getCount();
-        }
-
     }
 }

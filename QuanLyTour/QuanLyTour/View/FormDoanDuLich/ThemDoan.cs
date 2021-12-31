@@ -19,7 +19,7 @@ namespace QuanLyTour.View.FormDoanDuLich
         List<KhachHangModel> listKhach;
         Dictionary<string, string> tour, chiphi, khach;
 
-        int i = (DoanDuLichModel.getCount() + 2);
+        int i = (DoanDuLichModel.getCount() + 1);
         private void button1_Click(object sender, EventArgs e)
         {
             DoanDuLichModel doan = new DoanDuLichModel();
@@ -61,10 +61,6 @@ namespace QuanLyTour.View.FormDoanDuLich
 
         private void ThemDoan_Load(object sender, EventArgs e)
         {
-            DateTime date = DateTime.Now;
-            txtNgayKH.Text = date.ToString();
-            txtNgayKT.Text = date.ToString();
-
             listTour = TourDuLichModel.GetAll();
             listChiPhi = LoaiChiPhiModel.GetAll();
             listKhach = KhachHangModel.GetAll();

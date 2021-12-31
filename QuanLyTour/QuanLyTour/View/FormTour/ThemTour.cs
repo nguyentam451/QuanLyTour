@@ -17,13 +17,13 @@ namespace QuanLyTour.View
         List<LoaiHinhDuLichModel> listLoaiHinh;
         List<DiaDiemModel> listDiaDiem;
         Dictionary<string, string> loaiHinh, diaDiem;
-      //  private static Form1 c;
+     //   private static Form1 c;
         public ThemTour()
         {
             InitializeComponent();
-       //     c = new Form1();
+        
         }
-        int i = (TourDuLichModel.getCount() + 2);
+        int i = (TourDuLichModel.getCount() + 1);
         private void btnLuu_Click(object sender, EventArgs e)
         {   
             TourDuLichModel tour = new TourDuLichModel();
@@ -39,8 +39,7 @@ namespace QuanLyTour.View
             {
                 MessageBox.Show("Them thanh cong");
                 DialogResult = DialogResult.OK;
-             //   c.dtgvTour.DataSource = null;
-             //   c.dtgvTour.DataSource = c.allTours;
+                
                 i++;
             }
             else
@@ -54,7 +53,7 @@ namespace QuanLyTour.View
 
             }
 
-        //    MessageBox.Show(cbbTenLoaiHinh.SelectedValue.ToString() + "A:A" + cbbDiaDiem.SelectedValue.ToString());
+            MessageBox.Show(cbbTenLoaiHinh.SelectedValue.ToString() + "A:A" + cbbDiaDiem.SelectedValue.ToString());
 
 
 
@@ -66,10 +65,6 @@ namespace QuanLyTour.View
 
         private void ThemTour_Load(object sender, EventArgs e)
         {
-            DateTime date = DateTime.Now;
-            txtThoiGianBD_formThem.Text = date.ToString();
-            txtThoiGianKT_formThem.Text = date.ToString();
-
             listLoaiHinh = LoaiHinhDuLichModel.GetAll();
             listDiaDiem = DiaDiemModel.GetAll();
 

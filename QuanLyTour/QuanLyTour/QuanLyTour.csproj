@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Backend">
+      <HintPath>..\Backend\bin\Debug\Backend.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -56,28 +59,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL\ChiTietDoanDAL.cs" />
-    <Compile Include="DAL\DoanDuLichDAL.cs" />
-    <Compile Include="DAL\GiaTourDAL.cs" />
-    <Compile Include="DAL\KhachDAL.cs" />
-    <Compile Include="DAL\LoaiChiPhiDAL.cs" />
-    <Compile Include="DAL\LoaiHinhDuLichDAL.cs" />
-    <Compile Include="DAL\ndTourDAL.cs" />
-    <Compile Include="DAL\NhanVienDAL.cs" />
-    <Compile Include="DAL\PhanBoNhanVienDAL.cs" />
-    <Compile Include="DAL\ThamQuanDAL.cs" />
-    <Compile Include="Models\ChiPhiModel.cs" />
-    <Compile Include="DAL\DiaDiemDAL.cs" />
-    <Compile Include="Models\DiaDiemModel.cs" />
-    <Compile Include="Models\LoaiChiPhiModel.cs" />
-    <Compile Include="Models\NhanVienModel.cs" />
-    <Compile Include="Models\PhanBoNhanVienModel.cs" />
-    <Compile Include="Models\ThamQuanModel.cs" />
-    <Compile Include="QuanLyTour.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLyTour.dbml</DependentUpon>
-    </Compile>
     <Compile Include="View\FormBangGia\FormBangGia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,18 +77,6 @@
     <Compile Include="View\FormKhachHang\FormKhachHang.Designer.cs">
       <DependentUpon>FormKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormKhachHang\ThemKhach.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\FormKhachHang\ThemKhach.Designer.cs">
-      <DependentUpon>ThemKhach.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\FormNhanVien\ThemNhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\FormNhanVien\ThemNhanVien.Designer.cs">
-      <DependentUpon>ThemNhanVien.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\FormTour\FormTour.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,14 +89,6 @@
     <Compile Include="View\FormTrangChu.Designer.cs">
       <DependentUpon>FormTrangChu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\ChiTietDoanModel.cs" />
-    <Compile Include="Models\DoanDuLichModel.cs" />
-    <Compile Include="Models\GiaTourModel.cs" />
-    <Compile Include="Models\KhachHangModel.cs" />
-    <Compile Include="Models\LoaiHinhDuLichModel.cs" />
-    <Compile Include="Models\ndTourModel.cs" />
-    <Compile Include="DAL\TourDuLichDAL.cs" />
-    <Compile Include="Models\TourDuLichModel.cs" />
     <Compile Include="View\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,12 +111,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormKhachHang\FormKhachHang.resx">
       <DependentUpon>FormKhachHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\FormKhachHang\ThemKhach.resx">
-      <DependentUpon>ThemKhach.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\FormNhanVien\ThemNhanVien.resx">
-      <DependentUpon>ThemNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormTour\FormTour.resx">
       <DependentUpon>FormTour.cs</DependentUpon>
@@ -194,14 +149,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="QuanLyTour.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>QuanLyTour.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QuanLyTour.dbml.layout">
-      <DependentUpon>QuanLyTour.dbml</DependentUpon>
-    </None>
     <None Include="Resources\flight %281%29 %281%29.png" />
     <None Include="Resources\flight %281%29.png" />
     <None Include="Resources\changes %281%29.jpg" />

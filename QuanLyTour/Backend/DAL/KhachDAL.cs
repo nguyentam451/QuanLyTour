@@ -21,14 +21,6 @@ namespace QuanLyTour.DAL
         }
 
         private KhachDAL() { }
-        public static int getCount()
-        {
-            using (QuanLyTourDataContext db = new QuanLyTourDataContext())
-            {
-                int count = (from u in db.KHACHes select u).Count();
-                return count;
-            }
-        }
 
         public static List<KhachHangModel> getAll()
         {
