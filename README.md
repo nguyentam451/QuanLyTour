@@ -1,4 +1,17 @@
 # QuanLyTour
+
+![Language](https://img.shields.io/badge/Language-Java-orange.svg)
+![Language](https://img.shields.io/badge/Team-SGU-orange.svg)
+
+## Team
+| MSSV | Họ và Tên  |
+|------| ----- |
+| 3118410013 | Nguyễn Tuấn Anh |
+| 3118410043 | Tăng Chí Chung |
+| 3118410225 | Đỗ Thị Linh |
+| 3118410384 | Nguyễn Thiện Tâm |
+
+## Yêu cầu
 Công ty thiết kế nhiều tour du lịch chẳng hạn như: Tour Sài Gòn – Nha Trang, Sài Gòn – Đà Lạt, Sài Gòn – Miền Tây, Sài Gòn – Tây Nguyên,…. 
 <br>
 Mỗi tour có các thông tin như: mã số tour, tên gọi tour, đặc điểm,… Mỗi tour có một số địa điểm đến tham quan và tất nhiên mỗi địa điểm cũng được khai thác bởi nhiều tour. Mỗi tour có một giá tour– giá tour này có thể được thay đổi theo thời gian hoặc theo mùa. Mỗi tour thuộc về một loại hình du lịch nào đó (chẳng hạn như: du lịch di động, du lịch kết hợp nghề nghiệp, du lịch xã hội và gia đình,…)
